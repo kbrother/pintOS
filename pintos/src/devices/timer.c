@@ -186,6 +186,7 @@ static void match_tick (struct thread *t, void *aux){
 static void
 timer_interrupt (struct intr_frame *args UNUSED)
 {
+  intr_yield_on_return();
   enum intr_level old_level = intr_disable();
   
   ticks++;

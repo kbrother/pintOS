@@ -1464,3 +1464,275 @@ rm .init.c.swp
 vim init.c
 vim synch.c
 vim init.c
+cd pintos/src/threads/
+vim thread.h
+vim thread.c
+vim synch.c
+vim thread.c
+vim synch.c
+cd ..
+cscope
+clear
+cd threads/
+vim thread.c
+cd ..
+ls
+cd threads/
+ls
+vim Makefile
+cd ..
+ls
+vim Maek.config
+vim Make.config
+vim Makefile.kernel 
+cd threads
+vim synch.h
+vim synch.c
+cd ..
+cscope
+cd pintos/src/threads/
+vim synch.c
+vim synch.h
+vim synch.c
+make
+make check
+clear
+pintos -v -k -T 60 --bochs  -- -q  run alarm-single
+cd build/
+backtrace kernel.o Call stack: 0xc002a5f9 0xc0020ce5 0xc00244a6 0xc002d0e5 0xc002113e.
+cd ..
+vim thread.c
+make
+make check
+clear
+pintos -v -k -T 60 --bochs  -- -q  run priority-change 
+vim thread.c
+clear
+make
+make check
+vim thread.c
+clear
+make 
+make check
+clear
+vim thread.c
+make
+clear
+make check
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-one
+vim synch.c
+rm .synch.c.swp 
+vim synch.c
+make
+make check
+clear
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-multiple 
+clear
+vim thread.c
+cd ../
+cd lib/kernel/l
+cd lib/kernel/
+vim list.c
+ls
+clear
+cd ..
+cd threads/
+vim synch.h
+vim thread.h
+vim thread.c
+vim synch.h
+vim thread.h
+vim synch.h
+vim palloc.h
+vim palloc.c
+vim init.c
+cd ../
+cd tests/threads/
+vim priority-donate-o
+vim priority-donate-one.c
+[A
+vim priority-donate-one.c
+ls
+vim priority-donate-one.c
+cd ..
+cd userprog/
+ls
+vim exec-multiple
+cd ..
+cd threads/
+ls
+vim priority-donate-one.c
+cd pintos/src/threads/
+ls
+make check
+make clean
+make check
+pintos -v -k -T 60 --bochs  -- -q  run alarm-single
+cd build/
+backtrace Call stack: 0xc002a5fd 0xc0021581 0xc0020cf6 0xc0022ccc 0xc00230a8 0xc002c97d 0xc002ca18 0xc0027ba7 0xc00239b0 0xc002360f 0xc0020200.
+pintos -v –gdb – -q run alarm-single
+pintos -v --gdb -- -q run alarm-single
+clear
+cd ..
+cd tests/threads/
+clear
+ls
+vim priority-change.c
+vim priority-donate-one.c
+vim priority-donate-multiple.c
+CD ..
+cd ..
+cd.
+cd ..
+git remote add origin git@github.com:kbrother/pintOS.git
+git remote add origin https://github.com/kbrother/pintOS.git
+git --version
+ls
+git init
+git add .
+git status
+git commit -m "5 test case left"
+git config --global user.email "00076289@kaist.ac.kr"
+git config --global user.name "kbrother"
+git commit -m "5 test cases left"
+git remote add origin https://github.com/kbrother/pintOS.git
+git push -u origin master
+clear
+ls
+cd pintos/src/threads/
+ls
+vim synch.c
+make
+make check
+cd ..
+git add .
+git status
+git commit -m "change approach to sema waiters"
+git push origin master
+cd pintos/src/lib/kernel/
+vim list.c
+clear
+vim list.c
+ls
+vim list.c
+cd pintos/src/threads/
+pintos -v –gdb – -q run priority-donate-donate-one
+pintos -v --gdb -- -q run priority-donate-donate-one
+clear
+pintos -v --gdb -- -q run priority-donate-donate-one
+clear
+vim interrupt.c
+rm .interrupt.c.swp 
+vim interrupt.c
+make
+make check
+clear
+ls
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-one
+clear
+vim thread.c
+vim synch.c
+make
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-one
+vim synch.c
+vim thread.c
+clear
+vim synch.c
+make
+vim synch.c
+make
+make check
+clear
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-one
+backtrace Call stack: 0xc002a702 0xc0020e3b 0xc0023056 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc0023081 0xc002ca82 0xc002cb1d 0xc0027cac 0xc0021f15 0xc0021e20 0xc0022055 0xc002ac5d 0xc002adf2 0xc00230de 0xc002d95c 0xc002113e.
+clear
+ls
+vim synch.c
+cd pintos/src/threads/
+ls
+vim thread.c
+cd pintos/src/threads/
+vim thread.h
+vim thread.c
+vim synch.c
+make
+make check
+ls
+clear
+vim synch.c
+make
+make check
+make
+clea
+clear
+make check
+make
+make check
+make
+clear
+make checfk
+make check
+make
+clear
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-one
+clear
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-one
+vim thread.c
+vim synch.c
+clear
+vim synch.c
+cd ..
+cd tests/threads/
+ls
+cd ../
+cd threads/
+cd ../
+ls
+cd devices/
+ls
+vim timer.c
+cd ..
+cd threads/
+vim thread.c
+ls
+clear
+cd ../devices/
+vim timer.c
+cd ..
+ls
+cd threads/
+ls
+clear
+ls
+clear
+ls
+pintos -v -gdb -- -q run priority-donate-donate-one
+clear
+pintos -v -gdb -- -q priority-donate-donate-one
+clear
+make check
+clear
+pintos -v -gdb -- -q run priority-donate-one
+clear
+pintos -v --gdb -- -q run priority-donate-one
+clear
+pintos -v --gdb -- -q run priority-donate-one
+clear
+cd pintos/src/threads/
+ls
+cd build/
+pintos-gdb kernel.o
+cd ..
+make
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-one
+clear
+make
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-one
+cd build/
+pintos-gdb kernel.o
+clear
+pintos-gdb kernel.o
+clear
+pintos-gdb kernel.o
+clear
+pintos-gdb kernel.o

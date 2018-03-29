@@ -93,6 +93,7 @@ struct thread
     int original_prior;     /* original priority */
     struct lock *lock_to_acquire;       /* lock which thread want to acquire */
     bool locked;                        /* blokced by lock */
+    struct list acquired_locks;        /* acquired locks */
     
     /* Shared between thread.c and synch.c. */
     struct list_elem elem;              /* List element. */

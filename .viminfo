@@ -11,20 +11,46 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/sema_up
+~MSle0~/init_thread
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:wq
-|2,0,1522243616,,"wq"
 :q!
-|2,0,1522243551,,"q!"
+|2,0,1522293301,,"q!"
+:wq
+|2,0,1522288689,,"wq"
+:249
+|2,0,1522288509,,"249"
+:q
+|2,0,1522251155,,"q"
+:q1
+|2,0,1522249161,,"q1"
+:WQ
+|2,0,1522248397,,"WQ"
+:s
+|2,0,1522246842,,"s"
+:101
+|2,0,1522246430,,"101"
+:81
+|2,0,1522246602,,"81"
+:298
+|2,0,1522246132,,"298"
+:287
+|2,0,1522246120,,"287"
+:231
+|2,0,1522246106,,"231"
+:498
+|2,0,1522246010,,"498"
+:497
+|2,0,1522245985,,"497"
+:306
+|2,0,1522245975,,"306"
+:qall
+|2,0,1522243987,,"qall"
 :143, 152 d
 |2,0,1522243325,,"143, 152 d"
-:q
-|2,0,1522239033,,"q"
 :183
 |2,0,1522236178,,"183"
 :69
@@ -147,8 +173,6 @@ $
 |2,0,1522160002,,"442"
 :453
 |2,0,1522159910,,"453"
-:q1
-|2,0,1522158120,,"q1"
 :q@
 |2,0,1522157882,,"q@"
 :68
@@ -167,8 +191,6 @@ $
 |2,0,1522147084,,"241"
 :603
 |2,0,1522146380,,"603"
-:WQ
-|2,0,1522145894,,"WQ"
 :274
 |2,0,1522144582,,"274"
 :618
@@ -231,16 +253,104 @@ $
 |2,0,1521117937,,"Q1"
 
 # Search String History (newest to oldest):
+?/sem
+|2,1,1522288448,47,"sem"
+?/sema_down (
+|2,1,1522288049,47,"sema_down ("
+?/lock_acquire (
+|2,1,1522288027,47,"lock_acquire ("
+?/init_thread
+|2,1,1522252223,47,"init_thread"
+?/lock_release (
+|2,1,1522252716,47,"lock_release ("
+?/list_insert
+|2,1,1522252460,47,"list_insert"
+?/list_push_back
+|2,1,1522252450,47,"list_push_back"
+?/list_remove
+|2,1,1522252274,47,"list_remove"
+?/lock_release
+|2,1,1522251182,47,"lock_release"
+?/lock_releas	
+|2,1,1522251178,47,"lock_releas	"
+?/lock
+|2,1,1522251173,47,"lock"
+?/timer_interrupt (
+|2,1,1522250619,47,"timer_interrupt ("
+?/timer_interrupt
+|2,1,1522250615,47,"timer_interrupt"
+?/intr_yield_on_return
+|2,1,1522250067,47,"intr_yield_on_return"
+?/timer
+|2,1,1522249900,47,"timer"
+?/thread_yield
+|2,1,1522248823,47,"thread_yield"
+?/time
+|2,1,1522248811,47,"time"
+?/lock_
+|2,1,1522248436,47,"lock_"
+?/lock_release(
+|2,1,1522248432,47,"lock_release("
+?/main
+|2,1,1522246637,47,"main"
+?/list_begin
+|2,1,1522245479,47,"list_begin"
+?/list_entry
+|2,1,1522245265,47,"list_entry"
+?/thread_entry
+|2,1,1522245260,47,"thread_entry"
+?/for (
+|2,1,1522244911,47,"for ("
+?/for
+|2,1,1522244907,47,"for"
+?/60
+|2,1,1522247084,47,"60"
+?/init
+|2,1,1522246936,47,"init"
+?/acquired_lock
+|2,1,1522246820,47,"acquired_lock"
+?/free
+|2,1,1522246797,47,"free"
+?/malloc
+|2,1,1522246781,47,"malloc"
+?/THREAD_RUNNING
+|2,1,1522246551,47,"THREAD_RUNNING"
+?/thread_init
+|2,1,1522246511,47,"thread_init"
+?/thread_current
+|2,1,1522246487,47,"thread_current"
+?/malloc.h
+|2,1,1522246082,47,"malloc.h"
+?/lock_acquire
+|2,1,1522244636,47,"lock_acquire"
+?/list
+|2,1,1522245461,47,"list"
+?/semaphore
+|2,1,1522245367,47,"semaphore"
+?/thread_exit
+|2,1,1522244295,47,"thread_exit"
+?/init_thread (
+|2,1,1522244179,47,"init_thread ("
+?/list_init
+|2,1,1522244163,47,"list_init"
+?/multiple
+|2,1,1522243935,47,"multiple"
+?/list_pop
+|2,1,1522243237,47,"list_pop"
+?/list_next
+|2,1,1522243152,47,"list_next"
+?/list_insert (
+|2,1,1522242817,47,"list_insert ("
+?/list_entry (
+|2,1,1522242692,47,"list_entry ("
+?/sema_up (
+|2,1,1522241489,47,"sema_up ("
 ?/sema_up
 |2,1,1522243556,47,"sema_up"
 ?/thread_unblock
 |2,1,1522243495,47,"thread_unblock"
 ?/sema_down 
 |2,1,1522242379,47,"sema_down "
-?/sema_up (
-|2,1,1522239966,47,"sema_up ("
-?/lock_release (
-|2,1,1522239951,47,"lock_release ("
 ?/thread_create (
 |2,1,1522239334,47,"thread_create ("
 ?//thread_yiel
@@ -257,8 +367,6 @@ $
 |2,1,1522237700,47,"thread_yield("
 ?/thread_un
 |2,1,1522238592,47,"thread_un"
-?/thread_yield
-|2,1,1522238576,47,"thread_yield"
 ?/schedule (
 |2,1,1522238031,47,"schedule ("
 ?/thread_yiel	
@@ -279,8 +387,6 @@ $
 |2,1,1522234683,47,"sema_init"
 ?/lock_init (
 |2,1,1522234677,47,"lock_init ("
-?/sema_down (
-|2,1,1522234558,47,"sema_down ("
 ?/lock_init
 |2,1,1522234427,47,"lock_init"
 ?/sema_down
@@ -291,8 +397,6 @@ $
 |2,1,1522219124,47,"CFLAGS"
 ?/cflags
 |2,1,1522218983,47,"cflags"
-?/lock_acquire
-|2,1,1522217395,47,"lock_acquire"
 ?/thread_schedule_tail
 |2,1,1522215748,47,"thread_schedule_tail"
 ?/switch_threads
@@ -309,8 +413,6 @@ $
 |2,1,1522207574,47,"thread_init ("
 ?/run_actions (
 |2,1,1522207820,47,"run_actions ("
-?/list_push_back
-|2,1,1522210265,47,"list_push_back"
 ?/run_actions
 |2,1,1522207511,47,"run_actions"
 ?/schedule_tail
@@ -331,8 +433,6 @@ $
 |2,1,1522205825,47,"idle_thread"
 ?/idle_started
 |2,1,1522205359,47,"idle_started"
-?/lock_acquire (
-|2,1,1522203586,47,"lock_acquire ("
 ?/list_end (
 |2,1,1522167135,47,"list_end ("
 ?/list_end
@@ -345,8 +445,6 @@ $
 |2,1,1522169247,47,"thread_current ("
 ?/void thread_current
 |2,1,1522169243,47,"void thread_current"
-?/thread_current
-|2,1,1522169218,47,"thread_current"
 ?/running_thread (
 |2,1,1522168348,47,"running_thread ("
 ?/next_thread
@@ -361,36 +459,22 @@ $
 |2,1,1522164928,47,"init_thread "
 ?/init_thread(
 |2,1,1522164921,47,"init_thread("
-?/thread_init
-|2,1,1522163957,47,"thread_init"
 ?/thread_create
 |2,1,1522162284,47,"thread_create"
 ?/sema_up 
 |2,1,1522165814,47,"sema_up "
-?/timer_interrupt (
-|2,1,1522164617,47,"timer_interrupt ("
 ?/handler
 |2,1,1522164495,47,"handler"
 ?/list_remove (
 |2,1,1522164332,47,"list_remove ("
 ?/timer_sleep (
 |2,1,1522162466,47,"timer_sleep ("
-?/timer_interrupt
-|2,1,1522162130,47,"timer_interrupt"
 ?/timer_handler
 |2,1,1522161252,47,"timer_handler"
 ?/timer.c
 |2,1,1522160192,47,"timer.c"
-?/list_entry
-|2,1,1522160187,47,"list_entry"
 ?/ready_list
 |2,1,1522150274,47,"ready_list"
-?/list_entry (
-|2,1,1522150452,47,"list_entry ("
-?/list
-|2,1,1522150445,47,"list"
-?/init_thread
-|2,1,1522161125,47,"init_thread"
 ?/thread_exit (
 |2,1,1522160407,47,"thread_exit ("
 ?/thread_tick (
@@ -405,16 +489,8 @@ $
 |2,1,1522159916,47,"kernel_thread("
 ?/kernel_thread
 |2,1,1522159854,47,"kernel_thread"
-?/list_remove
-|2,1,1522158264,47,"list_remove"
-?/list_init
-|2,1,1522155867,47,"list_init"
 ?/list_prev
 |2,1,1522155408,47,"list_prev"
-?/timer
-|2,1,1522159511,47,"timer"
-?/init_thread (
-|2,1,1522159221,47,"init_thread ("
 ?/int_thread (
 |2,1,1522159103,47,"int_thread ("
 ?/sema_down ()
@@ -431,8 +507,6 @@ $
 |2,1,1522155262,47,"list_elem"
 ?/list_size (
 |2,1,1522154642,47,"list_size ("
-?/list_next
-|2,1,1522148837,47,"list_next"
 ?/is_interior
 |2,1,1522148758,47,"is_interior"
 ?/thread_unblock 
@@ -441,8 +515,6 @@ $
 |2,1,1522146301,47,"unblock ("
 ?/sema_waiter
 |2,1,1522145914,47,"sema_waiter"
-?/lock_release
-|2,1,1522145563,47,"lock_release"
 ?/lock_relea	
 |2,1,1522145558,47,"lock_relea	"
 ?/allocate_tid
@@ -467,8 +539,6 @@ $
 |2,1,1522140189,47,"thread_get_priority"
 ?/thread_set
 |2,1,1522139342,47,"thread_set"
-?/thread_exit
-|2,1,1522138314,47,"thread_exit"
 ?/schedule
 |2,1,1522138057,47,"schedule"
 ?/schedule()
@@ -495,18 +565,12 @@ $
 |2,1,1522068456,47,"enum thread_status"
 ?/thread_status
 |2,1,1522068106,47,"thread_status"
-?/for (
-|2,1,1522067111,47,"for ("
 ?/for(
 |2,1,1522066671,47,"for("
-?/for
-|2,1,1522066660,47,"for"
 ?/next_thread_to_run(
 |2,1,1522066105,47,"next_thread_to_run("
 ?/list_head
 |2,1,1522064876,47,"list_head"
-?/list_begin
-|2,1,1522064839,47,"list_begin"
 ?/cscope
 |2,1,1522063854,47,"cscope"
 ?/thread_set_prio
@@ -533,8 +597,6 @@ $
 |2,1,1521982875,47,"fail("
 ?/main (
 |2,1,1521977634,47,"main ("
-?/main
-|2,1,1521977452,47,"main"
 ?/main(
 |2,1,1521977447,47,"main("
 ?/syntax
@@ -594,6 +656,9 @@ $
 	  struct thread *temp_thread = thread_current();
 |3,0,0,1,2,0,1522128548,"  struct lock *temp_lock = lock;","  struct thread *temp_thread = thread_current();"
 "1	LINE	0
+	
+|3,0,1,1,1,0,1522246968,""
+"2	LINE	0
 	    /*
 	    for(e = list_begin(sema_waiters); e != list_end(sema_waiters); e = list_next(e)){
 	
@@ -604,535 +669,514 @@ $
 	        elem_to_up = e;
 	      }
 	    } */
-|3,0,1,1,10,0,1522243325,"    /*","    for(e = list_begin(sema_waiters); e != list_end(sema_waiters); e = list_next(e)){","","      struct thread *temp = list_entry(e, struct thread, elem);","      if(max_prior < temp->priority){","        max_prior = temp->priority;","        up_candi = temp;","        elem_to_up = e;","      }","    } */"
-"2	LINE	0
+|3,0,2,1,10,0,1522243325,"    /*","    for(e = list_begin(sema_waiters); e != list_end(sema_waiters); e = list_next(e)){","","      struct thread *temp = list_entry(e, struct thread, elem);","      if(max_prior < temp->priority){","        max_prior = temp->priority;","        up_candi = temp;","        elem_to_up = e;","      }","    } */"
+"3	LINE	0
 	    /*
 	    for(e = list_begin(sema_waiters); e != list_end(sema_waiters); e = list_next(e)){
-|3,0,2,1,2,0,1522243306,"    /*","    for(e = list_begin(sema_waiters); e != list_end(sema_waiters); e = list_next(e)){"
-"3	LINE	0
-	 
-|3,0,3,1,1,0,1522129061," "
+|3,0,3,1,2,0,1522243306,"    /*","    for(e = list_begin(sema_waiters); e != list_end(sema_waiters); e = list_next(e)){"
 "4	LINE	0
+	 
+|3,0,4,1,1,0,1522129061," "
+"5	LINE	0
 	    THREAD_LOCKED       /* Blokced by lock */
-|3,0,4,1,1,0,1522068471,"    THREAD_LOCKED       /* Blokced by lock */"
-"5	CHAR	0
+|3,0,5,1,1,0,1522068471,"    THREAD_LOCKED       /* Blokced by lock */"
+"6	CHAR	0
 	list_entry (e, struct foo, elem);
 	          ...do something with f...
 	        }
 	*/
 	struct list_elem *
-|3,0,5,0,5,0,1522067499,"list_entry (e, struct foo, elem);","          ...do something with f...","        }","*/","struct list_elem *"
-"6	LINE	0
+|3,0,6,0,5,0,1522067499,"list_entry (e, struct foo, elem);","          ...do something with f...","        }","*/","struct list_elem *"
+"7	LINE	0
 	
 	    return list_entry (list_pop_front (&ready_list), struct thread, elem);
 	  }
 	}
 	
-|3,0,6,1,5,0,1522064950,"","    return list_entry (list_pop_front (&ready_list), struct thread, elem);","  }","}",""
-"7	CHAR	0
+|3,0,7,1,5,0,1522064950,"","    return list_entry (list_pop_front (&ready_list), struct thread, elem);","  }","}",""
+"8	CHAR	0
 	static struct thread *running_thread (void);
 	static struct thread *next_thread_to_run (void);
 	static void init_thread (struct thread *, const char *name, int priority);
 	static bool is_thread (struct thread *) UNUSED;
 	static void *alloc_frame (struct thread *, size_t size);
-|3,0,7,0,5,0,1521999400,"static struct thread *running_thread (void);","static struct thread *next_thread_to_run (void);","static void init_thread (struct thread *, const char *name, int priority);","static bool is_thread (struct thread *) UNUSED;","static void *alloc_frame (struct thread *, size_t size);"
-"8	CHAR	0
-	/* Add to run queue. */
-	  thread_unblock (t);
-	
-	  return tid;
-	}
-|3,0,8,0,5,0,1521999397,"/* Add to run queue. */","  thread_unblock (t);","","  return tid;","}"
+|3,0,8,0,5,0,1521999400,"static struct thread *running_thread (void);","static struct thread *next_thread_to_run (void);","static void init_thread (struct thread *, const char *name, int priority);","static bool is_thread (struct thread *) UNUSED;","static void *alloc_frame (struct thread *, size_t size);"
 "9	CHAR	0
 	/* Add to run queue. */
 	  thread_unblock (t);
 	
 	  return tid;
 	}
-|3,0,9,0,5,0,1521999392,"/* Add to run queue. */","  thread_unblock (t);","","  return tid;","}"
+|3,0,9,0,5,0,1521999397,"/* Add to run queue. */","  thread_unblock (t);","","  return tid;","}"
 ""-	CHAR	0
-	 int max_prior = -1;
-|3,1,36,0,1,0,1522243599," int max_prior = -1;"
+	      current_thread = thread_current();
+|3,1,36,0,1,0,1522288484,"      current_thread = thread_current();"
 
 # File marks:
-'0  136  34  ~/pintos/src/threads/synch.c
-|4,48,136,34,1522243616,"~/pintos/src/threads/synch.c"
-'1  422  1  ~/pintos/src/threads/thread.c
-|4,49,422,1,1522243551,"~/pintos/src/threads/thread.c"
-'2  1  0  ~/pintos/src/threads/thread.c
-|4,50,1,0,1522243490,"~/pintos/src/threads/thread.c"
-'3  1  0  ~/pintos/src/threads/thread.c
-|4,51,1,0,1522243490,"~/pintos/src/threads/thread.c"
-'4  124  5  ~/pintos/src/threads/thread.h
-|4,52,124,5,1522243474,"~/pintos/src/threads/thread.h"
-'5  137  0  ~/pintos/src/threads/synch.c
-|4,53,137,0,1522243338,"~/pintos/src/threads/synch.c"
-'6  140  0  ~/pintos/src/threads/synch.c
-|4,54,140,0,1522243338,"~/pintos/src/threads/synch.c"
-'7  95  0  ~/pintos/src/threads/thread.c
-|4,55,95,0,1522241342,"~/pintos/src/threads/thread.c"
-'8  95  0  ~/pintos/src/threads/thread.c
-|4,56,95,0,1522241342,"~/pintos/src/threads/thread.c"
-'9  95  0  ~/pintos/src/threads/thread.c
-|4,57,95,0,1522241342,"~/pintos/src/threads/thread.c"
+'0  77  0  ~/pintos/src/tests/threads/priority-donate-sema.c
+|4,48,77,0,1522293301,"~/pintos/src/tests/threads/priority-donate-sema.c"
+'1  1  0  ~/pintos/src/tests/threads/priority-donate-sema.c
+|4,49,1,0,1522292729,"~/pintos/src/tests/threads/priority-donate-sema.c"
+'2  65  0  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,50,65,0,1522292642,"~/pintos/src/tests/threads/priority-donate-one.c"
+'3  250  52  ~/pintos/src/threads/synch.c
+|4,51,250,52,1522288689,"~/pintos/src/threads/synch.c"
+'4  1  0  ~/pintos/src/threads/thread.c
+|4,52,1,0,1522288021,"~/pintos/src/threads/thread.c"
+'5  497  2  ~/pintos/src/threads/thread.c
+|4,53,497,2,1522252982,"~/pintos/src/threads/thread.c"
+'6  497  2  ~/pintos/src/threads/thread.c
+|4,54,497,2,1522252982,"~/pintos/src/threads/thread.c"
+'7  321  0  ~/pintos/src/threads/synch.c
+|4,55,321,0,1522252975,"~/pintos/src/threads/synch.c"
+'8  322  0  ~/pintos/src/threads/synch.c
+|4,56,322,0,1522252975,"~/pintos/src/threads/synch.c"
+'9  321  0  ~/pintos/src/threads/synch.c
+|4,57,321,0,1522252975,"~/pintos/src/threads/synch.c"
 
 # Jumplist (newest first):
--'  136  34  ~/pintos/src/threads/synch.c
-|4,39,136,34,1522243616,"~/pintos/src/threads/synch.c"
+-'  77  0  ~/pintos/src/tests/threads/priority-donate-sema.c
+|4,39,77,0,1522293301,"~/pintos/src/tests/threads/priority-donate-sema.c"
+-'  1  0  ~/pintos/src/tests/threads/priority-donate-sema.c
+|4,39,1,0,1522292729,"~/pintos/src/tests/threads/priority-donate-sema.c"
+-'  1  0  ~/pintos/src/tests/threads/priority-donate-sema.c
+|4,39,1,0,1522292649,"~/pintos/src/tests/threads/priority-donate-sema.c"
+-'  65  0  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,65,0,1522292642,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  65  0  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,65,0,1522292642,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  65  0  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,65,0,1522292642,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  250  52  ~/pintos/src/threads/synch.c
+|4,39,250,52,1522288689,"~/pintos/src/threads/synch.c"
+-'  250  52  ~/pintos/src/threads/synch.c
+|4,39,250,52,1522288689,"~/pintos/src/threads/synch.c"
+-'  250  52  ~/pintos/src/threads/synch.c
+|4,39,250,52,1522288689,"~/pintos/src/threads/synch.c"
+-'  383  2  ~/pintos/src/threads/synch.c
+|4,39,383,2,1522288052,"~/pintos/src/threads/synch.c"
+-'  383  2  ~/pintos/src/threads/synch.c
+|4,39,383,2,1522288052,"~/pintos/src/threads/synch.c"
+-'  383  2  ~/pintos/src/threads/synch.c
+|4,39,383,2,1522288052,"~/pintos/src/threads/synch.c"
+-'  248  2  ~/pintos/src/threads/synch.c
+|4,39,248,2,1522288050,"~/pintos/src/threads/synch.c"
+-'  248  2  ~/pintos/src/threads/synch.c
+|4,39,248,2,1522288050,"~/pintos/src/threads/synch.c"
+-'  248  2  ~/pintos/src/threads/synch.c
+|4,39,248,2,1522288050,"~/pintos/src/threads/synch.c"
+-'  212  0  ~/pintos/src/threads/synch.c
+|4,39,212,0,1522288049,"~/pintos/src/threads/synch.c"
+-'  212  0  ~/pintos/src/threads/synch.c
+|4,39,212,0,1522288049,"~/pintos/src/threads/synch.c"
+-'  212  0  ~/pintos/src/threads/synch.c
+|4,39,212,0,1522288049,"~/pintos/src/threads/synch.c"
 -'  1  0  ~/pintos/src/threads/synch.c
-|4,39,1,0,1522243556,"~/pintos/src/threads/synch.c"
--'  422  1  ~/pintos/src/threads/thread.c
-|4,39,422,1,1522243551,"~/pintos/src/threads/thread.c"
--'  422  1  ~/pintos/src/threads/thread.c
-|4,39,422,1,1522243551,"~/pintos/src/threads/thread.c"
--'  257  0  ~/pintos/src/threads/thread.c
-|4,39,257,0,1522243547,"~/pintos/src/threads/thread.c"
--'  257  0  ~/pintos/src/threads/thread.c
-|4,39,257,0,1522243547,"~/pintos/src/threads/thread.c"
--'  217  25  ~/pintos/src/threads/thread.c
-|4,39,217,25,1522243497,"~/pintos/src/threads/thread.c"
--'  217  25  ~/pintos/src/threads/thread.c
-|4,39,217,25,1522243497,"~/pintos/src/threads/thread.c"
--'  210  2  ~/pintos/src/threads/thread.c
-|4,39,210,2,1522243496,"~/pintos/src/threads/thread.c"
--'  210  2  ~/pintos/src/threads/thread.c
-|4,39,210,2,1522243496,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522243495,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522243495,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522243490,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522243490,"~/pintos/src/threads/thread.c"
--'  124  5  ~/pintos/src/threads/thread.h
-|4,39,124,5,1522243474,"~/pintos/src/threads/thread.h"
--'  124  5  ~/pintos/src/threads/thread.h
-|4,39,124,5,1522243474,"~/pintos/src/threads/thread.h"
--'  124  5  ~/pintos/src/threads/thread.h
-|4,39,124,5,1522243474,"~/pintos/src/threads/thread.h"
--'  124  5  ~/pintos/src/threads/thread.h
-|4,39,124,5,1522243474,"~/pintos/src/threads/thread.h"
--'  124  5  ~/pintos/src/threads/thread.h
-|4,39,124,5,1522243474,"~/pintos/src/threads/thread.h"
--'  124  5  ~/pintos/src/threads/thread.h
-|4,39,124,5,1522243474,"~/pintos/src/threads/thread.h"
--'  124  5  ~/pintos/src/threads/thread.h
-|4,39,124,5,1522243474,"~/pintos/src/threads/thread.h"
--'  124  5  ~/pintos/src/threads/thread.h
-|4,39,124,5,1522243474,"~/pintos/src/threads/thread.h"
--'  51  13  ~/pintos/src/threads/thread.h
-|4,39,51,13,1522243471,"~/pintos/src/threads/thread.h"
--'  51  13  ~/pintos/src/threads/thread.h
-|4,39,51,13,1522243471,"~/pintos/src/threads/thread.h"
--'  51  13  ~/pintos/src/threads/thread.h
-|4,39,51,13,1522243471,"~/pintos/src/threads/thread.h"
--'  51  13  ~/pintos/src/threads/thread.h
-|4,39,51,13,1522243471,"~/pintos/src/threads/thread.h"
--'  51  13  ~/pintos/src/threads/thread.h
-|4,39,51,13,1522243471,"~/pintos/src/threads/thread.h"
--'  51  13  ~/pintos/src/threads/thread.h
-|4,39,51,13,1522243471,"~/pintos/src/threads/thread.h"
--'  51  13  ~/pintos/src/threads/thread.h
-|4,39,51,13,1522243471,"~/pintos/src/threads/thread.h"
--'  51  13  ~/pintos/src/threads/thread.h
-|4,39,51,13,1522243471,"~/pintos/src/threads/thread.h"
--'  137  0  ~/pintos/src/threads/synch.c
-|4,39,137,0,1522243338,"~/pintos/src/threads/synch.c"
--'  140  0  ~/pintos/src/threads/synch.c
-|4,39,140,0,1522243338,"~/pintos/src/threads/synch.c"
--'  140  0  ~/pintos/src/threads/synch.c
-|4,39,140,0,1522243338,"~/pintos/src/threads/synch.c"
--'  140  0  ~/pintos/src/threads/synch.c
-|4,39,140,0,1522243338,"~/pintos/src/threads/synch.c"
--'  140  0  ~/pintos/src/threads/synch.c
-|4,39,140,0,1522243338,"~/pintos/src/threads/synch.c"
--'  140  0  ~/pintos/src/threads/synch.c
-|4,39,140,0,1522243325,"~/pintos/src/threads/synch.c"
--'  143  0  ~/pintos/src/threads/synch.c
-|4,39,143,0,1522243325,"~/pintos/src/threads/synch.c"
--'  143  0  ~/pintos/src/threads/synch.c
-|4,39,143,0,1522243325,"~/pintos/src/threads/synch.c"
--'  143  0  ~/pintos/src/threads/synch.c
-|4,39,143,0,1522243325,"~/pintos/src/threads/synch.c"
--'  143  0  ~/pintos/src/threads/synch.c
-|4,39,143,0,1522243325,"~/pintos/src/threads/synch.c"
--'  94  21  ~/pintos/src/threads/synch.c
-|4,39,94,21,1522243174,"~/pintos/src/threads/synch.c"
--'  94  21  ~/pintos/src/threads/synch.c
-|4,39,94,21,1522243174,"~/pintos/src/threads/synch.c"
--'  94  21  ~/pintos/src/threads/synch.c
-|4,39,94,21,1522243174,"~/pintos/src/threads/synch.c"
--'  94  21  ~/pintos/src/threads/synch.c
-|4,39,94,21,1522243174,"~/pintos/src/threads/synch.c"
--'  94  21  ~/pintos/src/threads/synch.c
-|4,39,94,21,1522243174,"~/pintos/src/threads/synch.c"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1522243113,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1522243113,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1522243113,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1522243113,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1522243113,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1522243113,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1522243113,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1522243113,"~/pintos/src/threads/thread.h"
+|4,39,1,0,1522288027,"~/pintos/src/threads/synch.c"
 -'  1  0  ~/pintos/src/threads/synch.c
-|4,39,1,0,1522242379,"~/pintos/src/threads/synch.c"
+|4,39,1,0,1522288027,"~/pintos/src/threads/synch.c"
 -'  1  0  ~/pintos/src/threads/synch.c
-|4,39,1,0,1522242379,"~/pintos/src/threads/synch.c"
+|4,39,1,0,1522288027,"~/pintos/src/threads/synch.c"
+-'  1  0  ~/pintos/src/threads/thread.c
+|4,39,1,0,1522288021,"~/pintos/src/threads/thread.c"
+-'  1  0  ~/pintos/src/threads/thread.c
+|4,39,1,0,1522288021,"~/pintos/src/threads/thread.c"
+-'  1  0  ~/pintos/src/threads/thread.c
+|4,39,1,0,1522288021,"~/pintos/src/threads/thread.c"
+-'  1  0  ~/pintos/src/threads/thread.c
+|4,39,1,0,1522288021,"~/pintos/src/threads/thread.c"
+-'  1  0  ~/pintos/src/threads/thread.c
+|4,39,1,0,1522288021,"~/pintos/src/threads/thread.c"
+-'  1  0  ~/pintos/src/threads/thread.c
+|4,39,1,0,1522288021,"~/pintos/src/threads/thread.c"
+-'  1  0  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,1,0,1522287913,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  1  0  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,1,0,1522287913,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  1  0  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,1,0,1522287913,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  497  2  ~/pintos/src/threads/thread.c
+|4,39,497,2,1522252982,"~/pintos/src/threads/thread.c"
+-'  321  0  ~/pintos/src/threads/synch.c
+|4,39,321,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  322  0  ~/pintos/src/threads/synch.c
+|4,39,322,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  321  0  ~/pintos/src/threads/synch.c
+|4,39,321,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  321  0  ~/pintos/src/threads/synch.c
+|4,39,321,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  321  0  ~/pintos/src/threads/synch.c
+|4,39,321,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  322  0  ~/pintos/src/threads/synch.c
+|4,39,322,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  321  0  ~/pintos/src/threads/synch.c
+|4,39,321,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  321  0  ~/pintos/src/threads/synch.c
+|4,39,321,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  321  0  ~/pintos/src/threads/synch.c
+|4,39,321,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  322  0  ~/pintos/src/threads/synch.c
+|4,39,322,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  321  0  ~/pintos/src/threads/synch.c
+|4,39,321,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  321  0  ~/pintos/src/threads/synch.c
+|4,39,321,0,1522252975,"~/pintos/src/threads/synch.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  169  0  ~/pintos/src/lib/kernel/list.c
+|4,39,169,0,1522252969,"~/pintos/src/lib/kernel/list.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
+-'  61  3  ~/pintos/src/tests/threads/priority-donate-one.c
+|4,39,61,3,1522252965,"~/pintos/src/tests/threads/priority-donate-one.c"
 -'  1  0  ~/pintos/src/threads/synch.c
-|4,39,1,0,1522242379,"~/pintos/src/threads/synch.c"
+|4,39,1,0,1522252716,"~/pintos/src/threads/synch.c"
 -'  1  0  ~/pintos/src/threads/synch.c
-|4,39,1,0,1522242379,"~/pintos/src/threads/synch.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  95  0  ~/pintos/src/threads/thread.c
-|4,39,95,0,1522241342,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522241002,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522241002,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522241002,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522241002,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522241002,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1522241002,"~/pintos/src/threads/thread.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
--'  30  0  ~/pintos/src/tests/threads/priority-donate-multiple.c
-|4,39,30,0,1522240980,"~/pintos/src/tests/threads/priority-donate-multiple.c"
+|4,39,1,0,1522252716,"~/pintos/src/threads/synch.c"
+-'  1  0  ~/pintos/src/threads/synch.c
+|4,39,1,0,1522252716,"~/pintos/src/threads/synch.c"
+-'  1  0  ~/pintos/src/threads/synch.c
+|4,39,1,0,1522252716,"~/pintos/src/threads/synch.c"
+-'  1  0  ~/pintos/src/threads/synch.c
+|4,39,1,0,1522252716,"~/pintos/src/threads/synch.c"
+-'  1  0  ~/pintos/src/threads/synch.c
+|4,39,1,0,1522252716,"~/pintos/src/threads/synch.c"
+-'  1  0  ~/pintos/src/threads/synch.c
+|4,39,1,0,1522252716,"~/pintos/src/threads/synch.c"
+-'  1  0  ~/pintos/src/threads/synch.c
+|4,39,1,0,1522252716,"~/pintos/src/threads/synch.c"
+-'  1  0  ~/pintos/src/threads/synch.c
+|4,39,1,0,1522252716,"~/pintos/src/threads/synch.c"
+-'  247  28  ~/pintos/src/threads/synch.c
+|4,39,247,28,1522252548,"~/pintos/src/threads/synch.c"
+-'  247  28  ~/pintos/src/threads/synch.c
+|4,39,247,28,1522252548,"~/pintos/src/threads/synch.c"
+-'  247  28  ~/pintos/src/threads/synch.c
+|4,39,247,28,1522252548,"~/pintos/src/threads/synch.c"
+-'  247  28  ~/pintos/src/threads/synch.c
+|4,39,247,28,1522252548,"~/pintos/src/threads/synch.c"
 
 # History of marks within files (newest to oldest):
 
-> ~/pintos/src/threads/synch.c
-	*	1522243614	0
-	"	136	34
-	^	136	35
-	.	137	0
-	+	239	6
-	+	238	28
-	+	239	19
-	+	237	15
-	+	238	24
-	+	238	57
-	+	229	16
-	+	239	38
-	+	240	46
-	+	235	0
-	+	234	0
-	+	231	45
-	+	232	30
-	+	235	28
-	+	247	35
-	+	250	27
-	+	222	47
-	+	223	0
-	+	224	0
-	+	223	0
-	+	227	0
-	+	227	78
-	+	227	79
-	+	229	0
-	+	284	0
-	+	140	33
-	+	140	28
-	+	140	6
-	+	140	0
-	+	284	51
-	+	288	59
-	+	287	18
-	+	228	13
-	+	287	28
-	+	291	27
-	+	140	57
-	+	287	29
-	+	74	11
-	+	87	5
-	+	87	35
-	+	127	31
-	+	138	0
-	+	131	31
-	+	127	0
-	+	128	0
-	+	74	5
-	+	74	4
-	+	74	9
-	+	77	0
-	+	74	5
-	+	140	25
-	+	137	32
-	+	140	22
-	+	140	25
-	+	87	63
-	+	248	34
-	+	87	5
-	+	140	5
-	+	140	0
-	+	249	34
-	+	87	5
-	+	88	0
-	+	141	17
-	+	145	0
-	+	77	0
-	+	134	16
-	+	135	0
-	+	141	28
-	+	142	0
-	+	126	0
-	+	144	17
-	+	143	19
-	+	68	22
-	+	72	0
-	+	80	8
-	+	83	15
-	+	86	36
-	+	86	37
-	+	87	0
-	+	86	36
-	+	69	32
-	+	70	27
-	+	75	35
-	+	77	34
-	+	78	0
-	+	79	50
-	+	76	39
-	+	82	41
-	+	86	21
-	+	140	5
-	+	140	7
-	+	138	62
-	+	139	29
-	+	137	27
-	+	139	64
-	+	137	0
-	+	140	0
-	+	139	50
-	+	136	39
-	+	137	0
-	n	356	2
-
-> ~/pintos/src/threads/thread.c
-	*	1522243550	0
-	"	422	1
-	^	211	2
-	.	211	1
-	+	540	22
-	+	527	21
-	+	540	18
-	+	537	25
-	+	527	22
-	+	537	40
-	+	539	12
-	+	540	21
-	+	544	0
-	+	540	22
-	+	544	0
-	+	546	15
-	+	544	5
-	+	546	16
-	+	528	68
-	+	529	0
-	+	530	31
-	+	532	0
-	+	531	29
-	+	544	34
-	+	528	21
-	+	529	0
-	+	531	0
-	+	531	3
-	+	544	5
-	+	546	0
-	+	545	0
-	+	539	36
-	+	543	0
-	+	541	33
-	+	254	12
-	+	537	41
-	+	499	31
-	+	501	0
-	+	500	19
-	+	370	45
-	+	370	0
-	+	368	44
-	+	371	17
-	+	372	27
-	+	355	4
-	+	351	43
-	+	357	53
-	+	368	0
-	+	356	0
-	+	357	45
-	+	361	11
-	+	360	5
-	+	361	11
-	+	361	3
-	+	354	1
-	+	352	18
-	+	357	47
-	+	359	20
-	+	360	0
-	+	360	5
-	+	361	3
-	+	366	0
-	+	368	27
-	+	367	0
-	+	368	28
-	+	369	16
-	+	351	8
-	+	355	58
-	+	534	57
-	+	477	0
-	+	476	1
-	+	476	16
-	+	476	29
-	+	476	22
-	+	476	37
-	+	476	1
-	+	477	0
-	+	245	19
-	+	254	16
-	+	541	23
-	+	534	0
-	+	541	0
-	+	524	31
-	+	523	29
-	+	543	23
-	+	536	20
-	+	538	23
-	+	542	28
-	+	497	22
-	+	323	0
-	+	609	0
-	+	608	62
-	+	608	28
-	+	609	0
-	+	605	0
-	+	606	0
-	+	610	0
-	+	251	0
-	+	605	0
-	+	606	0
-	+	605	0
-	+	606	0
-	+	212	0
-	+	211	1
-	i	537	40
-	n	100	24
-
-> ~/pintos/src/threads/thread.h
-	*	1522243473	0
-	"	124	5
-	^	96	13
-	.	96	13
-	+	92	63
-	+	94	79
-	+	14	52
-	+	14	51
-	+	95	0
-	+	94	79
-	+	95	61
-	+	96	15
-	+	97	0
-	+	96	13
-
-> ~/pintos/src/tests/threads/priority-donate-multiple.c
-	*	1522240979	0
-	"	30	0
+> ~/pintos/src/tests/threads/priority-donate-sema.c
+	*	1522293300	0
+	"	77	0
 
 > ~/pintos/src/tests/threads/priority-donate-one.c
-	*	1522240284	0
-	"	35	2
+	*	1522292640	0
+	"	65	0
+	^	33	23
+	.	34	0
+	+	33	23
+	+	34	0
 
-> ~/pintos/src/tests/threads/priority-change.c
-	*	1522239683	0
-	"	19	2
+> ~/pintos/src/threads/synch.c
+	*	1522288688	0
+	"	250	52
+	^	250	53
+	.	250	53
+	+	76	5
+	+	76	4
+	+	76	9
+	+	78	0
+	+	76	5
+	+	141	25
+	+	138	32
+	+	141	22
+	+	141	25
+	+	88	63
+	+	251	34
+	+	88	5
+	+	141	5
+	+	141	0
+	+	252	34
+	+	88	5
+	+	89	0
+	+	142	17
+	+	146	0
+	+	78	0
+	+	135	16
+	+	136	0
+	+	142	28
+	+	143	0
+	+	127	0
+	+	145	17
+	+	144	19
+	+	68	22
+	+	72	0
+	+	81	8
+	+	84	15
+	+	87	36
+	+	87	37
+	+	88	0
+	+	87	36
+	+	69	32
+	+	70	27
+	+	77	35
+	+	78	34
+	+	79	0
+	+	80	50
+	+	77	39
+	+	83	41
+	+	87	21
+	+	141	5
+	+	141	7
+	+	139	62
+	+	140	29
+	+	138	27
+	+	140	64
+	+	138	0
+	+	141	0
+	+	140	50
+	+	137	39
+	+	138	0
+	+	230	74
+	+	232	0
+	+	293	0
+	+	293	2
+	+	289	7
+	+	292	29
+	+	291	0
+	+	296	20
+	+	288	52
+	+	297	0
+	+	290	20
+	+	297	3
+	+	294	14
+	+	303	46
+	+	310	0
+	+	303	58
+	+	299	4
+	+	303	70
+	+	300	45
+	+	302	0
+	+	310	0
+	+	309	0
+	+	314	0
+	+	313	5
+	+	314	1
+	+	315	2
+	+	230	73
+	+	288	53
+	+	300	19
+	+	303	60
+	+	230	46
+	+	288	23
+	+	295	0
+	+	294	27
+	+	295	0
+	+	315	2
+	+	316	0
+	+	250	64
+	+	230	29
+	+	231	0
+	+	74	35
+	+	77	0
+	+	78	0
+	+	250	53
+	n	384	2
 
-> ~/pintos/src/threads/init.c
-	*	1522239033	0
-	"	86	0
-	^	93	4
+> ~/pintos/src/threads/thread.c
+	*	1522288016	0
+	"	1	0
+	^	314	91
+	.	315	0
+	+	531	0
+	+	533	0
+	+	533	3
+	+	546	5
+	+	548	0
+	+	547	0
+	+	541	36
+	+	545	0
+	+	543	33
+	+	255	12
+	+	539	41
+	+	501	31
+	+	503	0
+	+	502	19
+	+	371	45
+	+	371	0
+	+	369	44
+	+	372	17
+	+	373	27
+	+	356	4
+	+	352	43
+	+	358	53
+	+	369	0
+	+	357	0
+	+	358	45
+	+	362	11
+	+	361	5
+	+	362	11
+	+	362	3
+	+	355	1
+	+	353	18
+	+	358	47
+	+	360	20
+	+	361	0
+	+	361	5
+	+	362	3
+	+	367	0
+	+	369	27
+	+	368	0
+	+	369	28
+	+	370	16
+	+	352	8
+	+	356	58
+	+	536	57
+	+	478	0
+	+	477	1
+	+	477	16
+	+	477	29
+	+	477	22
+	+	477	37
+	+	477	1
+	+	478	0
+	+	246	19
+	+	255	16
+	+	543	23
+	+	536	0
+	+	543	0
+	+	526	31
+	+	525	29
+	+	545	23
+	+	538	20
+	+	540	23
+	+	544	28
+	+	499	22
+	+	324	0
+	+	611	0
+	+	610	62
+	+	610	28
+	+	611	0
+	+	607	0
+	+	608	0
+	+	612	0
+	+	252	0
+	+	607	0
+	+	608	0
+	+	607	0
+	+	608	0
+	+	213	0
+	+	212	1
+	+	496	72
+	+	497	30
+	+	306	82
+	+	496	42
+	+	497	28
+	+	14	26
+	+	98	70
+	+	98	78
+	+	99	52
+	+	100	0
+	+	98	77
+	+	497	0
+	+	306	43
+	+	307	0
+	+	497	12
+	+	1	0
+	+	100	41
+	+	98	37
+	+	99	0
+	+	314	90
+	+	315	0
+	i	539	40
+	n	100	24
+
+> ~/pintos/src/lib/kernel/list.c
+	*	1522252968	0
+	"	169	0
+	^	72	0
+	.	1	0
+	+	128	0
+	+	1	0
 
 > ~/pintos/src/devices/timer.c
-	*	1522239024	0
-	"	189	2
-	^	95	0
-	.	97	3
+	*	1522250623	0
+	"	187	0
+	^	189	25
+	.	189	24
 	+	91	0
 	+	94	68
 	+	100	11
@@ -1162,7 +1206,7 @@ $
 	+	179	40
 	+	182	22
 	+	183	1
-	+	192	32
+	+	193	32
 	+	179	55
 	+	180	0
 	+	183	0
@@ -1188,17 +1232,100 @@ $
 	+	97	4
 	+	103	5
 	+	97	40
-	+	190	0
-	+	189	39
-	+	194	0
-	+	190	2
-	+	195	27
-	+	189	6
+	+	191	0
+	+	190	39
+	+	195	0
+	+	191	2
+	+	196	27
+	+	190	6
 	+	98	2
 	+	97	35
 	+	97	3
 	+	103	4
 	+	97	3
+	+	181	32
+	+	182	22
+	+	183	0
+	+	181	32
+	+	196	28
+	+	189	24
+
+> ~/pintos/src/threads/interrupt.c
+	*	1522250142	0
+	"	222	0
+
+> ~/pintos/src/threads/synch.h
+	*	1522249980	0
+	"	1	0
+	^	25	70
+	.	25	69
+	+	23	74
+	+	25	69
+
+> ~/pintos/src/tests/userprog/exec-multiple
+	*	1522249177	0
+	"	1	0
+
+> ~/pintos/src/tests/threads/priority-donate-o
+	*	1522247325	0
+	"	1	0
+
+> ~/pintos/src/threads/init.c
+	*	1522247313	0
+	"	78	0
+	^	93	4
+
+> ~/pintos/src/Makefile.kernel
+	*	1522247105	0
+	"	3	0
+
+> ~/pintos/src/Make.config
+	*	1522247092	0
+	"	63	0
+	^	43	24
+	.	43	24
+	+	43	24
+
+> ~/pintos/src/Maek.config
+	*	1522247060	0
+	"	1	0
+
+> ~/pintos/src/threads/Makefile
+	*	1522247052	0
+	"	1	0
+
+> ~/pintos/src/threads/thread.h
+	*	1522246875	0
+	"	96	15
+	^	96	16
+	.	96	16
+	+	92	63
+	+	94	79
+	+	14	52
+	+	14	51
+	+	95	0
+	+	94	79
+	+	95	61
+	+	97	15
+	+	98	0
+	+	97	13
+	+	96	16
+
+> ~/pintos/src/threads/palloc.c
+	*	1522246625	0
+	"	81	2
+
+> ~/pintos/src/threads/palloc.h
+	*	1522246599	0
+	"	1	0
+
+> ~/pintos/src/tests/threads/priority-donate-multiple.c
+	*	1522240979	0
+	"	30	0
+
+> ~/pintos/src/tests/threads/priority-change.c
+	*	1522239683	0
+	"	19	2
 
 > ~/pintos/src/threads/timer.c
 	*	1522235901	0
@@ -1207,10 +1334,6 @@ $
 > ~/pintos/src/lib/kernel/console.c
 	*	1522235880	0
 	"	100	0
-
-> ~/pintos/src/threads/synch.h
-	*	1522235334	0
-	"	17	5
 
 > ~/pintos/src/lib/stdio.c
 	*	1522233867	0
@@ -1224,20 +1347,9 @@ $
 	*	1522233611	0
 	"	1	0
 
-> ~/pintos/src/threads/palloc.c
-	*	1522233549	0
-	"	167	2
-
 > ~/pintos/src/threads/pallo.c
 	*	1522233430	0
 	"	1	0
-
-> ~/pintos/src/Make.config
-	*	1522219131	0
-	"	43	23
-	^	43	24
-	.	43	24
-	+	43	24
 
 > ~/pintos/src/thread.c
 	*	1522218821	0
@@ -1253,14 +1365,6 @@ $
 > ~/pintos/src/Makefile.build
 	*	1522217329	0
 	"	109	0
-
-> ~/pintos/src/lib/kernel/list.c
-	*	1522215142	0
-	"	227	0
-	^	1	3
-	.	1	0
-	+	128	0
-	+	1	0
 
 > ~/pintos/src/threads/switch.S
 	*	1522206958	0
@@ -1289,10 +1393,6 @@ $
 > ~/pintos/src/threads/build/thread.c
 	*	1522146193	0
 	"	1	0
-
-> ~/pintos/src/threads/interrupt.c
-	*	1522144166	0
-	"	213	0
 
 > ~/pintos/src/threads/synch.
 	*	1522143644	0

@@ -11,6 +11,7 @@
 #include "threads/switch.h"
 #include "threads/synch.h"
 #include "threads/vaddr.h"
+#include "threads/malloc.h"
 #ifdef USERPROG
 #include "userprog/process.h"
 #endif
@@ -493,6 +494,7 @@ init_thread (struct thread *t, const char *name, int priority)
   t->original_prior = priority;
   t->locked = false;
   t->time_to_wake = -1;
+  list_init(&t->acquired_locks);
   list_push_back (&all_list, &t->allelem);
 }
 
