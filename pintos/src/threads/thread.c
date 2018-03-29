@@ -529,15 +529,8 @@ next_thread_to_run (void)
   }
   else{
 
-    for(e = list_begin(&ready_list); e != list_end(&ready_list); e = list_next(e)){
-          
-      struct thread *temp = list_entry(e, struct thread, elem);
-      if(temp->priority > max_prior){
-        thread_to_run = temp;
-        max_prior = temp->priority;
-        elem_to_run = e;
-      }
-    }
+    elem_to_run = linear_search(&ready_list);
+    thread_to_run = list_entry(elem_to_run, struct thread, elem);     
 
     list_remove(elem_to_run);
     return thread_to_run;

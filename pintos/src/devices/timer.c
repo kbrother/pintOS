@@ -178,20 +178,26 @@ timer_print_stats (void)
 /* wake up the thread*/
 static void match_tick (struct thread *t, void *aux){
   
-  if(ticks == t -> time_to_wake)
+  if(ticks == t -> time_to_wake){
+    *(bool *)aux = true;
     thread_unblock(t);
+  }
 }
 
 /* Timer interrupt handler. */
 static void
 timer_interrupt (struct intr_frame *args UNUSED)
 {
-  intr_yield_on_return();
   enum intr_level old_level = intr_disable();
   
   ticks++;
-  thread_foreach(&match_tick, 0);
+  bool yield_on_return = false;
+
+  thread_foreach(&match_tick, &yield_on_return);
   thread_tick ();
+
+  if(yield_on_return)
+    intr_yield_on_return();
 
   intr_set_level(old_level);
 }

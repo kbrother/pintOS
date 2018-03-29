@@ -65,26 +65,10 @@ sema_down (struct semaphore *sema)
   ASSERT (sema != NULL);
   ASSERT (!intr_context ());
 
-  struct list_elem *e;
-  struct thread *current_thread;
-  struct list *sema_waiters;
   old_level = intr_disable ();
-
-  sema_waiters = &sema->waiters;
-  current_thread = thread_current();
   while (sema->value == 0) 
     {
-
-      e = list_head(sema_waiters);
-
-      while((e = list_next(e)) != list_end(sema_waiters)){
-        
-        struct thread *temp = list_entry(e, struct thread, elem);
-        if(temp->priority < current_thread->priority)
-          break;
-      }
-
-      list_insert(e, &current_thread->elem);
+      list_push_back(&sema->waiters, &thread_current()->elem);
       thread_block ();
     }
 
@@ -118,6 +102,23 @@ sema_try_down (struct semaphore *sema)
   return success;
 }
 
+struct list_elem* linear_search(struct list *sema_waiters){
+  
+  struct list_elem *e;
+  int max_prior = -1;
+  struct list_elem *selected_e;
+
+  for(e = list_begin(sema_waiters); e != list_end(sema_waiters); e = list_next(e)){
+    
+    struct thread *temp = list_entry(e, struct thread, elem);
+    if(temp->priority > max_prior){
+      max_prior = temp->priority;
+      selected_e = e;
+    }
+  }
+
+  return selected_e;
+}
 /* Up or "V" operation on a semaphore.  Increments SEMA's value
    and wakes up one thread of those waiting for SEMA, if any.
 
@@ -136,7 +137,7 @@ sema_up (struct semaphore *sema)
 
   if (!list_empty (sema_waiters)){ 
 
-    struct list_elem *elem_to_up = list_pop_front(sema_waiters);
+    struct list_elem *elem_to_up = linear_search(sema_waiters);
     struct thread *up_candi = list_entry(elem_to_up, struct thread, elem);
   
     list_remove(elem_to_up);
@@ -234,12 +235,16 @@ lock_acquire (struct lock *lock)
     temp_thread->locked = true;
   }
 
-  while(temp_thread->locked == true){
+  while(temp_thread->locked){
     
     if(temp_lock->holder->priority < temp_thread->priority){
       temp_lock->holder->priority = temp_thread->priority; 
       temp_thread = temp_lock->holder;
       temp_lock = temp_thread->lock_to_acquire;
+
+      if(temp_thread->locked){
+        
+      }      
     }
     else
       break;
@@ -300,7 +305,7 @@ lock_release (struct lock *lock)
     if(list_empty(&temp->semaphore.waiters))
       continue;
     
-    struct list_elem *thread_e = list_begin(&temp->semaphore.waiters);
+    struct list_elem *thread_e = linear_search(&temp->semaphore.waiters);
     struct thread *thread_temp = list_entry(thread_e, struct thread, elem);
 
     if(max_prior < thread_temp->priority)
