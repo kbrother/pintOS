@@ -241,10 +241,6 @@ lock_acquire (struct lock *lock)
       temp_lock->holder->priority = temp_thread->priority; 
       temp_thread = temp_lock->holder;
       temp_lock = temp_thread->lock_to_acquire;
-
-      if(temp_thread->locked){
-        
-      }      
     }
     else
       break;
@@ -403,12 +399,21 @@ cond_signal (struct condition *cond, struct lock *lock UNUSED)
   ASSERT (lock != NULL);
   ASSERT (!intr_context ());
   ASSERT (lock_held_by_current_thread (lock));
-
-  if (!list_empty (&cond->waiters)) 
+  if (!list_empty (&cond->waiters)){
+    list_sort(&cond->waiters, cond_comparator, NULL);
     sema_up (&list_entry (list_pop_front (&cond->waiters),
                           struct semaphore_elem, elem)->semaphore);
+  }
 }
 
+bool
+cond_comparator (struct list_elem *x, struct list_elem *y, void *aux){
+  struct semaphore_elem *a = list_entry (x, struct semaphore_elem, elem);
+  struct semaphore_elem *b = list_entry (y, struct semaphore_elem, elem);
+  struct thread *c = list_entry (list_front(&a->semaphore.waiters), struct thread, elem);
+  struct thread *d = list_entry (list_front(&b->semaphore.waiters), struct thread, elem);
+  return c->priority > d->priority;
+}
 /* Wakes up all threads, if any, waiting on COND (protected by
    LOCK).  LOCK must be held before calling this function.
 

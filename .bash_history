@@ -1,517 +1,3 @@
-ls
-passwd
-ls
-pwd
-cp /shared/pintos . -r
-ls
-pwd
-ls
-cd pintos/src/threads
-ls
-make
-ls
-../utils/pintos run alarm-multiple
-ls
-cd pintos/
-ls
-vim .cshrc
-ls
-cd ..
-vim ./cshrc
-ls
-cd pintos/
-ls
-cd src/
-ls
-clear
-ls
-cd threads/
-ls
-cd ..
-ls
-cd lib/
-ls
-cd kernel/
-ls
-vim hash.c
-ls
-vim hash.h
-vim hash.c
-cd ..
-c d..
-ls
-cd ../
-cd ...
-cd ..
-ls
-cd src
-ls
-cd threads/
-make
-ls
-cd build/
-ls
-cd ..
-clear
-ls
-cd build/
-ls
-cat Makefile 
-clear
-ls
-cd devices/
-;s
-ls
-cd ..
-ls
-cd buil
-cd b
-ls
-cd threads/
-cd b
-cd build/
-ls
-clear
-pintos run alarm-multiple
-cd ..
-ls
-cd ..
-ls
-cd threads/
-make clean
-make 
-clear
-make all
-cd thread.
-cd build/
-ls
-pintos
-cd threads
-ls
-cd ..
-pintos
-pintos run alarm-multiple
-cd ,,
-cd ..
-ls
-cd ..
-ls
-cd threads/
-ls
-cd build/
-ls
-cd lib/
-ls
-cd ..
-cd threads/
-ls
-cd ..
-cd tests/
-ls
-clear
-cd threads/
-ls
-cd ..
-pintos 
-pintos run alarm-multiple
-make clean
-ls
-make 
-cd build/
-ls
-clear
-vim ~/.bashrc
-clear
-cd ..
-vim ~/.bashrc
-source ~/.bashrc
-make clean
-make
-cd build/
-ls
-clear
-pintoscd ..
-cd ..
-ls
-cd src/
-ls
-cd ..
-vim ~/.bashrc
-clear
-ls
-source ~/.bashrc
-clear
-ls
-cd src/
-ls
-cd threads/
-ls
-cd build/
-ls
-pintos
-clear
-pintos alarm-multiple
-clear
-pintos run alarm-multiple
-clear
-vim ~/.bashrc
-clear
-ls
-cat bochsrc.txt 
-clear
-pintos run alarm-multiple
-clear
-pintos run alarm-multiple
-pintos run alarm-multiple > logfile
-ls
-cat logfile 
-rm logfile 
-clear
-pintos -j 1 -- run alarm-multiple > logfile
-pintos -j 1 -- run alarm-multiple
-pintos -j 1 2 -- run alarm-multiple
-clear
-make check
-make SIMULAOTR==--bochs
-make 'SIMULATOR=--bochs'
-make clean
-clear
-CD ..
-c ..
-cd ..
-ls
-cd build/
-ls
-cd tests
-ls
-cd threads/
-ls
-cd .. 
-cd ..
-make check
-clear
-make clean
-clear
-make
-clear
-ls
-cd tests/
-ls
-cd threads/
-ls
-cd ..
-make tests/threads/alarm-multiple.result
-ls
-cd tests
-ls
-cd threads/
-ls
-cat alarm-multiple.output
-clear
-ls
-cat alarm-multiple.result 
-clear
-cd pintos/src/
-ls
-make cscope
-cscope
-cd threads/
-ls
-cd pintos
-ls
-cd src
-ls
-cd tests
-ls
-cd threads
-ls
-vi grading
-ls
-vi Grading
-vi Make.tests
-vi Grading
-vi Make.tests
-make grade
-cd .
-cd ..
-ls
-cd threads
-make grade
-cd /pintos/src/devices
-cd /pintos/src/devices/
-ls
-cd ..
-ls
-cd src
-ls
-cd devices
-ls
-vi shutdown.c
-cd ..
-ls
-cd tests/
-ls
-cd threads/
-ls
-cd ..
-ls
-cd threads
-ls
-make
-make clean
-make grade
-make check
-ls
-make grade > result
-ls
-vi result
-make
-cd build
-ls
-cd ..
-make clean
-make
-ls
-vi build
-cd build
-ls
-cd ..
-ls
-vim ~/.bashrc
-cd ../../..
-ls
-cd ..
-ls
-cd team22a
-cd ..
-cd team22b
-ls
-cd ..
-ls
-cd team22a
-ls
-vim ~/.bashrc
-source ~/.bashrc
-clear
-ls
-cd pintos/src/threads/
-make grade
-ls
-vi build
-cd build
-ls
-vi grade
-cd ..
-cd test
-cd tests
-ls
-cd threads
-ls
-vi Grading
-vi Make.tests
-cd ..
-cd threads
-make clean
-make grade > result
-vi result
-make test
-ls
-cd ..
-cd team22b
-ls
-cd ..
-cd team22a
-ls
-cp pintos ../tema22b
-ls
-cp -a pintos/ ../team22b
-clear
-ls
-cd pintos/src/threads/
-vim thread.c
-vim synch.h
-vim synch.c
-ls
-cd ..
-cd devices/timer.c 
-vim devices/timer.
-vim devices/timer.c
-vim devices/timer.h
-vim threads/synch.c
-vim threads/synch.h
-ls
-cd pintos
-;s
-ls
-cd src
-ls
-cd threads
-ls
-cd ..
-cd devices
-ls
-vi timer.c
-ks
-cd ..
-cd threads/
-ls
-vim thread.c
-clear
-ls
-vim thread.h
-clear
-cd ../devices/timer.
-cd ../devices/
-ks
-vim timer.c
-cd ../threads/thread.c
-cd ../threads/
-vim thread.h
-vim ../devices/timer.c
-vim thread.h
-vim ../devices/timer.c
-vim thread.c
-vim thread.h
-vim thread.c 
-exit
-tmux list
-tmux ls
-exit
-tmux ls
-tmux attach -t gd
-exit
-tmux
-c;lear
-clear
-Ctrl-b 
-cd /usr
-cd share/
-cd doc/
-ls
-cd tmux-next/
-ls
-cd /team22a
-cd /usr
-ls
-cd bin/
-ls
-cd ..
-ls
-cd src/
-ls
-cd ..
-ls
-cd home/
-ls
-clear
-cd team22a
-ls
-vim ~/.tmux.conf
-ls
-exit
-ls
-exit
-exitr
-exit
-clear
-vim tmux.conf
-vim ~/tmux.conf
-ls
-clear
-tmux ls
-tmux kill-session -t "1"
-tmux ls
-tmux kill-session -t "4"
-vim ~/.tmux.change.conf 
-tmux source-file ~/.tmux.change.conf 
-tmux
-xit
-exit
-eixt
-exit
-tmux ls
-tmux kill-session -t "2"
-tmux kill-session -t "4"
-cd
-vim ~/.tmux.currnt.conf
-ls -al
-vim .tmux.change.conf
-tmux
-ls
-tmux ls
-ls -al
-exit
-tmux show -g | sed 's/^/set-option -g /' > ~/.tmux.current.conf
-ls
-cd pintos/src/devices/
-vim timer.c
-ls
-clear
-cd ../threads/thread.h
-vim ../threads/thread.h
-vim timer.c
-vim ../threads/thread.c
-vim timer.c
-vim ../threads/thread.c
-vim timer.c
-vim ../threads/thread.c
-vim ../threads/synch.c
-vim timer.c
-tmux
-tmux source-file ~/.tmux.current.conf
-tmux source-file ~/.tmux.current.conf 
-tmux source-file ~/.tmux.change.conf 
-tmux
-exit
-tmux show -g | sed 's/^/set-option -g /' > ~/.tmux.current.conf
-vim ~/.tmux.current.conf 
-exit
-tmux
-tmux list
-tmux
-tmux ls
-tmux new -s gd
-tmux ls
-tmux new -s gd
-clea
-clear
-tmux ls
-tmux kill-session -t "gd"
-tmux
-tmux show -g | sed 's/^/set-option -g /' > ~/.tmux.current.conf
-ls
-vim ~/.tmux.current.conf 
-tmux
-vim ~/.tmux.change.conf 
-vim ~/.tmux.current.conf 
-tmux source-file ~/.tmux.change.conf 
-tmux
-vim ~/.tmux.change.conf
-tmux source-file ~/.tmux.change.conf 
-tmux
-tmux new -s "1"
-clea
-clear
-tmux
-clear
-vim ~/.tmux.conf
-tmux
-clear
-ls
-clear
-ls
-cd pintos/src/threads/
-vim thread.h 
-vim thread.c
-cd ../devices/
-vim timer.c
-vim timer.h 
-vim timer.c
-vim timer.h 
-vim timer.c
-vim timer.
-vim timer.c
-vim ../threads/thread.h
 vim timer.c
 cd ../..
 ls
@@ -1736,3 +1222,779 @@ clear
 pintos-gdb kernel.o
 clear
 pintos-gdb kernel.o
+cd pintos/src/threads/b
+cd pintos/src/threads/build/
+pintos-gdb kernel.o
+clear
+pintos-gdb kernel.o
+clear
+pintos-gdb kernel.o
+cd pintos/src/kernel
+cd pintos/src/lib/kernel/
+vim list.c
+cd ..
+cd threads/
+ls
+clear
+make
+pintos -v -k -T 60 --bochs  -- -q  run priority-fifo 
+pintos -v --gdb -- -q run priority-donate-fifo
+clear
+pintos -v --gdb -- -q run priority-fifo
+clear
+pintos -v -k -T 60 --bochs  -- -q  run priority-fifo 
+pintos -v --gdb -- -q run priority-fifo
+pintos -v -k -T 60 --bochs  -- -q  run priority-condvar 
+pintos -v --gdb -- -q run priority-condvar
+cd pintos/src/tests/threads/
+vim priority-donate-one.c
+vim priority-donate-sema.c
+cd ../../
+cd threads/
+ls
+clar
+clear
+vim thread.c
+make
+make check
+clear
+pintos -v -k -T 60 --bochs  -- -q  run priority-fifo 
+vim thread.c
+vim ../devices/timer.c
+make
+make check
+cd ..
+git add .
+git remote -m "monitor left"
+git status
+git remote -m "monitor left"
+clear
+git commit -m "monitor left"
+git push origin master
+cd pintos/src
+ls
+cd tests
+ls
+cd threads
+ls
+vim priority-condvar.c
+cd ../..
+cd threads
+vim synch.c
+vim synch.h
+ls
+cd ..
+ls
+cd devices
+ls
+cd ..
+cd lib/kernel/
+ls
+vim list.c
+cd ../..
+cd threads
+vim thread.c
+cd ..
+cd lib/kernel
+vim list.c
+exit
+cd pintos/src/threads/
+pintos -v --gdb -- -q run priority-donate-one
+ls
+cd ../
+cd tests/threads/
+clear
+vim priority-donate-sema.c
+cd .
+cd ..
+cd threads/
+pintos -v --gdb -- -q run priority-donate-sema
+cd ../../
+dc ..
+cd ..
+git add .
+git status
+git commit -m "error reason :waiters priority may change "
+git push origin master
+clear
+sl
+ls
+cd pintos/src/tests/threads/
+ls
+vim priority-donate-sema.c
+;s
+vim priority-fifo.c
+vim priority-condvar.c
+vim synch.c
+ls
+vim priority-condvar.c
+cd ../..
+cd threads
+ls
+vim synch.h
+cd ..
+ls
+cd tests
+ls
+cd threads
+ls
+vim priority-condvar.c
+exit
+cd pintos/src/threads/
+make check
+make clean
+clear
+make check
+clear
+vim thread.c
+vim synch.c
+make
+make check
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-sema
+ls
+vim synch.c
+make
+vim synch.c
+make
+clear
+make
+vim synch.c
+make
+vim synch.c
+make
+make check
+clear
+vim synch.c
+make
+make check
+clear
+vim synch.c
+make
+make check
+vim synch.c
+make
+clear
+make
+vim synch.c
+make
+mclear
+vim synch.c
+make
+clear
+make check
+pintos -v -k -T 60 --bochs  -- -q  run priority-fifo 
+vim thread.c
+make
+vim thread.c
+vim synch.c
+vim synch.h
+vim synch.c
+vim thread.c
+make
+clear
+make check
+clear
+vim synch.c
+vim thread.c
+pintos -v -k -T 60 --bochs  -- -q  run alarm-single
+backtrace Call stack: 0xc002a6d8 0xc002154e 0xc0020f90 0xc0020c69 0xc0020a6d 0xc0020223.
+clear
+vim synch.c
+clear
+ls
+vim interrupt.c
+vim thread.c
+vim synch.h
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+vim synch.h
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+vim synch.c
+make check
+make grade
+cd ..
+cscope
+cd threads/
+make
+make check
+clear
+cd ..
+vim Make.config 
+make
+make clean
+cd threads/
+make grade
+cd ..
+tar –czvf [team number].tar.gz src document
+ls
+cd ..
+ls
+tar –czvf tema22.tar.gz src Project_1_Document_Template.docx 
+tar --czvf tema22.tar.gz src Project_1_Document_Template.docx 
+tar -czvf tema22.tar.gz src Project_1_Document_Template.docx 
+lsw
+ls
+cd ..
+clear
+ls
+cd pintos/src
+ls
+cd threads
+ls
+vim synch.c
+cd pintos/src/threads/
+vim thread.c
+vim synch.c
+vim thread.h
+vim sema.h
+vim synch.h
+vim thread.h
+vim synch.
+vim synch.h
+vim synch.c
+vim synch.h
+vim thread.c
+make
+vim thread.h
+make
+clear
+vim thread.c
+vim thread.h
+make
+vim synch.h
+vim thread.h
+vim synch.h
+vim thread.h
+clear
+make
+vim thread.h
+vim synch.c
+vim synch.h
+vim thread.h
+make
+clear
+make clean
+make
+vim thread.c
+make
+clear
+make
+vim thread.h
+clear
+make
+vim thread.h
+vim synch.h
+vim thread.h
+vim synch.h
+make clean
+clear
+make
+ls
+vim thread.h
+vim thread.c
+make
+ls
+clear
+vim synch.h
+vim thread.h
+vim thread.c
+vim thread.h
+make
+vim synch.c
+make
+clear
+make check
+ls
+clear
+cd pintos/
+ls
+cd src/
+ls
+clear
+ls
+cd devices/
+vim timer.c
+cd pintos/src/threads/
+vim vim synch.c
+vim synch.c
+make
+vim synch.c
+make
+clear
+cd pintos/src/threads/
+vim synch.h
+vim synch.c
+cd pintos/src/userprog/build/
+pintos-mkdisk filesys.dsk --filesys-size=2
+ls
+pintos -f -q
+pintos -p ../../examples/echo -a echo -- -q
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+make
+cd ..
+make
+cd build
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd ../..
+ls
+make
+make all
+cd examples/
+make
+cd ..
+cd tests/userprog/
+make
+cd ..
+make
+cd ..
+cd userprog/
+ls
+cd build/
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd ..
+make check
+clear
+make clean
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd ..
+cd tests/
+make
+cd ..
+cd userprog/
+ls
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd ..
+ls
+make clean
+make check
+cd build/
+ls
+cd ..
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+clear
+ls
+cd pintos/src/userprog/
+ls
+vim process.c
+cd build
+make
+clear
+cd build/
+ls
+clear
+cd ~/examples
+clear
+cd ../
+;s
+cd ..
+;s
+cd tests/
+ls
+cd userprog/
+ls
+clear
+cd ../..
+ls
+cd examples/
+ls
+clear
+cd ..
+cd userprog/build/
+ls
+A system crash mid-operation may corrupt the disk in a way that cannot be repaired
+pintos-mkdisk filesys.dsk --filesys-size=2
+ls
+pintos-mkdisk filesys.dsk --filesys-size=2
+pintos -p ../../examples/echo -a echo -- -f -q run ’echo x’
+pintos -q rm echo
+pintos -q cat echo
+clear
+pintos -q rm echo
+clear
+ls
+pintos -f -q
+clear
+pintos -p ../../examples/echo -a echo -- -q
+ls
+rm filesys.dsk 
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run 'echo x'
+cd ../../..
+ls
+cd src/utils/pintos
+cd ..
+ls
+cd pintos/
+ls
+cd src/utils/
+vim pintos
+cp pintos pintos_origin
+ls
+vim pintos
+cd ..
+cd src/userprog/
+make
+cd build/
+ls
+pintos -p ../../examples/echo -a echo -- -q
+cd ..
+make clean
+make
+ls
+clear
+ls
+cd build/
+pintos-mkdisk filesys.dsk --filesys-size=2
+pintos -f -q
+pintos -p ../../examples/echo -a echo -- -q
+cd ..
+cd utils/
+ls
+make
+cd ..
+cd userprog/build/
+ls
+pintos -p ../../examples/echo -a echo -- -q
+cd ..
+make clean
+make
+clear
+pintos-mkdisk filesys.dsk --filesys-size=2
+pintos -f -q
+ls
+rm filesys.dsk 
+clear
+ls
+cd build/
+ls
+pintos-mkdisk filesys.dsk --filesys-size=2
+pintos -f -q
+pintos -p ../../examples/echo -a echo -- -q
+pintos -q run ’echo x’
+cd ..
+cd utils/
+ls
+cp pintos_origin pintos
+ls
+vim pintos
+make
+cd ..
+cd utils/
+make clean
+make
+cd ..
+ake
+make
+cd userprog/
+ls
+make
+make clean
+make all
+cd build/
+clear
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+ls
+cd ..
+cd examples/
+ls
+cd ..
+cd userprog/
+ls
+make check
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+clear
+make check
+clear
+make clean
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none.c -a args-none -- -q  -f run args-none
+ls
+cd ..
+cd tests/
+ls
+cd userprog/
+ls
+cd ..
+cd userprog/
+ls
+cd build/
+ls
+clear
+ls
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none.ck -a args-none -- -q  -f run args-none
+clear
+ls
+cd ..
+cd..
+cd ..
+ls
+cd tests/userprog/
+make
+cd ..
+make
+cd ..
+make clean
+make all
+cd userprog/
+ls
+make
+clear
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none 
+cd build/
+ls
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run 'echo x'
+cd ..
+cd examples/
+make
+cd ..
+cd userprog/
+ls
+cd build/
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+pintos --filesys-size=2 -p ../../examples/arg-none -a arg-none -- -f -q run 'echo x'
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd ..
+cd threads/
+vim thread.h
+vim thread.c
+cd pintos/src/threads/
+vim thread.c
+cd pintos/src/examples/
+cd ..
+cd userprog/
+ls
+vim exception.c
+vim exception.h
+vim exception.c
+cscope
+cd ..
+cscope
+cd pintos/src/threads/
+ls
+cd ..
+lks
+ls
+cd tests/
+ls
+clear
+cd ..
+cd userprog/
+vim syscall.c
+ls
+vim process.h
+cd ..
+cd threads/
+ls
+vim interrupt.c
+vim interrupt.h
+vim interrupt.c
+cd ..
+cd src/lib/user/
+vim entry.c 
+cd ..
+cd tests/userprog/
+ls
+vim args-many.ck 
+vim bad-write.c
+vim multi-child-fd.c
+cd ..
+cd threads/
+ls
+vim init.c
+cd ..
+cscope
+clear
+cd userprog/
+ls
+vim syscall.c
+cd ..
+cd src/lib/user
+vim syscall.h
+cd ..
+cd userprog/
+ls
+vim syscall.c
+cd ..
+cd lib/user/
+ls
+vim syscall.c
+cd ..
+cd threads/
+vim init.c
+cd ..
+cd userprog/
+ls
+cd ..
+cd  threads/
+vim thread.c
+cd ..
+cscope
+cd tests/
+ls
+cd user
+cd userprog/
+ls
+vim exec-arg.c
+vim child-simple.c 
+vim child-rox.c 
+vim child-simple.c 
+vim args.c
+vim child-args.c
+vim exec-arg.c
+ls
+vim exec-arg.c
+cd ..
+cd threads/
+vim init.c
+cd ..
+cscope runactions
+cscope
+cd threads/
+vim init.c
+cd ..
+cscope
+cd tests/userprog/
+ls
+vim exec-arg.c
+cd ..
+cscope
+cd ..
+cscope
+cd src/
+ls
+cd userprog/
+ls
+vim process.c
+cd pintos/src/userprog/
+vim process.c
+ls
+cd ..
+cd threads/
+ls
+vim palloc.c
+vim palloc.h
+cd ..
+clear
+cd userprog/
+vim process.c
+cd ..
+cd threads/
+ls
+vim thread.h
+vim thread.c
+cd synch.h
+vim synch.h
+cd synch.c
+vim synch.c
+vim synch.h
+make check
+vim thread.c
+vim synch.c
+make check
+vim thread.c
+vim synch.c
+vim thread.c
+cd ..
+cd tests/
+ls
+cd userprog/
+ls
+cd ..
+cd threads/
+ls
+vim priority-donate-nest.c
+cd ..
+ls
+clear
+cd threads/
+ls
+cd ..
+cd threads/
+vim thread.c
+vim thread.h
+ls
+vim synch.c
+make check
+make clean
+make check
+cd ..
+cd tests/threads/
+ls
+vim priority-donate-nest.c
+clear
+cd ..
+cd threads/
+vim thread.c
+make
+vim thread.h
+vim thread.c
+make
+make check
+vim thread.c
+make
+clear
+vim thread.h
+vim thread.c
+cd pintos/src/tests/threads/
+vim priority-donate-nest.c
+cd pintos/src/threads/
+make check
+clear
