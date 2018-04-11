@@ -17,6 +17,7 @@
 #include "threads/palloc.h"
 #include "threads/thread.h"
 #include "threads/vaddr.h"
+#include "threads/malloc.h"
 
 static thread_func start_process NO_RETURN;
 static bool load (const char *cmdline, void (**eip) (void), void **esp);
@@ -59,6 +60,8 @@ start_process (void *file_name_)
   if_.gs = if_.fs = if_.es = if_.ds = if_.ss = SEL_UDSEG;
   if_.cs = SEL_UCSEG;
   if_.eflags = FLAG_IF | FLAG_MBS;
+ 
+  //String을 parse해준다.
   success = load (file_name, &if_.eip, &if_.esp);
 
   /* If load failed, quit. */
@@ -195,7 +198,7 @@ struct Elf32_Phdr
 #define PF_W 2          /* Writable. */
 #define PF_R 4          /* Readable. */
 
-static bool setup_stack (void **esp);
+static bool setup_stack (void **esp, const char *file_name_);
 static bool validate_segment (const struct Elf32_Phdr *, struct file *);
 static bool load_segment (struct file *file, off_t ofs, uint8_t *upage,
                           uint32_t read_bytes, uint32_t zero_bytes,
@@ -213,7 +216,8 @@ load (const char *file_name, void (**eip) (void), void **esp)
   struct file *file = NULL;
   off_t file_ofs;
   bool success = false;
-  int i;
+  int i, file_name_size;
+  char *first_space, *file_name_only;
 
   /* Allocate and activate page directory. */
   t->pagedir = pagedir_create ();
@@ -222,10 +226,19 @@ load (const char *file_name, void (**eip) (void), void **esp)
   process_activate ();
 
   /* Open executable file. */
-  file = filesys_open (file_name);
+  first_space = strchr (file_name, ' ');
+
+  if(first_space == NULL)
+    file_name_size = strlen(file_name);
+  else
+    file_name_size = (int)(first_space - file_name);
+
+  file_name_only = malloc (file_name_size + 1);
+  strlcpy (file_name_only, file_name, file_name_size + 1);
+  file = filesys_open (file_name_only);
   if (file == NULL) 
     {
-      printf ("load: %s: open failed\n", file_name);
+      printf ("load: %s: open failed\n", file_name_only);
       goto done; 
     }
 
@@ -238,7 +251,7 @@ load (const char *file_name, void (**eip) (void), void **esp)
       || ehdr.e_phentsize != sizeof (struct Elf32_Phdr)
       || ehdr.e_phnum > 1024) 
     {
-      printf ("load: %s: error loading executable\n", file_name);
+      printf ("load: %s: error loading executable\n", file_name_only);
       goto done; 
     }
 
@@ -302,7 +315,7 @@ load (const char *file_name, void (**eip) (void), void **esp)
     }
 
   /* Set up stack. */
-  if (!setup_stack (esp))
+  if (!setup_stack (esp, file_name))
     goto done;
 
   /* Start address. */
@@ -427,21 +440,78 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
 /* Create a minimal stack by mapping a zeroed page at the top of
    user virtual memory. */
 static bool
-setup_stack (void **esp) 
+setup_stack (void **esp, const char *file_name_) 
 {
+
   uint8_t *kpage;
   bool success = false;
-
+  int fname_size = strlen(file_name_), arg_c;
+  char *file_name = malloc(fname_size + 1);
+  
   kpage = palloc_get_page (PAL_USER | PAL_ZERO);
   if (kpage != NULL) 
     {
       success = install_page (((uint8_t *) PHYS_BASE) - PGSIZE, kpage, true);
-      if (success)
+      if (success){
+        
+        char *token, *save_ptr;
+        int index = 0, i;
         *esp = PHYS_BASE;
+        memcpy (file_name, file_name_, fname_size + 1);        
+
+        // get argc 
+        for(token = strtok_r (file_name, " ", &save_ptr); token != NULL;
+            token = strtok_r (NULL, " ", &save_ptr))
+          index++;
+      
+        arg_c = index;
+        char *arg_v[arg_c];
+        index = 0;
+        memcpy (file_name, file_name_, fname_size + 1);
+        
+        // push arguments and fill in the argv 
+        for(token = strtok_r (file_name, " ", &save_ptr); token != NULL;
+            token = strtok_r (NULL, " ", &save_ptr)){
+           
+          int token_size = strlen (token);
+          *esp = (char *)*esp - token_size - 1;
+          memcpy (*esp, token, token_size + 1); 
+          arg_v[index] = *esp;
+          index ++;
+
+        }
+
+        // word-align 
+        *esp = (void *)((unsigned long)*esp >> 2 << 2);
+
+        // argv[argc] = null 
+        *esp = (char *)*esp - 4;
+
+        // push argv element 
+        for(i = arg_c-1; i >=0; i--){
+          *esp = (char *)*esp - 4;
+          **(char ***)esp = arg_v[i]; 
+        }
+  
+        // push argv 
+        *esp = (char *)*esp - 4;
+        **(char ***)esp =(char *)*esp + 4; 
+
+        // push argc 
+        *esp = (char *)*esp - 4;
+        **(int **)esp = arg_c;
+
+        // push return address 
+        *esp = (char *)*esp - 4;  
+      }
       else
         palloc_free_page (kpage);
     }
-  return success;
+
+  hex_dump ((int)*esp, *esp, (0xc0000000-(uintptr_t)*esp), true); 
+  free(file_name);
+
+  return success; 
 }
 
 /* Adds a mapping from user virtual address UPAGE to kernel

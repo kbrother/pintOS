@@ -1,623 +1,3 @@
-vim timer.c
-cd ../..
-ls
-cd ..
-cd pintos/src/devices/
-vim timer.c
-cd /threads
-ls
-cd ../threads/
-make
-make check
-clear
-make check
-backtrace kernel.o  0xc00282f0 0xc0020d45 0xc0023a56 0xc002a28d 0xc0021035
-backtrace kernel.o 0xc00282f0 0xc0020d45 0xc0023a56 0xc002a28d 0xc0021035
-clear
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-backtrace kernel.lds.S Call stack: 0xc00282f0 0xc0020d45 0xc0023a56 0xc002a28d 0xc0021035.
-backtrace kernel.o Call stack: 0xc00282f0 0xc0020d45 0xc0023a56 0xc002a28d 0xc0021035.
-backtrace Call stack: 0xc00282f0 0xc0020d45 0xc0023a56 0xc002a28d 0xc0021035.
-clear
-backtrace Call stack: 0xc00282f0 0xc0020d45 0xc0023a56 0xc002a28d 0xc0021035.
-make
-make all
-clar
-clear
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-make check
-clear
-ls
-clear
-tmux
-vim ~/.tmux.current.conf 
-rm ~/.tmux.change.conf 
-ls
-clear
-tmux show -g | sed 's/^/set-option -g /' > ~/.tmux.current.conf
-vim ~/.tmux.conf
-show -g | sed 's/^/set-option -g /' > ~/.tmux.current.conf
-tmux
-exit
-tmux
-exit
-tmux
-tmux ls
-exit
-sudo tmux
-clear
-ls
-cd ..
-ls
-cd .tmux.current.conf 
-vim .tmux.current.conf 
-ls
-rm ~/.tmux.current.conf 
-tmux
-tmux
-tmux ls
-tmux kill-session -t 0
-tmux ls
-tmux kill-session -t 3
-tmux
-tmux ls
-clear
-tmux attach -t 0
-tmux ls
-clear
-tmux
-clear
-tmux
-ls
-cd pintos/
-ls
-cd src/devices/
-vim timer.
-vim timer.c
-clear
-ls
-clear
-ls
-clear
-
-clear
-ls
-tmux
-ls
-cd pintos
-ls
-cd src
-cd devices
-ls
-vim timer.c
-cd ..
-cd threads
-make check
-make grade
-ls
-cd build
-ls
-vim grade
-cd ..
-exit
-exit
-exit
-cd /pintos/sr
-cd /pintos/src
-cd pintos/src
-ls
-vi devices
-cd devices
-ls
-vim timer.c
-vim ~/.vimrc
-source ~/.vimrc
-vim timer.c
-vim ~/.vimrc
-source ~/.vimrc
-vim timer.
-vim timer.c
-clear
-vim ~/.vimrc
-source ~/.vimrc
-vim timer.c 
-exit
-source ~/.vimrc
-vim ~/.vimrc
-source ~/.vimrc
-clear
-rm ~/.vimrc
-source ~/.vimrc
-vim --version
-clear
-source ~/.vimrc
-ls
-rm -\,trail\:.\,nbsp\:_\,extends\:+\,precedes\:+ 
-rm ./-,trail:.,nbsp:_,extends:+,precedes:+
-ls
-cd pintos/src/devices/
-vim timer.
-vim timer.c
-make check
-make clean
-make check
-cd ../threads/
-make check
-clear
-source ~/.vimrc
-vim thread.c
-exit
-vim ~/.vimrc
-source ~/.vimrc
-clear
-vim ~/.vimrc
-source ~/.vimrc 
-vim ~/.vimrc
-source ~/.vimrc
-vim ~/.vimrc
-source ~/.vimrc
-clear
-vim ~/.vimrc
-ls
-vim ~/.vimrc
-source ~/.vim
-source ~/.vimrc
-vim ~/.vimrc
-source ~/.vimrc
-clear
-source ~/.vimrc
-vim ~/.vimrc
-exit
-tmux
-clear
-ls
-cd pintos/src/devices/
-vim timer.c 
-ls
-cd pintos/src/
-ls
-cd threads/
-ls
-cd ..
-ls
-cd tests/
-ls
-cd threads/
-ls
-clear
-ls
-vim alarm-zero.c
-vim alarm-negative.c
-cd pintos/src/threads/
-ls
-vim init.c
-cd ..
-cd devices/
-vim timer.c
-cd ..
-cd tests/threads/
-ls
-vim mlfqs-load-1.c
-cd ..
-ls
-cd lib/
-ls
-cd user
-ls
-vim debug.c 
-vim entry.c 
-vim syscall.c
-cd ../..
-cd threads/
-ls
-vim thread.c
-tmux
-cd pintos/src/threads/
-ls
-clear
-vim thread.c
-cd ../
-ls
-cd threads/
-vim synch.c
-clear
-ls
-vim thread.c
-ls
-vim thread.h
-vim synch.c
-vim synch.h
-cd pintos/src/threads/
-vim synch.c
-cd list.c
-vim list.c
-cscope
-cd ..
-cscope
-exit
-cd ../
-ls
-cd ../
-cd threads/
-vim thread.c
-cscope
-cd ..
-cscope
-ls
-cd threads/
-vim thread.c 
-clear
-ls
-clear
-vim thread.c
-ls
-clear
-ls
-vim synch.c
-ls -al
-rm .synch.c.swp 
-clear
-vim synch.c
-cd 
-cd ..
-cd team22a
-cd pintos/sr
-cd pintos/src/
-cscope
-cd threads/
-vim synch.c
-vim thread.c
-vim synch.c
-clear
-vim synch.c
-vim thread.h
-vim thread.c
-vim thread.h
-vim thread.c
-vim synch.
-vim synch.c
-vim thread.c
-vim synch.c
-exit
-vim list.c
-vim list.h
-vim list.c 
-vim list.h
-cd ,,/..
-cd ../..
-cscope
-cd threads/
-vim thread.c
-vim thread.h
-vim thread.c
-vim thread.h
-vim thread.c
-exit
-cd pintos/src/threads/
-ls
-vim synch.c
-vim thread.c
-vim synch.
-vim synch.c
-ls
-clear
-vim thread.c
-vim synch.c
-clear
-vim thread.c
-vim synch.c
-clear
-vim thread.c
-cd ..
-cd threads/
-ls
-vim synch.c
-cd ../devices/
-vim timer.c
-cscope
-vim timer.c
-make csope
-make cscope
-cscope
-cd ..
-cscope
-cd devices/
-ls
-vim timer.c
-cscope
-cd ..
-ls
-vim Makefile.build 
-cscope
-clear
-cd threads/
-vim synch.c
-clear
-cscode
-cscope
-cd ..
-ls
-cd lib/
-ls
-cd ..
-cd lib/kernel/
-ls
-vim list.c
-tmux
-exit
-ls
-cd pintos/src
-ls
-cd threads
-clear
-vi synch.c
-vi thread.c
-exit
-vim thread.c
-cd ../../
-cd threads/
-vim thread.c
-vim thread.h
-vim thread.c
-vim synch.c
-exit
-vim thread.c
-cd ../../threads/
-vim thread.c
-vim thread.h
-vim thread.c
-clear
-vim thread.c
-exit
-ls
-clear
-vim thread.c
-cd ../../threads/
-vim thread.c
-cd ../devices/
-vim timer.c
-clear
-cd ../threads/
-vim thread_block
-vim thread.c
-make checjk
-make check
-clear
-make check
-clear
-make check
-clear
-make check
-make clean
-make check
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-clear
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-backtrace 0xc0028410 0xc0020cd6 0xc0022834 0xc0022a79 0xc0020f87 0xc002124d 0xc0020472. 
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-clear
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-make check
-clear
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-make
-make clean
-clear
-make
-clear
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-ls
-cd ..
-ls
-cd lib
-cd ..
-cscope
-cd threads/
-lkas
-ls
-clear
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-backtrace 0xc0028440 0xc0020cfb 0xc0022864 0xc0022aa9 0xc0020fac 0xc0021270 0xc0020472
-clear
-make
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-cd ..
-clear
-ls
-cd lib
-ls
-cd kernel/
-ls
-cd ..
-ls
-cscope
-ls
-cd threads/
-ls
-cd build/
-ls
-backtrace kernel.o 0xc0028410 0xc0020cd6 0xc0022834 0xc0022a79 0xc0020f87 0xc002124d 0xc0020472
-pintos --gdb -- -q  run alarm-single
-pintos --gdb -- run alarm-single
-exit
-cd pintos/src/threads/b
-cd pintos/src/threads/
-cd build/
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-make
-clear
-ls
-pintos-gdb kernel.o
-clea
-
-ls
-vim thread.c
-cd ..
-vim thread.c
-pintos-gdb kernel.o
-clear
-cd build/
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-ls
-cd pintos/src/
-ls
-cd threads/
-clear
-ls
-vim thread.c
-vim synch.c
-vim synch.h
-vim synch.c
-cd ..
-cscope
-cd threads/
-vim synch.c
-vim thread.c
-vim thread.h
-vim synch.h
-vim synch.c
-cd ..
-cscope
-clear
-cs threads/
-ls
-cd threads/
-clear
-ls
-vim thread.c
-cd ..
-cscope
-cd tests/
-ls
-cd threads/
-clear
-ls
-vim priority-change.c
-tmux
-pintos -v --gdb -- -q run alarm-single
-cd..
-cd ..
-make check
-cd threads/
-make check
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single 
-celar
-clear
-pintos -v --gdb -- -q  run alarm-single 
-clear
-pintos -v --gdb -- -q  run alarm-single 
-clear
-vim thread.c
-make check
-clear0xc0028460: debug_panic (.../../lib/kernel/debug.c:38)
-0xc0020b67: schedule (..../../threads/thread.c:603)
-0xc0020d5e: thread_unblock (..../../threads/thread.c:253)
-0xc002108c: thread_create (..../../threads/thread.c:213)
-0xc00211b4: thread_start (..../../threads/thread.c:114)
-0xc00206ca: main (.../../../threads/init.c:120)
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-backtrace Call stack: 0xc0028460 0xc0028860 0xc0020ae5 0xc0020def 0xc0022b65 0xc00211c1 0xc00206ca.
-clear
-ls
-vim thread.c
-cd ..
-cd lib
-cd src/lib/kernel/
-ls
-vim list.c
-cd ..
-cd tests/
-ls
-cd threads/
-ls
-vim alarm-single.c
-vim alarm-single.ck 
-cd ..
-cd lib
-cd kernel/
-ls
-vim list.c
-ls
-cd pintos/src/threads/
-clear
-ls
-vim thread.c
-vim synch.c
-vim interrupt.c
-vim synch.c
-ls
-vim thread.c
-vim synch.c
-clear
-ls
-vim thread.c
-vim synch.
-vim synch.c
-vim interrupt.c
-vim synch.c
-vim thread.c
-vim synch.c
-vim thread.c
-clear
-vim thread.h
-vim thread.c
-vim synch.c
-vim synch.h
-vim synch.c
-make
-make chekc
-make check
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-clearf
-claer
-clear
-pintos -v -k -T 60 --bochs  -- -q  run alarm-single
-backtrace 0xc0028460 0xc0020b67 0xc0020d5e 0xc002108c 0xc00211b4 0xc00206ca.
-pintos -v --gdb  -- -q  run alarm-single
-clear
-cd ..
-pintos -v --gdb -- -q run alarm-single
-pintos -v --gdb run alarm-single
-cd threads/
-pintos -v --gdb run alarm-single
-pintos -v --gdb -- -q run alarm-single
-clear
-pintos -v --gdb -- -q run alarm-single
-cd pintos/src/threads/
-ls
-vim thread.c
-cd pintos/src/threads/
-ls
-vim thread.c
-rrm .thread.c.swp 
-rm .thread.c.swp 
-clear
-vim thread.c
-cd ..
-cscope
-cd threads/
-ls
-vim synch.c
-vim thread.c
-vim synch.c
-vim thread.c
-vim synch.c
-vim thread.c
-vim synch.c
-vim thread.c
-clear
-vim timer.c
-cd ../devices/timer.
-cd ../devices/
-vim timer.c
 cd ../threads/
 vim thread.c
 cd ..
@@ -1998,3 +1378,623 @@ vim priority-donate-nest.c
 cd pintos/src/threads/
 make check
 clear
+cd pintos/
+ls
+tar -xvzf tema22.tar.gz 
+ls
+cd src/
+ls
+cd threads/
+make
+make check
+make clean
+make check
+cd ..
+git add .
+git status
+git commit -m "project 1"
+git push origin master
+ls
+cd pintos/src/threads/
+vim thread.c
+vim synch.c
+vim thread.c
+cd ..
+cd userprog/
+ls
+vim process.c
+cd ..
+cd threads/
+vim init.c
+cd ..
+cd userprog/
+ls
+vim process.c
+cd ..
+cd threads/
+vim init.c
+clear
+cd ..
+cd userprog/
+vim process.c
+cd ..
+cd threads/
+vim init.c
+cd ..
+cscope
+ls
+cd userprog/
+ls
+cd ..
+cd filesys/
+ls
+vim filesys.c
+ls
+vim file.c
+vim file.h
+vim file.c
+vim filesys.c
+vim file.c
+vim filsys.c
+vim filesys.
+vim filesys.c
+vim file.c
+clear
+cd pintos/src/tests/threads/
+ls
+vim priority-fifo.c
+ls
+cd ..
+ls
+vim test.c
+cd threads/
+ls
+vim tests.c
+cd ..
+cd ../userprog/
+vim process.c
+clear
+vim process.c
+vim process.h
+cscope
+cd ..
+cscope
+cd pintos/src/lib/user
+vim entry.c 
+cd ..
+cd tests/userprog/
+ls
+vim read-normal.c
+vim wait-simple.c
+cd ..
+ls
+cd threads/
+ls
+vim palloc.
+vim palloc.c
+vim thread.c
+cd ../userprog/
+vim syscall.c
+cd pintos/src/userprog/
+vim process.c
+vim syscall.c
+cd ..
+vim lib/syscall-nr.h 
+vim lib/user/syscall.h
+vim lib/user/syscall.c
+vim string.c
+exit
+cd pintos/src/lib/
+vim string.c
+tmux
+cd pintos/src/
+ls
+vim Make.config
+make clean
+make 
+cd userprog/
+make 
+clear
+cd build/
+pintos --gdb -v -k -T 60 --bochs --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q -f run args-none
+cd ..
+cd build/
+pintos --gdb -v -k -T 60 --bochs --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q -f run args-none
+clear
+cd ..
+vim process.c
+make
+cd build/
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+backtrace  0xc002a9f0 0xc00211ce 0xc00230aa 0xc0027154 0xc0022036 0xc002228e 0xc0021369 0xc00213b3.
+cd ..
+ls
+cd ..
+cd threads/
+vim thread.c
+vim synch.c
+cd ..
+cd userprog/
+ls
+clear
+cd build/
+ls
+pintos-gdb 
+cd pintos/src/userprog/
+clear
+ls
+vim process.c
+make
+clear
+make
+vim make
+make
+clear
+make
+clear
+make
+clear
+make
+clear
+make
+vim process.c
+cd ..
+ls
+cd lib/
+ls
+vim string.c
+cd ..
+cd userprog/
+make
+vim process.c
+clear
+cd ..
+cd tests/userprog/
+ls
+vim args-none.ck 
+vim args-single.ck 
+cd build
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+c d..
+cd ..
+cd examples/
+make
+ls
+cd ..
+cscope
+cd examples/echo
+ls
+make
+cd examples/echo
+cd examples/
+ls
+make
+make all
+make clean
+make
+clear
+vim echo
+vim echo.c
+cd ..
+cscope
+vim threads/
+cd threads/
+vim init.c
+cd ..
+cscope 
+cd examples/
+make
+cd ..
+cd threads/
+vim thread.c
+vim init.c
+make
+vim init.c
+make clean
+make check
+cd ..
+clear
+cd userprog/
+make clean
+make
+clear
+cd build/
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+backtrace 0xc0028730 0xc00208b4
+cd ..
+make
+cd build/
+make
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd ..
+cd build/
+clear
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+pintos-gdb 
+pintos-gdb kernel.o
+cd ..
+cd build/
+pintos-gdb kernel.o
+cd ..
+make
+cd build/
+pintos-gdb kernel.o
+cd ..
+cd build/
+pintos-gdb kernel.o
+clear
+cd pintos/src/userprog/
+ls
+vim process.c
+make
+vim process.c
+make
+make check
+backtrace  0xc002a9f0 0xc00211ce 0xc00230aa 0xc0027154 0xc0022036 0xc002228e 0xc0021369 0xc00213b3
+clear
+cd ..
+cd src/lib/
+vim stdio.h
+vim stdio.c
+cd ..
+cd threads/
+lks
+clear
+ls
+vim thread.c
+cd ../devices/
+vim timer.c
+cd ..
+cd threads/
+vim synch.c
+make
+make check
+cd ..
+cd userprog/
+clear
+make check
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd ..
+vim process.c
+make
+vim process.c
+make
+vim process.c
+make
+Dumps the SIZE bytes in BUF to the console as hex bytes
+arranged 16 per line.  Numeric offsets are also included,
+starting at OFS for the first byte in BUF.  If ASCII is true
+then the corresponding ASCII characters are also rendered
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd build
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd ..
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd ..
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd ..
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd ..
+ls
+vim process.c
+make
+cd build/
+ls
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+cd ..
+vim process.c
+ls
+make
+cd build/
+ls
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+cd ..
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+cd ..
+vim process.c
+vim process.
+vim process.c
+make
+cd build
+clear
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+cd ,.
+cd ..
+vim process.c
+make
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+cd build/
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+make
+make clear
+cd ..
+make
+make clear
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+cd ..
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+cd ..
+vim process.c
+make
+vim process.c
+make
+vim process.c
+make
+clear
+vim process.c
+make
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+pintos-gdb kernel.o
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+pintos-gdb kernel.o
+clear
+cd ..
+cd build/
+clear
+pintos-gdb kernel.o
+ls
+pintos-gdb kernel.o
+clear
+pintos-gdb kernel.o
+quit
+exit
+clear
+cd pintos/src/
+ls
+cd userprog/
+ls
+vim process.c
+make
+cd build/
+cd ..
+vim process.c
+make
+vim process.c
+make
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-single -a args-single -- -q  -f run 'args-single onearg'
+cd ..
+vim process.
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-single -a args-single -- -q  -f run 'args-single onearg'
+pintos --gdb -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+clear
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+pintos --gdb -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+n
+nn
+pintos --gdb -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+cd ..
+vim process.c
+exit
+ls
+cd pintos/src/userprog/
+ls
+cd ..
+cd lib
+ls
+vim string.c
+cd ..
+cd lib/
+vim stdio.c
+ls
+cd ..
+cd devices/
+vim timer.c
+cd ..
+cd lib/
+vim stdio.c
+exit
+cd pintos/src/userprog/
+vim process.c
+ls
+cd ..
+cd lib/
+ls
+vim stdio.c
+clear
+ls
+cd ..
+cd threads/
+vim interrupt.h
+cd ..
+cd lib/
+vim stdio.c
+vim stdio.h
+cd ..
+cscope
+cd userprog/
+clear
+ls
+vim process.c
+make
+make check
+vim process.c
+make check
+vim process.c
+make
+make check
+clear
+vim process.c
+make
+clear
+make check
+d
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+clear
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
+clear
+cd ,,
+cd ../
+ls
+cd Makefile.build 
+vim Makefile
+vim Makefile.build 
+vim Makefile.userprog 
+vim Makefile.kernel 
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd userprog/build/
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+clear
+cd ..
+vim process.c
+make
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd build/
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd ..
+cd threads/
+ls
+cd ../userprog/
+make
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd build/
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd ..
+ls
+vim process.c
+make
+vim process.c
+make
+clear
+make
+vim process.c
+make
+clear
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd build
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+cd ..
+clear
+cd build/
+make check
+pintos --filesys-size=2 -p ../../examples/echo -a echo -- -f -q run ’echo x’
+clear
+cd ..
+ls
+clear
+ls
+vim process.c
+cd ..
+vim threads/
+cd threads/
+vim init.c
+cd ..
+cd userprog/
+ls
+clear
+vim process.
+vim process.c
+make
+vim process.c
+make
+clear
+cd build/
+pintos --gdb -v -k -T 60 --bochs --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q -f run args-none
+cd ..
+clear
+vim process.c
+make
+cd ..
+cd threads/
+vim thread.c
+vim interrupt.c
+vim interrupt_handler
+cd ..
+cd devices/
+vim ide.c
+cd ..
+cd threads/
+vim thread.c
+vim synch.c
+vim interrupt.c
+cd ..
+cd devices/
+vim ide.c
+ls
+cd ..
+cd threads/
+vim thread.c
+cd ..
+cd lib/
+vim stdio.c
+ls
+make
+cd ..
+cd userprog/
+make
+clear
+cd build/
+pintos --gdb -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+cd ..
+clear
+vim process.c
+cd ..
+cd threads/
+ls
+cd ..
+cd lib/
+ls
+vim string.c
+cd ..
+cd userprog/build/
+pintos --gdb -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+clear
+pintos --gdb -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+cd ..
+cd build/
+pintos -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-single -a args-single -- -q  -f run 'args-single onearg'
+cd ..
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --bochs --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q -f run args-none
+cd ..
+vim process.c
+make
+cd userprog
+cd build/
+pintos -v -k -T 60 --bochs --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q -f run args-none
+pintos --gdb -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+exit
