@@ -11,20 +11,102 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/thread_exit
+~MSle0~/process_wait
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
 :q!
-|2,0,1523440154,,"q!"
+|2,0,1523515247,,"q!"
+:wq
+|2,0,1523515225,,"wq"
+:44
+|2,0,1523514477,,"44"
+:277
+|2,0,1523513969,,"277"
+:224
+|2,0,1523513939,,"224"
+:q@
+|2,0,1523513897,,"q@"
+:207
+|2,0,1523513792,,"207"
+:109
+|2,0,1523513194,,"109"
+:106
+|2,0,1523512079,,"106"
+:57
+|2,0,1523512068,,"57"
+:202
+|2,0,1523510544,,"202"
+:153
+|2,0,1523510356,,"153"
+:13
+|2,0,1523510352,,"13"
+:52
+|2,0,1523510211,,"52"
+:111
+|2,0,1523510158,,"111"
+:105
+|2,0,1523510128,,"105"
+:99
+|2,0,1523510096,,"99"
+:62
+|2,0,1523509997,,"62"
+:119,120 y
+|2,0,1523509776,,"119,120 y"
+:105, 109d
+|2,0,1523509652,,"105, 109d"
+:105, 109 y
+|2,0,1523509632,,"105, 109 y"
+:105. 109 y
+|2,0,1523509601,,"105. 109 y"
+:116
+|2,0,1523509538,,"116"
+:157
+|2,0,1523505860,,"157"
+:92
+|2,0,1523505732,,"92"
+:138
+|2,0,1523505595,,"138"
+:137
+|2,0,1523505342,,"137"
+:80
+|2,0,1523505074,,"80"
+:115
+|2,0,1523505014,,"115"
+:74
+|2,0,1523504948,,"74"
+:97
+|2,0,1523504771,,"97"
+:58, 59 y
+|2,0,1523504391,,"58, 59 y"
+:58,59 y
+|2,0,1523504378,,"58,59 y"
+:64,65 y
+|2,0,1523504127,,"64,65 y"
+:72
+|2,0,1523448242,,"72"
+:60
+|2,0,1523448161,,"60"
+:35
+|2,0,1523448053,,"35"
+:45, 59 d
+|2,0,1523447705,,"45, 59 d"
+:29, 43 y
+|2,0,1523447682,,"29, 43 y"
+:50, 58 d
+|2,0,1523447205,,"50, 58 d"
+:49.59 d
+|2,0,1523447196,,"49.59 d"
+:36,46 y
+|2,0,1523447170,,"36,46 y"
+:36,46 Y
+|2,0,1523447166,,"36,46 Y"
 :151, 153 y
 |2,0,1523440053,,"151, 153 y"
 :Q!
 |2,0,1523428131,,"Q!"
-:wq
-|2,0,1523422877,,"wq"
 :q
 |2,0,1523378591,,"q"
 :444
@@ -55,8 +137,6 @@ $
 |2,0,1523359309,,"367"
 :WQ
 |2,0,1523359019,,"WQ"
-:q@
-|2,0,1523358898,,"q@"
 :435
 |2,0,1523357343,,"435"
 :250
@@ -129,8 +209,6 @@ $
 |2,0,1522299476,,"532"
 :140
 |2,0,1522298328,,"140"
-:111
-|2,0,1522298250,,"111"
 :100
 |2,0,1522297372,,"100"
 :58
@@ -179,18 +257,8 @@ $
 |2,0,1522224338,,"315"
 :244
 |2,0,1522224212,,"244"
-:97
-|2,0,1522233893,,"97"
-:99
-|2,0,1522233361,,"99"
-:80
-|2,0,1522233856,,"80"
 :167
 |2,0,1522233477,,"167"
-:60
-|2,0,1522233436,,"60"
-:116
-|2,0,1522224079,,"116"
 :q@!
 |2,0,1522218509,,"q@!"
 :70
@@ -199,8 +267,6 @@ $
 |2,0,1522216464,,"606"
 :602
 |2,0,1522216319,,"602"
-:224
-|2,0,1522216281,,"224"
 :2224
 |2,0,1522216276,,"2224"
 :107
@@ -299,8 +365,6 @@ $
 |2,0,1522143443,,"230"
 :225
 |2,0,1522143233,,"225"
-:106
-|2,0,1522143193,,"106"
 :215
 |2,0,1522143070,,"215"
 :617
@@ -339,22 +403,56 @@ $
 |2,0,1521955550,,"set paste"
 :25.29 d
 |2,0,1521955151,,"25.29 d"
-:92
-|2,0,1521903086,,"92"
 :258
 |2,0,1521903072,,"258"
 :Q1
 |2,0,1521117937,,"Q1"
 
 # Search String History (newest to oldest):
+?/process_wait
+|2,1,1523515202,47,"process_wait"
+?/sys_exit
+|2,1,1523515126,47,"sys_exit"
+?/sys_write
+|2,1,1523515054,47,"sys_write"
+? \<syscall_arg\>
+|2,1,1523514317,,"\\<syscall_arg\\>"
+?/block_to_arena
+|2,1,1523513962,47,"block_to_arena"
+?/exit
+|2,1,1523511439,47,"exit"
+?/eax
+|2,1,1523510418,47,"eax"
+?/esp
+|2,1,1523510409,47,"esp"
+?/sys_exec
+|2,1,1523510383,47,"sys_exec"
+?/install_page
+|2,1,1523440979,47,"install_page"
+?/vaddr == NULL
+|2,1,1523441634,47,"vaddr == NULL"
+?/is_user_vaddr
+|2,1,1523441622,47,"is_user_vaddr"
+?/lookup_page
+|2,1,1523441512,47,"lookup_page"
+?/pagedir_get
+|2,1,1523441451,47,"pagedir_get"
+?/page_get_dir
+|2,1,1523441447,47,"page_get_dir"
+?/PTE_P
+|2,1,1523441111,47,"PTE_P"
+?/process_exit
+|2,1,1523439522,47,"process_exit"
+?/init_process
+|2,1,1523439503,47,"init_process"
+?/process_init
+|2,1,1523439498,47,"process_init"
 ?/thread_exit
 |2,1,1523439599,47,"thread_exit"
 ?/process
 |2,1,1523439471,47,"process"
 ?/pcb
 |2,1,1523439469,47,"pcb"
-?/esp
-|2,1,1523429699,47,"esp"
 ?/eso
 |2,1,1523429697,47,"eso"
 ?/PTE_ADDR
@@ -371,14 +469,8 @@ $
 |2,1,1523424672,47,"unmapped"
 ?/is_u
 |2,1,1523423848,47,"is_u"
-?/install_page
-|2,1,1523425117,47,"install_page"
-?/lookup_page
-|2,1,1523425246,47,"lookup_page"
 ?/pagedir_get_page
 |2,1,1523425233,47,"pagedir_get_page"
-?/is_user_vaddr
-|2,1,1523423719,47,"is_user_vaddr"
 ?/hex_
 |2,1,1523422867,47,"hex_"
 ?/setup_stack
@@ -513,8 +605,6 @@ $
 |2,1,1523334792,47,"setup_st"
 ?/process_execute
 |2,1,1523333202,47,"process_execute"
-?/process_wait
-|2,1,1523333119,47,"process_wait"
 ?/strtok_r
 |2,1,1523329782,47,"strtok_r"
 ?/kernel_thread
@@ -573,8 +663,6 @@ $
 |2,1,1523253782,47,"process_wiat"
 ?/run_Test
 |2,1,1523253020,47,"run_Test"
-?/process_exit
-|2,1,1523252796,47,"process_exit"
 ?/main
 |2,1,1523252490,47,"main"
 ?/switch_threads (
@@ -1023,267 +1111,590 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	/* Writes the N characters in BUFFER to the console. */
-	void
-	putbuf (const char *buffer, size_t n) 
-|3,1,0,1,3,0,1523440053,"/* Writes the N characters in BUFFER to the console. */","void","putbuf (const char *buffer, size_t n) "
-"1	LINE	0
-	
-|3,0,1,1,1,0,1523336783,""
-"2	LINE	0
-	  /*int max_prior = -1;
-|3,0,2,1,1,0,1522326912,"  /*int max_prior = -1;"
-"3	LINE	0
-	  struct list_elem *e;
-|3,0,3,1,1,0,1522326909,"  struct list_elem *e;"
-"4	LINE	0
-	  struct list *waiters;
-|3,0,4,1,1,0,1522326908,"  struct list *waiters;"
-"5	LINE	0
-	  struct list *sorted;
-|3,0,5,1,1,0,1522326908,"  struct list *sorted;"
-"6	LINE	0
-	  list_init(sorted);*/
-|3,0,6,1,1,0,1522326907,"  list_init(sorted);*/"
-"7	LINE	0
-	    /*waiters = &cond->waiters;
-|3,0,7,1,1,0,1522326905,"    /*waiters = &cond->waiters;"
-"8	LINE	0
-	    struct list_elem *temp;
-|3,0,8,1,1,0,1522326903,"    struct list_elem *temp;"
-"9	LINE	0
-	    struct thread *thread_temp;
-|3,0,9,1,1,0,1522326898,"    struct thread *thread_temp;"
-"-	CHAR	0
+"0	LINE	0
+	  printf("system call!\n");
 	  thread_exit ();
-|3,0,36,0,1,0,1523429347,"  thread_exit ();"
+|3,0,0,1,2,0,1523509776,"  printf(\"system call!\\n\");","  thread_exit ();"
+"1	LINE	0
+	static void sys_write (uint32_t *syscall_arg UNUSED, void *eax UNUSED){
+|3,0,1,1,1,0,1523510152,"static void sys_write (uint32_t *syscall_arg UNUSED, void *eax UNUSED){"
+"2	LINE	0
+	static void sys_read (uint32_t *syscall_arg UNUSED, void *eax){
+|3,0,2,1,1,0,1523510116,"static void sys_read (uint32_t *syscall_arg UNUSED, void *eax){"
+"3	LINE	0
+	static void sys_seek (uint32_t *syscall_arg){
+	
+	  printf("system call!\n");
+	  thread_exit ();
+	}
+|3,0,3,1,5,0,1523509652,"static void sys_seek (uint32_t *syscall_arg){","","  printf(\"system call!\\n\");","  thread_exit ();","}"
+"4	LINE	0
+	static bool valid_memory(void *uaddr){
+	
+	  uint32_t *pd = thread_current()->pagedir;
+	
+	  if (uaddr == NULL)
+	    return false;
+	
+	  if (!is_user_vaddr (uaddr))
+	    return false;
+	
+	  if (pagedir_get_page (pd, uaddr) == NULL)
+	    return false;
+	
+	  return true;
+	}
+|3,0,4,1,15,0,1523447705,"static bool valid_memory(void *uaddr){","","  uint32_t *pd = thread_current()->pagedir;","","  if (uaddr == NULL)","    return false;","","  if (!is_user_vaddr (uaddr))","    return false;","","  if (pagedir_get_page (pd, uaddr) == NULL)","    return false;","","  return true;","}"
+"5	LINE	0
+	  uint32_t *arg_pointer = (char *)esp + 4;
+	  syscall_arg = malloc (4 * arg_num);
+	
+	  for (int i = 0; i < arg_num; i++){
+	    
+	    syscall_arg[i] = *arg_pointer;
+	    arg_pointer += 1;
+	  }
+	}
+|3,0,5,1,9,0,1523447205,"  uint32_t *arg_pointer = (char *)esp + 4;","  syscall_arg = malloc (4 * arg_num);","","  for (int i = 0; i < arg_num; i++){","    ","    syscall_arg[i] = *arg_pointer;","    arg_pointer += 1;","  }","}"
+"6	LINE	0
+	static void get_arg(uint32_t *syscall_arg, int arg_num, void *esp){
+|3,0,6,1,1,0,1523447196,"static void get_arg(uint32_t *syscall_arg, int arg_num, void *esp){"
+"7	LINE	0
+	
+|3,0,7,1,1,0,1523336783,""
+"8	LINE	0
+	  /*int max_prior = -1;
+|3,0,8,1,1,0,1522326912,"  /*int max_prior = -1;"
+"9	LINE	0
+	  struct list_elem *e;
+|3,0,9,1,1,0,1522326909,"  struct list_elem *e;"
+""-	CHAR	0
+	  printf("fd: %d\n", fd);
+|3,1,36,0,1,0,1523514890,"  printf(\"fd: %d\\n\", fd);"
 
 # File marks:
-'0  153  0  ~/pintos/src/lib/kernel/console.c
-|4,48,153,0,1523440154,"~/pintos/src/lib/kernel/console.c"
-'1  4  0  ~/pintos/src/lib/kernel/stdio.h
-|4,49,4,0,1523440012,"~/pintos/src/lib/kernel/stdio.h"
-'2  299  0  ~/pintos/src/threads/thread.c
-|4,50,299,0,1523440003,"~/pintos/src/threads/thread.c"
-'3  102  25  ~/pintos/src/threads/thread.h
-|4,51,102,25,1523439594,"~/pintos/src/threads/thread.h"
-'4  20  19  ~/pintos/src/userprog/syscall.c
-|4,52,20,19,1523439485,"~/pintos/src/userprog/syscall.c"
-'5  58  0  ~/pintos/src/threads/interrupt.h
-|4,53,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
-'6  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,54,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
-'7  1  0  ~/pintos/src/threads/interrupt.c
-|4,55,1,0,1523430339,"~/pintos/src/threads/interrupt.c"
-'8  11  10  ~/pintos/src/threads/interrupt.h
-|4,56,11,10,1523430198,"~/pintos/src/threads/interrupt.h"
-'9  11  10  ~/pintos/src/threads/interrupt.h
-|4,57,11,10,1523430198,"~/pintos/src/threads/interrupt.h"
+'0  288  2  ~/pintos/src/threads/init.c
+|4,48,288,2,1523515247,"~/pintos/src/threads/init.c"
+'1  61  22  ~/pintos/src/userprog/syscall.c
+|4,49,61,22,1523515225,"~/pintos/src/userprog/syscall.c"
+'2  112  0  ~/pintos/src/userprog/syscall.c
+|4,50,112,0,1523514899,"~/pintos/src/userprog/syscall.c"
+'3  113  0  ~/pintos/src/userprog/syscall.c
+|4,51,113,0,1523514899,"~/pintos/src/userprog/syscall.c"
+'4  112  0  ~/pintos/src/userprog/syscall.c
+|4,52,112,0,1523514899,"~/pintos/src/userprog/syscall.c"
+'5  1  0  ~/pintos/src/tests/userprog/args-none.ck
+|4,53,1,0,1523514786,"~/pintos/src/tests/userprog/args-none.ck"
+'6  125  2  ~/pintos/src/userprog/syscall.c
+|4,54,125,2,1523514710,"~/pintos/src/userprog/syscall.c"
+'7  127  2  ~/pintos/src/userprog/syscall.c
+|4,55,127,2,1523514710,"~/pintos/src/userprog/syscall.c"
+'8  126  2  ~/pintos/src/userprog/syscall.c
+|4,56,126,2,1523514710,"~/pintos/src/userprog/syscall.c"
+'9  128  2  ~/pintos/src/userprog/syscall.c
+|4,57,128,2,1523514710,"~/pintos/src/userprog/syscall.c"
 
 # Jumplist (newest first):
--'  153  0  ~/pintos/src/lib/kernel/console.c
-|4,39,153,0,1523440154,"~/pintos/src/lib/kernel/console.c"
--'  1  0  ~/pintos/src/lib/kernel/console.c
-|4,39,1,0,1523440014,"~/pintos/src/lib/kernel/console.c"
--'  4  0  ~/pintos/src/lib/kernel/stdio.h
-|4,39,4,0,1523440012,"~/pintos/src/lib/kernel/stdio.h"
--'  4  0  ~/pintos/src/lib/kernel/stdio.h
-|4,39,4,0,1523440012,"~/pintos/src/lib/kernel/stdio.h"
--'  1  0  ~/pintos/src/lib/kernel/stdio.h
-|4,39,1,0,1523440010,"~/pintos/src/lib/kernel/stdio.h"
--'  1  0  ~/pintos/src/lib/kernel/stdio.h
-|4,39,1,0,1523440010,"~/pintos/src/lib/kernel/stdio.h"
--'  299  0  ~/pintos/src/threads/thread.c
-|4,39,299,0,1523440003,"~/pintos/src/threads/thread.c"
--'  299  0  ~/pintos/src/threads/thread.c
-|4,39,299,0,1523440003,"~/pintos/src/threads/thread.c"
--'  299  0  ~/pintos/src/threads/thread.c
-|4,39,299,0,1523440003,"~/pintos/src/threads/thread.c"
--'  299  0  ~/pintos/src/threads/thread.c
-|4,39,299,0,1523440003,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1523439599,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1523439599,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1523439599,"~/pintos/src/threads/thread.c"
--'  1  0  ~/pintos/src/threads/thread.c
-|4,39,1,0,1523439599,"~/pintos/src/threads/thread.c"
--'  102  25  ~/pintos/src/threads/thread.h
-|4,39,102,25,1523439594,"~/pintos/src/threads/thread.h"
--'  102  25  ~/pintos/src/threads/thread.h
-|4,39,102,25,1523439594,"~/pintos/src/threads/thread.h"
--'  102  25  ~/pintos/src/threads/thread.h
-|4,39,102,25,1523439594,"~/pintos/src/threads/thread.h"
--'  102  25  ~/pintos/src/threads/thread.h
-|4,39,102,25,1523439594,"~/pintos/src/threads/thread.h"
--'  102  25  ~/pintos/src/threads/thread.h
-|4,39,102,25,1523439594,"~/pintos/src/threads/thread.h"
--'  102  25  ~/pintos/src/threads/thread.h
-|4,39,102,25,1523439594,"~/pintos/src/threads/thread.h"
--'  102  25  ~/pintos/src/threads/thread.h
-|4,39,102,25,1523439594,"~/pintos/src/threads/thread.h"
--'  102  25  ~/pintos/src/threads/thread.h
-|4,39,102,25,1523439594,"~/pintos/src/threads/thread.h"
--'  20  19  ~/pintos/src/userprog/syscall.c
-|4,39,20,19,1523439485,"~/pintos/src/userprog/syscall.c"
--'  20  19  ~/pintos/src/userprog/syscall.c
-|4,39,20,19,1523439485,"~/pintos/src/userprog/syscall.c"
--'  20  19  ~/pintos/src/userprog/syscall.c
-|4,39,20,19,1523439485,"~/pintos/src/userprog/syscall.c"
--'  20  19  ~/pintos/src/userprog/syscall.c
-|4,39,20,19,1523439485,"~/pintos/src/userprog/syscall.c"
--'  20  19  ~/pintos/src/userprog/syscall.c
-|4,39,20,19,1523439485,"~/pintos/src/userprog/syscall.c"
--'  20  19  ~/pintos/src/userprog/syscall.c
-|4,39,20,19,1523439485,"~/pintos/src/userprog/syscall.c"
--'  20  19  ~/pintos/src/userprog/syscall.c
-|4,39,20,19,1523439485,"~/pintos/src/userprog/syscall.c"
--'  20  19  ~/pintos/src/userprog/syscall.c
-|4,39,20,19,1523439485,"~/pintos/src/userprog/syscall.c"
--'  27  27  ~/pintos/src/threads/thread.h
-|4,39,27,27,1523439472,"~/pintos/src/threads/thread.h"
--'  27  27  ~/pintos/src/threads/thread.h
-|4,39,27,27,1523439472,"~/pintos/src/threads/thread.h"
--'  27  27  ~/pintos/src/threads/thread.h
-|4,39,27,27,1523439472,"~/pintos/src/threads/thread.h"
--'  27  27  ~/pintos/src/threads/thread.h
-|4,39,27,27,1523439472,"~/pintos/src/threads/thread.h"
--'  27  27  ~/pintos/src/threads/thread.h
-|4,39,27,27,1523439472,"~/pintos/src/threads/thread.h"
--'  27  27  ~/pintos/src/threads/thread.h
-|4,39,27,27,1523439472,"~/pintos/src/threads/thread.h"
--'  27  27  ~/pintos/src/threads/thread.h
-|4,39,27,27,1523439472,"~/pintos/src/threads/thread.h"
--'  27  27  ~/pintos/src/threads/thread.h
-|4,39,27,27,1523439472,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1523439471,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1523439471,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1523439471,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1523439471,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1523439471,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1523439471,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1523439471,"~/pintos/src/threads/thread.h"
--'  1  0  ~/pintos/src/threads/thread.h
-|4,39,1,0,1523439471,"~/pintos/src/threads/thread.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  58  0  ~/pintos/src/threads/interrupt.h
-|4,39,58,0,1523439464,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/lib/syscall-nr.h
-|4,39,1,0,1523430416,"~/pintos/src/lib/syscall-nr.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.h
-|4,39,1,0,1523430342,"~/pintos/src/threads/interrupt.h"
--'  1  0  ~/pintos/src/threads/interrupt.c
-|4,39,1,0,1523430339,"~/pintos/src/threads/interrupt.c"
--'  1  0  ~/pintos/src/threads/interrupt.c
-|4,39,1,0,1523430339,"~/pintos/src/threads/interrupt.c"
--'  1  0  ~/pintos/src/threads/interrupt.c
-|4,39,1,0,1523430339,"~/pintos/src/threads/interrupt.c"
--'  1  0  ~/pintos/src/threads/interrupt.c
-|4,39,1,0,1523430339,"~/pintos/src/threads/interrupt.c"
--'  1  0  ~/pintos/src/threads/interrupt.c
-|4,39,1,0,1523430339,"~/pintos/src/threads/interrupt.c"
--'  1  0  ~/pintos/src/threads/interrupt.c
-|4,39,1,0,1523430339,"~/pintos/src/threads/interrupt.c"
+-'  288  2  ~/pintos/src/threads/init.c
+|4,39,288,2,1523515247,"~/pintos/src/threads/init.c"
+-'  61  22  ~/pintos/src/userprog/syscall.c
+|4,39,61,22,1523515225,"~/pintos/src/userprog/syscall.c"
+-'  82  2  ~/pintos/src/threads/init.c
+|4,39,82,2,1523515202,"~/pintos/src/threads/init.c"
+-'  1  0  ~/pintos/src/threads/init.c
+|4,39,1,0,1523515195,"~/pintos/src/threads/init.c"
+-'  165  6  ~/pintos/src/userprog/syscall.c
+|4,39,165,6,1523515128,"~/pintos/src/userprog/syscall.c"
+-'  163  9  ~/pintos/src/userprog/syscall.c
+|4,39,163,9,1523515128,"~/pintos/src/userprog/syscall.c"
+-'  130  0  ~/pintos/src/userprog/syscall.c
+|4,39,130,0,1523515126,"~/pintos/src/userprog/syscall.c"
+-'  91  0  ~/pintos/src/userprog/syscall.c
+|4,39,91,0,1523515054,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/userprog/syscall.c
+|4,39,1,0,1523515009,"~/pintos/src/userprog/syscall.c"
+-'  112  0  ~/pintos/src/userprog/syscall.c
+|4,39,112,0,1523514899,"~/pintos/src/userprog/syscall.c"
+-'  113  0  ~/pintos/src/userprog/syscall.c
+|4,39,113,0,1523514899,"~/pintos/src/userprog/syscall.c"
+-'  112  0  ~/pintos/src/userprog/syscall.c
+|4,39,112,0,1523514899,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/userprog/syscall.c
+|4,39,1,0,1523514868,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/userprog/syscall.c
+|4,39,1,0,1523514868,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/tests/userprog/args-none.ck
+|4,39,1,0,1523514786,"~/pintos/src/tests/userprog/args-none.ck"
+-'  1  0  ~/pintos/src/tests/userprog/args-none.ck
+|4,39,1,0,1523514786,"~/pintos/src/tests/userprog/args-none.ck"
+-'  1  0  ~/pintos/src/tests/userprog/args-none.ck
+|4,39,1,0,1523514786,"~/pintos/src/tests/userprog/args-none.ck"
+-'  1  0  ~/pintos/src/tests/userprog/args-none.ck
+|4,39,1,0,1523514786,"~/pintos/src/tests/userprog/args-none.ck"
+-'  1  0  ~/pintos/src/tests/userprog/args-none.ck
+|4,39,1,0,1523514786,"~/pintos/src/tests/userprog/args-none.ck"
+-'  1  0  ~/pintos/src/tests/userprog/args-none.ck
+|4,39,1,0,1523514786,"~/pintos/src/tests/userprog/args-none.ck"
+-'  125  2  ~/pintos/src/userprog/syscall.c
+|4,39,125,2,1523514710,"~/pintos/src/userprog/syscall.c"
+-'  127  2  ~/pintos/src/userprog/syscall.c
+|4,39,127,2,1523514710,"~/pintos/src/userprog/syscall.c"
+-'  126  2  ~/pintos/src/userprog/syscall.c
+|4,39,126,2,1523514710,"~/pintos/src/userprog/syscall.c"
+-'  128  2  ~/pintos/src/userprog/syscall.c
+|4,39,128,2,1523514710,"~/pintos/src/userprog/syscall.c"
+-'  125  2  ~/pintos/src/userprog/syscall.c
+|4,39,125,2,1523514710,"~/pintos/src/userprog/syscall.c"
+-'  127  2  ~/pintos/src/userprog/syscall.c
+|4,39,127,2,1523514710,"~/pintos/src/userprog/syscall.c"
+-'  49  15  ~/pintos/src/userprog/syscall.c
+|4,39,49,15,1523514700,"~/pintos/src/userprog/syscall.c"
+-'  49  15  ~/pintos/src/userprog/syscall.c
+|4,39,49,15,1523514700,"~/pintos/src/userprog/syscall.c"
+-'  49  15  ~/pintos/src/userprog/syscall.c
+|4,39,49,15,1523514700,"~/pintos/src/userprog/syscall.c"
+-'  49  15  ~/pintos/src/userprog/syscall.c
+|4,39,49,15,1523514700,"~/pintos/src/userprog/syscall.c"
+-'  49  15  ~/pintos/src/userprog/syscall.c
+|4,39,49,15,1523514700,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/userprog/syscall.c
+|4,39,1,0,1523514605,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/userprog/syscall.c
+|4,39,1,0,1523514605,"~/pintos/src/userprog/syscall.c"
+-'  48  17  ~/pintos/src/userprog/syscall.c
+|4,39,48,17,1523514594,"~/pintos/src/userprog/syscall.c"
+-'  48  17  ~/pintos/src/userprog/syscall.c
+|4,39,48,17,1523514594,"~/pintos/src/userprog/syscall.c"
+-'  48  17  ~/pintos/src/userprog/syscall.c
+|4,39,48,17,1523514594,"~/pintos/src/userprog/syscall.c"
+-'  48  17  ~/pintos/src/userprog/syscall.c
+|4,39,48,17,1523514594,"~/pintos/src/userprog/syscall.c"
+-'  48  17  ~/pintos/src/userprog/syscall.c
+|4,39,48,17,1523514594,"~/pintos/src/userprog/syscall.c"
+-'  48  17  ~/pintos/src/userprog/syscall.c
+|4,39,48,17,1523514594,"~/pintos/src/userprog/syscall.c"
+-'  48  17  ~/pintos/src/userprog/syscall.c
+|4,39,48,17,1523514594,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/userprog/syscall.c
+|4,39,1,0,1523514473,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/userprog/syscall.c
+|4,39,1,0,1523514473,"~/pintos/src/userprog/syscall.c"
+-'  48  4  ~/pintos/src/userprog/syscall.c
+|4,39,48,4,1523514471,"~/pintos/src/userprog/syscall.c"
+-'  48  4  ~/pintos/src/userprog/syscall.c
+|4,39,48,4,1523514471,"~/pintos/src/userprog/syscall.c"
+-'  35  31  ~/pintos/src/userprog/syscall.c
+|4,39,35,31,1523514317,"~/pintos/src/userprog/syscall.c"
+-'  35  31  ~/pintos/src/userprog/syscall.c
+|4,39,35,31,1523514317,"~/pintos/src/userprog/syscall.c"
+-'  35  31  ~/pintos/src/userprog/syscall.c
+|4,39,35,31,1523514317,"~/pintos/src/userprog/syscall.c"
+-'  35  31  ~/pintos/src/userprog/syscall.c
+|4,39,35,31,1523514317,"~/pintos/src/userprog/syscall.c"
+-'  35  31  ~/pintos/src/userprog/syscall.c
+|4,39,35,31,1523514317,"~/pintos/src/userprog/syscall.c"
+-'  35  31  ~/pintos/src/userprog/syscall.c
+|4,39,35,31,1523514317,"~/pintos/src/userprog/syscall.c"
+-'  35  31  ~/pintos/src/userprog/syscall.c
+|4,39,35,31,1523514317,"~/pintos/src/userprog/syscall.c"
+-'  35  31  ~/pintos/src/userprog/syscall.c
+|4,39,35,31,1523514317,"~/pintos/src/userprog/syscall.c"
+-'  35  31  ~/pintos/src/userprog/syscall.c
+|4,39,35,31,1523514317,"~/pintos/src/userprog/syscall.c"
+-'  202  9  ~/pintos/src/userprog/syscall.c
+|4,39,202,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  204  9  ~/pintos/src/userprog/syscall.c
+|4,39,204,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  204  9  ~/pintos/src/userprog/syscall.c
+|4,39,204,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  204  9  ~/pintos/src/userprog/syscall.c
+|4,39,204,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  203  9  ~/pintos/src/userprog/syscall.c
+|4,39,203,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  205  9  ~/pintos/src/userprog/syscall.c
+|4,39,205,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  202  9  ~/pintos/src/userprog/syscall.c
+|4,39,202,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  204  9  ~/pintos/src/userprog/syscall.c
+|4,39,204,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  204  9  ~/pintos/src/userprog/syscall.c
+|4,39,204,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  204  9  ~/pintos/src/userprog/syscall.c
+|4,39,204,9,1523514019,"~/pintos/src/userprog/syscall.c"
+-'  122  19  ~/pintos/src/userprog/syscall.c
+|4,39,122,19,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  124  12  ~/pintos/src/userprog/syscall.c
+|4,39,124,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  113  12  ~/pintos/src/userprog/syscall.c
+|4,39,113,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  124  12  ~/pintos/src/userprog/syscall.c
+|4,39,124,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  113  12  ~/pintos/src/userprog/syscall.c
+|4,39,113,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  124  12  ~/pintos/src/userprog/syscall.c
+|4,39,124,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  113  12  ~/pintos/src/userprog/syscall.c
+|4,39,113,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  123  19  ~/pintos/src/userprog/syscall.c
+|4,39,123,19,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  125  12  ~/pintos/src/userprog/syscall.c
+|4,39,125,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  114  12  ~/pintos/src/userprog/syscall.c
+|4,39,114,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  122  19  ~/pintos/src/userprog/syscall.c
+|4,39,122,19,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  124  12  ~/pintos/src/userprog/syscall.c
+|4,39,124,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  113  12  ~/pintos/src/userprog/syscall.c
+|4,39,113,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  124  12  ~/pintos/src/userprog/syscall.c
+|4,39,124,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  113  12  ~/pintos/src/userprog/syscall.c
+|4,39,113,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  124  12  ~/pintos/src/userprog/syscall.c
+|4,39,124,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  113  12  ~/pintos/src/userprog/syscall.c
+|4,39,113,12,1523514018,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/userprog/syscall.c
+|4,39,1,0,1523514007,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/userprog/syscall.c
+|4,39,1,0,1523514007,"~/pintos/src/userprog/syscall.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
+-'  274  14  ~/pintos/src/threads/malloc.c
+|4,39,274,14,1523513992,"~/pintos/src/threads/malloc.c"
 
 # History of marks within files (newest to oldest):
+
+> ~/pintos/src/threads/init.c
+	*	1523515246	0
+	"	288	2
+	^	297	0
+	.	339	0
+	+	338	0
+	+	339	0
+	m	133	2
+
+> ~/pintos/src/userprog/syscall.c
+	*	1523515224	0
+	"	61	22
+	^	61	23
+	.	61	22
+	+	215	36
+	+	136	0
+	+	137	0
+	+	148	0
+	+	135	0
+	+	128	0
+	+	129	0
+	+	133	1
+	+	107	0
+	+	108	0
+	+	220	28
+	+	212	0
+	+	217	0
+	+	221	11
+	+	143	0
+	+	148	0
+	+	144	0
+	+	145	17
+	+	146	1
+	+	224	20
+	+	57	49
+	+	65	67
+	+	72	49
+	+	73	0
+	+	72	67
+	+	78	64
+	+	84	69
+	+	90	67
+	+	96	66
+	+	102	67
+	+	108	0
+	+	129	49
+	+	135	67
+	+	142	50
+	+	53	27
+	+	9	29
+	+	65	60
+	+	72	60
+	+	78	62
+	+	84	62
+	+	90	60
+	+	96	64
+	+	102	60
+	+	108	61
+	+	135	60
+	+	219	29
+	+	60	25
+	+	57	43
+	+	109	0
+	+	122	3
+	+	59	29
+	+	60	40
+	+	110	25
+	+	108	44
+	+	112	33
+	+	119	41
+	+	118	46
+	+	119	42
+	+	122	0
+	+	120	25
+	+	121	0
+	+	122	3
+	+	123	7
+	+	127	0
+	+	126	0
+	+	67	17
+	+	74	17
+	+	80	19
+	+	86	22
+	+	92	20
+	+	98	21
+	+	104	17
+	+	123	27
+	+	131	17
+	+	137	17
+	+	144	18
+	+	113	24
+	+	124	21
+	+	38	2
+	+	35	31
+	+	38	2
+	+	44	11
+	+	48	17
+	+	164	15
+	+	169	15
+	+	174	15
+	+	179	15
+	+	184	15
+	+	189	15
+	+	194	15
+	+	199	15
+	+	204	15
+	+	209	15
+	+	214	15
+	+	219	15
+	+	123	7
+	+	124	0
+	+	113	0
+	+	114	0
+	+	61	22
+
+> ~/pintos/src/tests/userprog/args-none.ck
+	*	1523514785	0
+	"	1	0
+
+> ~/pintos/src/threads/malloc.c
+	*	1523513991	0
+	"	274	14
+
+> ~/pintos/src/userprog/process.c
+	*	1523512654	0
+	"	90	2
+	^	90	3
+	.	95	0
+	+	254	19
+	+	340	26
+	+	254	0
+	+	255	0
+	+	340	0
+	+	341	0
+	+	281	0
+	+	280	5
+	+	281	0
+	+	529	33
+	+	481	0
+	+	535	1
+	+	534	0
+	+	535	0
+	+	468	1
+	+	469	0
+	+	535	22
+	+	534	28
+	+	535	15
+	+	534	0
+	+	535	12
+	+	473	51
+	+	535	22
+	+	534	18
+	+	535	31
+	+	537	0
+	+	535	21
+	+	534	15
+	+	535	36
+	+	534	0
+	+	535	0
+	+	536	18
+	+	537	0
+	+	473	43
+	+	474	0
+	+	535	61
+	+	64	0
+	+	64	1
+	+	65	16
+	+	65	83
+	+	65	80
+	+	68	2
+	+	65	0
+	+	87	2
+	+	65	2
+	+	65	14
+	+	67	0
+	+	68	3
+	+	70	0
+	+	71	0
+	+	71	16
+	+	73	0
+	+	72	20
+	+	73	12
+	+	76	0
+	+	76	41
+	+	78	0
+	+	80	0
+	+	80	36
+	+	81	41
+	+	82	42
+	+	83	24
+	+	85	0
+	+	58	0
+	+	57	17
+	+	66	11
+	+	230	26
+	+	231	0
+	+	221	19
+	+	230	15
+	+	238	0
+	+	221	34
+	+	236	0
+	+	234	18
+	+	234	32
+	+	239	36
+	+	242	54
+	+	255	67
+	+	220	22
+	+	233	38
+	+	234	18
+	+	235	25
+	+	238	23
+	+	237	25
+	+	238	57
+	+	221	21
+	+	1	0
+	+	235	5
+	+	234	43
+	+	234	66
+	+	235	4
+	+	235	0
+	+	230	36
+	+	512	74
+	+	512	61
+	+	512	12
+	+	512	58
+	+	513	0
+	+	512	20
+	+	95	0
+	n	52	21
+
+> ~/pintos/src/threads/thread.h
+	*	1523511523	0
+	"	104	56
+	^	104	57
+	.	104	56
+	+	93	63
+	+	95	79
+	+	15	52
+	+	15	51
+	+	96	0
+	+	95	79
+	+	96	61
+	+	98	15
+	+	99	0
+	+	98	13
+	+	97	59
+	+	97	92
+	+	7	18
+	+	97	90
+	+	7	25
+	+	97	59
+	+	98	0
+	+	104	56
+
+> ~/pintos/src/threads/interrupt.h
+	*	1523510531	0
+	"	31	13
+
+> ~/pintos/src/lib/syscall-nr.h
+	*	1523506188	0
+	"	1	6
+
+> ~/pintos/src/userprog/syscall.
+	*	1523505581	0
+	"	1	0
+
+> ~/pintos/src/devices/shutdown.c
+	*	1523455212	0
+	"	37	6
+
+> ~/pintos/src/userprog/pagedir.c
+	*	1523447999	0
+	"	157	0
+
+> ~/pintos/src/lib/user/syscall.h
+	*	1523447578	0
+	"	25	0
+
+> ~/pintos/src/threads/vaddr.h
+	*	1523441642	0
+	"	39	0
+	^	59	2
+	.	61	0
+	+	62	0
+	+	61	0
+
+> ~/pintos/src/threads/pte.h
+	*	1523441430	0
+	"	74	0
+
+> ~/pintos/src/userprog/process.h
+	*	1523441130	0
+	"	1	0
+
+> ~/pintos/src/userprog/pagedir.h
+	*	1523441124	0
+	"	1	0
 
 > ~/pintos/src/lib/kernel/console.c
 	*	1523440150	0
@@ -1401,174 +1812,9 @@ $
 	i	532	105
 	n	66	22
 
-> ~/pintos/src/threads/thread.h
-	*	1523439592	0
-	"	102	25
-	^	97	59
-	.	98	0
-	+	93	63
-	+	95	79
-	+	15	52
-	+	15	51
-	+	96	0
-	+	95	79
-	+	96	61
-	+	98	15
-	+	99	0
-	+	98	13
-	+	97	59
-	+	97	92
-	+	7	18
-	+	97	90
-	+	7	25
-	+	97	59
-	+	98	0
-
-> ~/pintos/src/userprog/syscall.c
-	*	1523439484	0
-	"	20	19
-	^	20	20
-	.	20	19
-	+	19	0
-	+	19	1
-	+	19	0
-	+	18	3
-	+	20	19
-
-> ~/pintos/src/threads/interrupt.h
-	*	1523439463	0
-	"	58	0
-
-> ~/pintos/src/lib/syscall-nr.h
-	*	1523430415	0
-	"	1	0
-
 > ~/pintos/src/threads/interrupt.c
 	*	1523430338	0
 	"	1	0
-
-> ~/pintos/src/threads/vaddr.h
-	*	1523429311	0
-	"	89	0
-	^	59	2
-	.	61	0
-	+	62	0
-	+	61	0
-
-> ~/pintos/src/threads/pte.h
-	*	1523429306	0
-	"	83	21
-
-> ~/pintos/src/userprog/pagedir.c
-	*	1523429302	0
-	"	50	9
-
-> ~/pintos/src/userprog/process.c
-	*	1523427631	0
-	"	376	0
-	^	511	21
-	.	511	20
-	+	86	0
-	+	253	19
-	+	339	26
-	+	253	0
-	+	254	0
-	+	339	0
-	+	340	0
-	+	280	0
-	+	279	5
-	+	280	0
-	+	528	33
-	+	480	0
-	+	534	1
-	+	533	0
-	+	534	0
-	+	467	1
-	+	468	0
-	+	534	22
-	+	533	28
-	+	534	15
-	+	533	0
-	+	534	12
-	+	472	51
-	+	534	22
-	+	533	18
-	+	534	31
-	+	536	0
-	+	534	21
-	+	533	15
-	+	534	36
-	+	533	0
-	+	534	0
-	+	535	18
-	+	536	0
-	+	472	43
-	+	473	0
-	+	534	61
-	+	64	0
-	+	64	1
-	+	65	16
-	+	65	83
-	+	65	80
-	+	68	2
-	+	65	0
-	+	87	2
-	+	65	2
-	+	65	14
-	+	67	0
-	+	68	3
-	+	70	0
-	+	71	0
-	+	71	16
-	+	73	0
-	+	72	20
-	+	73	12
-	+	76	0
-	+	76	41
-	+	78	0
-	+	80	0
-	+	80	36
-	+	81	41
-	+	82	42
-	+	83	24
-	+	85	0
-	+	58	0
-	+	57	17
-	+	66	11
-	+	229	26
-	+	230	0
-	+	220	19
-	+	229	15
-	+	237	0
-	+	220	34
-	+	235	0
-	+	233	18
-	+	233	32
-	+	238	36
-	+	241	54
-	+	254	67
-	+	219	22
-	+	232	38
-	+	233	18
-	+	234	25
-	+	237	23
-	+	236	25
-	+	237	57
-	+	220	21
-	+	1	0
-	+	234	5
-	+	233	43
-	+	233	66
-	+	234	4
-	+	234	0
-	+	229	36
-	+	511	74
-	+	511	61
-	+	511	12
-	+	511	58
-	+	512	0
-	+	511	20
-	n	52	21
 
 > ~/pintos/src/lib/stdio.c
 	*	1523376560	0
@@ -1803,15 +2049,6 @@ $
 	.	43	25
 	+	43	25
 
-> ~/pintos/src/threads/init.c
-	*	1523355706	0
-	"	1	0
-	^	297	0
-	.	339	0
-	+	338	0
-	+	339	0
-	m	133	2
-
 > ~/pintos/src/threads/loader.S
 	*	1523354396	0
 	"	131	0
@@ -1827,10 +2064,6 @@ $
 > ~/pintos/src/tests/userprog/args-single.ck
 	*	1523351754	0
 	"	1	0
-
-> ~/pintos/src/tests/userprog/args-none.ck
-	*	1523351747	0
-	"	8	0
 
 > ~/pintos/src/Makefile.kernel
 	*	1523351700	0
@@ -1856,10 +2089,6 @@ $
 	*	1523349050	0
 	"	36	0
 
-> ~/pintos/src/userprog/process.h
-	*	1523334811	0
-	"	1	0
-
 > lib/user/syscall.c
 	*	1523330570	0
 	"	1	0
@@ -1867,10 +2096,6 @@ $
 > ~/pintos/src/lib/user/syscall.c
 	*	1523279646	0
 	"	37	0
-
-> ~/pintos/src/lib/user/syscall.h
-	*	1523279641	0
-	"	36	0
 
 > ~/pintos/src/threads/palloc.c
 	*	1523278029	0
@@ -2135,19 +2360,3 @@ $
 > ~/pintos/src/devices/pit.c
 	*	1522065636	0
 	"	75	2
-
-> ~/pintos/src/devices/speaker.c
-	*	1522065600	0
-	"	23	6
-
-> ~/pintos/src/devices/serial.c
-	*	1522065536	0
-	"	101	2
-
-> /usr/include/stdio.h
-	*	1522063734	0
-	"	362	0
-
-> ~/pintos/src/lib/user/debug.c
-	*	1521982975	0
-	"	10	0

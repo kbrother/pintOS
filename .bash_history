@@ -1,110 +1,3 @@
-cd ../threads/
-vim thread.c
-cd ..
-cscope
-cd threads/
-vim thread.c
-exit
-ls
-cd pintos/src
-ls
-cd threads
-vim synch.c
-make
-make check
-clear
-cd ../
-cd tests/threads/
-vim alarm-single.ck 
-ls
-vim alarm-negative.c
-cd ../
-cd ..
-cd threads/
-vim synch.c
-cd ..
-cscope
-exit
-cd pintos/src/threads/
-ls
-cd ..
-ls
-cd lib/kernel/
-ls
-vim list.c
-rm .list.c.swp 
-vim list.c
-vim list.h
-vim list.c
-ls
-cd ..
-cd devices/
-vim timer.c
-cd ../lib/kernel/
-ls
-clear
-vim list.c
-cd ../
-cd ..
-cd devices/
-vim timer.c
-make
-cd ..
-cd threads/
-make
-cd ../devices/
-vim timer.c
-clear
-cd ../
-cd threads/
-make
-make check
-clear
-cd ../
-cd lib/kernel/
-vim list.c
-exit
-ls
-cd pintos/src/
-ls
-cd threads/
-ls
-cd ../
-ls
-cd tests/
-cd threads/
-ls
-vim alarm-priority.c
-vim alarm-single.ck 
-clear
-cd ..
-ls
-cd threads/
-ls
-pintos -v --gdb -- -q alarm-single
-clear
-pintos -v --gdb -- -q alarm-single
-pintos -v -- -q alarm-single
-make
-
-clear
-make check
-clear
-pintos -v --gdb -- -q alarm-single
-clear
-pintos -v --gdb -- -q alarm-single
-make check
-clear
-pintos -v --gdb -- -q alarm-single
-make
-make check
-pintos -v --gdb -- -q alarm-single
-clear
-pintos -v --gdb -- -q alarm-negative
-clear
-ls
-vim thread.c
-pintos -v --gdb -- -q alarm-negative
 clear
 pintos -v --gdb -- -q alarm-negative
 [A
@@ -1998,3 +1891,110 @@ cd build/
 pintos -v -k -T 60 --bochs --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q -f run args-none
 pintos --gdb -v -k -T 60 --bochs  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
 exit
+cd pintos/src/
+lks
+ls
+clear
+cd userprog/
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
+clear
+cd ..
+cscope
+cd userprog/
+vim process.c
+cd ..
+cscope
+cd threads/
+vim interrupt.h
+cd ..
+cscope struct intr_frame
+cscope
+cd threads/
+vim interrupt.c
+vim interrupt.h
+vim thread.h
+vim thread.c
+cd ..
+cscope
+cd ..
+git add .
+git status
+git commit -m "argument passing finished"
+git push origin master
+clear
+cd pintos/src/threads/
+vim init.c
+vim vaddr.h 
+make 
+make cscope.out 
+make check
+cd ..
+cd userprog/
+vim pagedir.c
+ls
+vim syscall.c
+cd pintos/src/lib/
+vim syscall-nr.h 
+cd ..
+cd userprog/
+vim process.c
+cd pintos/src/threads/
+vim vaddr.h 
+cd..
+cd ..
+cscope
+clear
+cd lib/
+vim syscall-nr.h 
+cd user/
+vim syscall.h
+cd ..
+cd .
+cd ..
+cd threads/
+ls
+vim thread.h
+ls
+clear
+ls
+clear
+vim syscall.
+vim syscall.c
+exit
+cd ..
+cd lib/
+vim syscall-nr.h 
+exut
+exit
+exit
+exit
+cd pintos/src/
+ls
+cd userprog
+vim syscall.c
+tmux
+make
+clear
+make
+cd ..
+cd threads/
+vim interrupt.h
+cd ..
+cd userprog/
+make
+clear
+exit
+cd pintos/sr
+cd pintos/src/userprog/
+ls
+vim process.c
+vim syscall.c
+make
+vim syscall.c
+make
+vim syscall.c
+make
+clear
+make
+tmux
