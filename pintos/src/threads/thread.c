@@ -184,6 +184,7 @@ thread_create (const char *name, int priority,
   /* Initialize thread. */
   init_thread (t, name, priority);
   tid = t->tid = allocate_tid ();
+  t->parent = thread_current (); 
 
   /* Prepare thread for first run by initializing its stack.
      Do this atomically so intermediate values for the 'stack' 
@@ -294,6 +295,8 @@ thread_exit (void)
 {
   ASSERT (!intr_context ());
 
+  struct thread *cur = thread_current ();
+
 #ifdef USERPROG
   process_exit ();
 #endif
@@ -301,10 +304,11 @@ thread_exit (void)
   /* Remove thread from all threads list, set our status to dying,
      and schedule another process.  That process will destroy us
      when it calls thread_schedule_tail(). */
-  intr_disable ();
-  list_remove (&thread_current()->allelem);
-  thread_current ()->status = THREAD_DYING;
+  intr_disable ();  
+  list_remove (&thread_current()->allelem);  
+  cur->status = THREAD_DYING;
   schedule ();
+
   NOT_REACHED ();
 }
 
@@ -324,6 +328,22 @@ thread_yield (void)
   cur->status = THREAD_READY;
   schedule ();
   intr_set_level (old_level);
+}
+
+struct thread * 
+search_all_list (tid_t id){
+
+  struct list_elem *e;
+  
+  for (e = list_begin (&all_list); e != list_end (&all_list); 
+      e = list_next (e)){
+
+    struct thread *t = list_entry (e, struct thread, allelem);
+    if (t->tid == id)
+      return t;
+  }
+
+  return NULL;
 }
 
 /* Invoke function 'func' on all threads, passing along 'aux'.
@@ -488,13 +508,23 @@ init_thread (struct thread *t, const char *name, int priority)
   memset (t, 0, sizeof *t);
   t->status = THREAD_BLOCKED;
   strlcpy (t->name, name, sizeof t->name);
+  
   t->stack = (uint8_t *) t + PGSIZE;
   t->priority = priority;
   t->magic = THREAD_MAGIC;
+  
   t->original_prior = priority;
   t->locked = false;
   t->time_to_wake = -1;
-  list_init(&t->acquired_locks);
+  
+  list_init (&t->acquired_locks);
+  sema_init (&t->exec_sema, 0);
+   
+  lock_init (&t->list_lock);
+  list_init (&t->child_list);
+
+  t->exit_status = 0;
+  list_init (&t->fd_list);
   list_push_back (&all_list, &t->allelem);
 }
 
@@ -519,10 +549,8 @@ alloc_frame (struct thread *t, size_t size)
 static struct thread *
 next_thread_to_run (void) 
 {
-  struct list_elem *e;
   struct thread *thread_to_run;
   struct list_elem *elem_to_run;
-  int max_prior = -1;
 
   if (list_empty (&ready_list)){
     return idle_thread;

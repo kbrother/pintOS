@@ -18,6 +18,8 @@
 #include "threads/thread.h"
 #include "threads/vaddr.h"
 #include "threads/malloc.h"
+#include "threads/synch.h"
+#include "userprog/syscall.h"
 
 static thread_func start_process NO_RETURN;
 static bool load (const char *cmdline, void (**eip) (void), void **esp);
@@ -29,8 +31,9 @@ static bool load (const char *cmdline, void (**eip) (void), void **esp);
 tid_t
 process_execute (const char *file_name) 
 {
-  char *fn_copy;
+	char *fn_copy;
   tid_t tid;
+  struct thread *cur = thread_current ();
 
   /* Make a copy of FILE_NAME.
      Otherwise there's a race between the caller and load(). */
@@ -40,10 +43,33 @@ process_execute (const char *file_name)
   strlcpy (fn_copy, file_name, PGSIZE);
 
   /* Create a new thread to execute FILE_NAME. */
+  lock_acquire (&cur->list_lock);
+
   tid = thread_create (file_name, PRI_DEFAULT, start_process, fn_copy);
-  if (tid == TID_ERROR)
+  if (tid == TID_ERROR){
     palloc_free_page (fn_copy); 
-  return tid;
+  }
+  else {
+
+    sema_down (&cur->exec_sema);
+
+    if (cur->load_reply){
+      struct child_info *child = malloc (sizeof (struct child_info));
+    
+      child->tid = tid;         
+      child->wait_called = false;    
+      child->died = false;    
+      sema_init (&child->wait_sema, 0);
+      list_push_back (&cur->child_list, &child->child_elem);
+    }
+    else {
+      sema_down (&cur->exec_sema);
+      tid = TID_ERROR;
+    }
+  } 
+  
+  lock_release (&cur->list_lock);
+  return tid;  
 }
 
 /* A thread function that loads a user process and starts it
@@ -54,21 +80,29 @@ start_process (void *file_name_)
   char *file_name = file_name_;
   struct intr_frame if_;
   bool success;
+  struct thread *cur = thread_current ();
 
   /* Initialize interrupt frame and load executable. */
   memset (&if_, 0, sizeof if_);
   if_.gs = if_.fs = if_.es = if_.ds = if_.ss = SEL_UDSEG;
   if_.cs = SEL_UCSEG;
   if_.eflags = FLAG_IF | FLAG_MBS;
- 
-  //String을 parse해준다.
-  success = load (file_name, &if_.eip, &if_.esp);
+  
+  lock_acquire (&filesys_lock);
+  success = load (file_name, &if_.eip, &if_.esp); 
+  lock_release (&filesys_lock);
+  
+  cur->parent->load_reply = success;
+  cur->load_success = success;
+  sema_up (&cur->parent->exec_sema);
 
   /* If load failed, quit. */
   palloc_free_page (file_name);
-  if (!success) 
+  if (!success) {
+    cur->exit_status = -1;
     thread_exit ();
-
+  }
+ 
   /* Start the user process by simulating a return from an
      interrupt, implemented by intr_exit (in
      threads/intr-stubs.S).  Because intr_exit takes all of its
@@ -89,10 +123,43 @@ start_process (void *file_name_)
    This function will be implemented in problem 2-2.  For now, it
    does nothing. */
 int
-process_wait (tid_t child_tid UNUSED) 
+process_wait (tid_t child_tid) 
 {
-  while(true){
+  int exitStatus = -1;
+  struct thread *cur = thread_current ();
+  struct list_elem *e;
+  struct list *c_list;
+
+  lock_acquire (&cur->list_lock);
+  c_list = &cur->child_list;
+
+  e = list_begin (c_list);
+  while (e != list_end (c_list)){
+
+    struct child_info *fi = list_entry (e, struct child_info, child_elem);
+    if (fi->tid == child_tid){
+
+      if (!fi->wait_called){
+               
+        if (!fi->died){
+          
+          lock_release (&cur->list_lock);
+          sema_down (&fi->wait_sema);
+          lock_acquire (&cur->list_lock);
+        }
+  
+        fi->wait_called = true;
+        exitStatus = fi->exit_status;
+      } 
+
+      break;
+    }
+
+    e = list_next (e);
   }
+
+  lock_release (&cur->list_lock);
+  return exitStatus;
 }
 
 /* Free the current process's resources. */
@@ -101,9 +168,80 @@ process_exit (void)
 {
   struct thread *cur = thread_current ();
   uint32_t *pd;
-
+  struct list_elem *e;
+  struct list *c_list;
+  bool checked = false;
+  struct list *fd_l;
+ 
   /* Destroy the current process's page directory and switch back
      to the kernel-only page directory. */
+
+  //CLOSE executable
+  lock_acquire (&filesys_lock);
+  file_close (cur->executable);
+  lock_release (&filesys_lock);
+
+  //close all file
+  fd_l = &cur->fd_list;
+
+  while (list_size (fd_l) > 0){
+
+    e = list_pop_front (fd_l);
+    struct fd *fd_to_close = list_entry (e, struct fd, fd_elem);
+    //file_close (fd_to_close->f);
+    free (fd_to_close);
+  }
+
+  //자식 처리
+  lock_acquire (&cur->list_lock);
+  c_list = &cur->child_list;
+  e = list_begin (c_list);
+
+  while (e != list_end (c_list)){
+
+    struct child_info *c_info = list_entry (e, struct child_info, child_elem);
+    if (!c_info->died){   
+      
+      lock_release (&cur->list_lock);
+      sema_down (&c_info->wait_sema);
+      lock_acquire (&cur->list_lock);
+    }
+    
+    list_pop_front (c_list);
+    free (c_info);
+    e = list_begin(c_list);
+  }
+
+  lock_release (&cur->list_lock);
+
+  printf("%s: exit(%d)\n", cur->user_file, cur->exit_status);
+  free(cur->user_file);
+
+  //부모 바꾸기
+  if (cur->tid != 1 && cur->tid != 2){
+    
+    if (!cur->load_success)
+      sema_up (&cur->parent->exec_sema);
+
+    lock_acquire (&cur->parent->list_lock);
+    c_list = &cur->parent->child_list;
+
+		for (e = list_begin (c_list); e != list_end (c_list); e = list_next (e)){
+		
+      struct child_info *c_info = list_entry (e, struct child_info, child_elem);
+      if (c_info->tid == cur->tid){
+ 
+        checked = true;
+        c_info->exit_status = cur->exit_status;
+        c_info->died = true;
+        sema_up (&c_info->wait_sema);
+        break;
+    	}
+		}
+
+    lock_release (&cur->parent->list_lock);
+	}
+
   pd = cur->pagedir;
   if (pd != NULL) 
     {
@@ -218,7 +356,7 @@ load (const char *file_name, void (**eip) (void), void **esp)
   off_t file_ofs;
   bool success = false;
   int i, file_name_size;
-  char *first_space, *file_name_only;
+  char *first_space;
 
   /* Allocate and activate page directory. */
   t->pagedir = pagedir_create ();
@@ -234,15 +372,19 @@ load (const char *file_name, void (**eip) (void), void **esp)
   else
     file_name_size = (int)(first_space - file_name);
 
-  file_name_only = malloc (file_name_size + 1);
-  strlcpy (file_name_only, file_name, file_name_size + 1);
-  file = filesys_open (file_name_only);
+  t->user_file = malloc (file_name_size + 1);
+  strlcpy (t->user_file, file_name, file_name_size + 1);
+  file = filesys_open (t->user_file);
+  t->executable = file;
+
   if (file == NULL) 
     {
-      printf ("load: %s: open failed\n", file_name_only);
+      printf ("load: %s: open failed\n", t->user_file);
       goto done; 
     }
 
+  file_deny_write (file); //deny write to executable
+  
   /* Read and verify executable header. */
   if (file_read (file, &ehdr, sizeof ehdr) != sizeof ehdr
       || memcmp (ehdr.e_ident, "\177ELF\1\1\1", 7)
@@ -252,7 +394,7 @@ load (const char *file_name, void (**eip) (void), void **esp)
       || ehdr.e_phentsize != sizeof (struct Elf32_Phdr)
       || ehdr.e_phnum > 1024) 
     {
-      printf ("load: %s: error loading executable\n", file_name_only);
+      printf ("load: %s: error loading executable\n", t->user_file);
       goto done; 
     }
 
@@ -326,7 +468,6 @@ load (const char *file_name, void (**eip) (void), void **esp)
 
  done:
   /* We arrive here whether the load is successful or not. */
-  file_close (file);
   return success;
 }
 
@@ -509,7 +650,7 @@ setup_stack (void **esp, const char *file_name_)
         palloc_free_page (kpage);
     }
 
-  hex_dump ((int)*esp, *esp, (0xc0000000-(uintptr_t)*esp), true); 
+  //hex_dump (*esp, *esp, 0xc0000000 - (uint32_t)*esp, true);
   free(file_name);
 
   return success; 

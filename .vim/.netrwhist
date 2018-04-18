@@ -1,5 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/team22a/pintos/src/threads/build'
 let g:netrw_dirhist_2='/home/team22a/pintos/src/devices'
 let g:netrw_dirhist_3='/home/team22a/pintos/src/threads'
+let g:netrw_dirhist_4='/home/team22a/pintos/src/lib'
+let g:netrw_dirhist_5='/home/team22a/pintos/src/threads'
+let g:netrw_dirhist_6='/home/team22a/pintos/src'
+let g:netrw_dirhist_7='/home/team22a/pintos/src/threads'
+let g:netrw_dirhist_8='/home/team22a/pintos/src'
+let g:netrw_dirhist_9='/home/team22a/pintos/src/tests/userprog/no-vm'

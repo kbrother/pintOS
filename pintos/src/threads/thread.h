@@ -4,6 +4,7 @@
 #include <debug.h>
 #include <list.h>
 #include <stdint.h>
+#include "threads/synch.h"
 
 /* States in a thread's life cycle. */
 enum thread_status
@@ -94,20 +95,37 @@ struct thread
     struct lock *lock_to_acquire;       /* lock which thread want to acquire */
     bool locked;                        /* blokced by lock */
     struct list acquired_locks;        /* acquired locks */
-    
+
     /* Shared between thread.c and synch.c. */
     struct list_elem elem;              /* List element. */
 
 #ifdef USERPROG
     /* Owned by userprog/process.c. */
     uint32_t *pagedir;                  /* Page directory. */
-    uint32_t exit_status;               /* exit status */
+    char *user_file;
+    struct list child_list;    
+    struct list fd_list;
+    struct thread *parent;
+    struct lock list_lock;
+    struct semaphore exec_sema;
+    int exit_status;
+    bool load_success;
+    bool load_reply;
+    struct file *executable;
 #endif
 
     /* Owned by thread.c. */
     unsigned magic;                     /* Detects stack overflow. */
   };
 
+struct child_info {
+  tid_t tid;
+  bool wait_called;
+  bool died;
+  int exit_status;
+  struct list_elem child_elem;
+  struct semaphore wait_sema;
+};
 /* If false (default), use round-robin scheduler.
    If true, use multi-level feedback queue scheduler.
    Controlled by kernel command-line option "-o mlfqs". */
@@ -132,6 +150,8 @@ const char *thread_name (void);
 void thread_exit (void) NO_RETURN;
 void thread_yield (void);
 
+struct thread *search_all_list (tid_t id);
+
 /* Performs some operation on thread t, given auxiliary data AUX. */
 typedef void thread_action_func (struct thread *t, void *aux);
 void thread_foreach (thread_action_func *, void *);
@@ -143,5 +163,4 @@ int thread_get_nice (void);
 void thread_set_nice (int);
 int thread_get_recent_cpu (void);
 int thread_get_load_avg (void);
-
 #endif /* threads/thread.h */

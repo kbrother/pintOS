@@ -4,6 +4,7 @@
 #include "userprog/gdt.h"
 #include "threads/interrupt.h"
 #include "threads/thread.h"
+#include "userprog/syscall.h"
 
 /* Number of page faults processed. */
 static long long page_fault_cnt;
@@ -108,6 +109,11 @@ kill (struct intr_frame *f)
     }
 }
 
+static sysExit (){
+  thread_current ()->exit_status = -1;
+  thread_exit ();
+}
+
 /* Page fault handler.  This is a skeleton that must be filled in
    to implement virtual memory.  Some solutions to project 2 may
    also require modifying this code.
@@ -148,6 +154,18 @@ page_fault (struct intr_frame *f)
   write = (f->error_code & PF_W) != 0;
   user = (f->error_code & PF_U) != 0;
 
+  /*
+  printf ("not_present %d\n", not_present);
+  printf ("write %d\n", write);
+  printf ("user %d\n", user);
+  printf ("fault addr %x\n", fault_addr); */
+
+  if (not_present) 
+    sysExit ();
+
+  if (user && fault_addr >= 0xC0000000)
+    sysExit ();
+   
   /* To implement virtual memory, delete the rest of the function
      body, and replace it with code that brings in the page to
      which fault_addr refers. */
