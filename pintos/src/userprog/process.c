@@ -188,7 +188,11 @@ process_exit (void)
 
     e = list_pop_front (fd_l);
     struct fd *fd_to_close = list_entry (e, struct fd, fd_elem);
-    //file_close (fd_to_close->f);
+    
+    lock_acquire (&filesys_lock);
+    file_close (fd_to_close->f);
+    lock_release (&filesys_lock);
+
     free (fd_to_close);
   }
 
