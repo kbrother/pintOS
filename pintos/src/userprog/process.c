@@ -172,7 +172,8 @@ process_exit (void)
   struct list *c_list;
   bool checked = false;
   struct list *fd_l;
- 
+  struct list *lock_l;
+
   /* Destroy the current process's page directory and switch back
      to the kernel-only page directory. */
 
@@ -194,6 +195,17 @@ process_exit (void)
     lock_release (&filesys_lock);
 
     free (fd_to_close);
+  }
+
+  //release all lock
+  lock_l = &cur->acquired_locks;
+
+  while (list_size (lock_l) > 0){
+    
+    e = list_pop_front (lock_l);
+    struct lock *lock_to_release = list_entry (e, struct lock, elem);
+
+    lock_release (lock_to_release);
   }
 
   //자식 처리

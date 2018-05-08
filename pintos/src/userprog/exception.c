@@ -154,12 +154,6 @@ page_fault (struct intr_frame *f)
   write = (f->error_code & PF_W) != 0;
   user = (f->error_code & PF_U) != 0;
 
-  /*
-  printf ("not_present %d\n", not_present);
-  printf ("write %d\n", write);
-  printf ("user %d\n", user);
-  printf ("fault addr %x\n", fault_addr); */
-
   if (not_present) 
     sysExit ();
 

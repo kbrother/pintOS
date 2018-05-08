@@ -1,389 +1,3 @@
-vim file.c
-vim filesys.c
-vim file.c
-vim file.h
-vim file.c
-vim file.h
-vim file.c
-cd ..
-cd userprog/
-vim syscall.c
-make
-clear
-make
-clear
-make
-vim syscall.c
-ls
-clear
-ls
-clear
-cd pintos/src/filesys/
-clear
-vim file.c
-ls
-vim inode.c
-vim file.c
-vim filesys.c
-cd ..
-cd threads/
-ls
-vim thread.h
-vim thread.c
-vim thread.h
-vim thread.c
-vim  thread.c
-cd ..
-cscope
-cd threads/
-vim thread.c
-vim thread.h
-vim thread.c
-vim thread.h
-vim thread.c
-vim thread.h
-clear
-vim init.c
-vim thread.h
-vim thread.c
-vim thread.h
-vim thread.c
-vim thread.h
-vim synch.h
-vim thread.c
-cd ../userprog/
-vim process.c
-cd pintos/src/filesys/
-ls
-vim inode.c
-ls
-vim directory.c
-vim inode.c
-ls
-vim inode.c
-vim directory.c
-vim inode.c
-cd ..
-cd lib/string.c
-vim lib/
-cd lib/
-vim string.c
-cd ..
-cd threads/
-vim thread.h
-vim thread.c
-vim thread.h
-clear
-vim thread.c
-d pintos/src/
-ls
-cd pintos/src/
-cd threads/
-clear
-ls
-clear
-vim thread.c
-vim thread.h
-vim thread.c
-vim synch.c
-vim thread.h
-vim thread.c
-vim synch.h
-vim thread.h
-vim thread.c
-cd ..
-cscope
-clear
-ls
-clear
-ls
-clear
-ls
-cd lib/
-ls
-cd kernel/
-ls
-vim list.c
-c d..
-cd ..
-cd sr
-cd threads/
-vim thread.h
-cd ..
-cd userprog/
-ls
-vim process.c
-cd ..
-cd filesys/
-vim file.c
-cd ..
-cd threads/
-vim thread.c
-vim thread.h
-make
-vim thread.h
-vim thread.c
-vim thread.h
-make
-vim thread.c
-vim thread.h
-cd ..
-cd userprog/
-make
-clear
-cd ..
-cd threads/
-make
-vim thread.h
-cd ..
-cd userprog/
-make
-clear
-make
-clear
-make
-clear
-cd ..
-vim threads/interrupt.h
-cscope
-cd userprog/
-vim process.
-vim process.c
-cd ..
-cd threads/
-vim synch.h
-cd ..
-cd userprog/
-ls
-vim process.c
-make
-vim process.c
-make
-vim process.c
-vim process.c
-make
-make check
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m│
- n o p q r s t u v'
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m│
- n o p q r s t u v'
-clear
-exit
-vim syscall.c
-make
-make check
-clear
-make check
-clear
-make clean
-make check
-clear
-make clean
-make 
-clera
-clear
-make check
-clear
-make check
-clear
-make clean
-make check
-clear
-make
-clear
-cd build/
-make check
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-cd ..
-make clean
-make check
-clear
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none 
-cd ..
-clear
-ls
-make clean
-make check
-clear
-make check
-clear
-make clean
-make
-clear
-make check
-cd build/
-Run didn't produce any output
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none 
-clear
-cd ..
-cd build/
-cd ..
-make clean
-make
-clear
-make check
-clear
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
-clear
-cd ..
-make clean
-make
-clear
-make check
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
-clear
-cd ..
-ls
-vim process.c
-cd ..
-make clean
-make
-cd userprog/
-make clean
-make
-make check
-clear
-vim process.c
-clear
-ls
-vim process.c
-vim syscall.c
-cd ,,
-cd ..
-cscope
-cd buil
-cd userprog/
-clear
-vim process.c
-cd ..
-cscope
-cscioe
-cscope
-cd userprog/
-clear
-ls
-vim syscall.c
-make
-make check
-clear
-cd ..
-cd userprog/
-make
-make clean
-make
-clear
-make check
-exit
-ls
-cd pintos/src/threads/
-ls
-clear
-ls
-vim thread.h
-vim thread.c
-cd ..
-cd userprog/
-ls
-vim syscall.c
-make
-clear
-vim syscall.c
-tmux
-make clean
-make
-clear
-make check
-clear
-cd build/
-cd ..
-make clean
-make
-clear
-make check
-cd buil
-cd build/
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-clear
-pintos --gdb -v -k -T 60 --bochs --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-cd ..
-vim syscall.c
-cd build/
-cd ..
-cd build/
-pintos --gdb -v -k -T 60 --bochs --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-clear
-pintos --gdb -v -k -T 60 --bochs --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-pintos -v -k -T 60 --qemu --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-clear
-pintos --gdb -v -k --bochs --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-pintos --gdb -v --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-make
-pintos --gdb -v --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-clear
-cd ..
-ls
-vim process.c
-cd pintos/src/
-cscope
-cd lib/
-ls
-cd ..
-cd tests/
-ls
-cd userprog/
-ls
-vim args.c
-cd build
-cd ..
-cd userprog/
-clear
-vim syscall.c
-vim process.c
-backtrace Call stack: 0xc002ab1a 0xc002eae7 0xc002ebfb 0xc002214d 0xc00223a5 0xc002b075 0xc002b20a 0xc002d2a8 0xc00209b1 0xc0020aa4 0xc0020274
-cd build/
-pintos -v -k -T 60 --qemu --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none 
-cd pintos/src/
-ls
-cd lib/
-ls
-cd ..
-ls
-cd utils/
-ls
-cd ..
-ls
-cd devices/
-ls
-cd ..
-clear
-ls
-cd lib/
-ls
-vim stdio.c
-cd ..
-csope
-cscope
-cd userprog/
-vim process.c
-cd build/
-make
-vim process.c
-cd ..
-vim process.c
-make
-vim process.c
-make
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
 clear
 ls
 pintos-gdb kernel.o
@@ -1998,3 +1612,389 @@ make
 cd build/
 pintos -v -k -T 360 --qemu  --filesys-size=2 -p tests/userprog/no-vm/multi-oom -a multi-oom -- -q  -f run multi-oom
 clear
+cd pintos/src/tests/use
+cd pintos/src/tests/userprog/
+vim no-vm/
+cd no-vm/
+vim multi-oom.c
+cd ..
+cd userprog/
+clear
+ls
+cd build/
+pintos-gdb kernel.o
+clar
+clear
+cd pintos/src/threads/
+vim malloc.c
+cd pintos/src/userprog/
+ls
+cd ..
+cd tests/userprog/
+vim open-boundary.c
+vim open-missing.c
+cd pintos/src/filesys/
+ls
+vim file.c
+vim filesys.c
+vim file.c
+vim filesys.c
+cd pintos/src/userprog/
+vim process.c
+make
+vim process.c
+make
+cd build/
+pintos -v -k -T 360 --qemu  --filesys-size=2 -p tests/userprog/no-vm/multi-oom -a multi-oom -- -q  -f run multi-oom
+vim process.c
+clear
+ls
+cd ..
+vim process.c
+vim exception.c
+vim syscall.c
+make
+vim syscall.c
+make
+cd bio
+cd build/
+pintos -v -k -T 360 --qemu  --filesys-size=2 -p tests/userprog/no-vm/multi-oom -a multi-oom -- -q  -f run multi-oom
+cd ..
+vim process.c
+vim syscall.c
+vim process.c
+make
+make chck
+make check
+vim process.c
+vim syscall.c
+make
+clear
+make check
+clear
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+cd ..
+make
+cd build/
+cleraq
+clear
+Call stack: 0xc002aac4 0xc0023369 0xc002d4d3 0xc0021150 0xc002ed8a 0xc002ee44 0xc00220f7 0xc002234f 0xc002d50c 0xc0021150 0xc002f0b4 0xc002f6df 0xc00220f7 0xc002234f 0x804aab8 0x8048920.
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+clear
+ls
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+quit
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+cd ..
+vim process.c
+make
+makec check
+make check
+vim syscall.c
+make
+clear
+make check
+cd build/
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-missing -a open-missing -- -q  -f run open-missing
+cd ..
+cd by
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-missing -a open-missing -- -q  -f run open-missing
+cd ..
+make
+clear
+make check
+cd ..
+git add .
+cd ..
+git add .
+cd team22a
+ls
+cd home/
+ls
+cd team22a
+ls
+git add .
+git commit -m "except multi-o0m"
+git push origin master
+cd pintos/src/use
+cd pintos/src/userprog/
+cd build/
+pintos -v -k -T 360 --qemu  --filesys-size=2 -p tests/userprog/no-vm/multi-oom -a multi-oom -- -q  -f run multi-oom
+clear
+ls
+cd ..
+ls
+vim process.c
+cd ..
+cscope
+cd userprog/
+vim process.c
+clear
+ls
+cd pintos/src/
+ls
+cd userprog
+ls
+make
+make grade
+cd ..
+ls
+cd ..
+ls
+tar -czvf team22_project2.tar.gz src Project_2_Document_Templet.docx
+ls
+vim team22_project2.tar.gz
+cd pintos/src/userprog/
+vim exception.c
+vim syscall.c
+clear
+ls
+vim process.c
+vim syscall.c
+make
+cdlear
+vim process.c
+vim syscall.c
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+cd ..
+vim syscall.c
+make
+clear
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+cd ..
+vim syscall.c
+vim process.c
+vim exception.c
+make
+cd build/
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+cd ..
+clear
+cd build/
+ls
+cd ..
+vim process.c
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+backtrace Call stack: 0xc002aac4 0xc0023369 0xc002d4d3 0xc0021150 0xc002ed8a 0xc002ee44 0xc00220f7 0xc002234f 0xc002d50c 0xc0021150 0xc002f0b4 0xc002f6df 0xc00220f7 0xc002234f 0x804aab8 0x8048920.
+cd ..
+clear
+vim process.c
+make
+vim process.c
+make
+vim process.
+vim process.c
+make
+clear
+cd build/
+cd ..
+vim process.c
+make
+vim syscall.c
+make
+clear
+make check
+vim exception.c
+clear
+vim process.c
+vim syscall.c
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+cd ..
+vim syscall.c
+vim process.c
+vim syscall.c
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-boundary
+cd ..
+make check
+make clean
+make check
+cd ..
+git add .
+git commit -m "project 2 finished"
+git push origin master
+clear
+cd pintos/src/userprog/
+make chek
+make check
+make clean
+make check
+ls
+cd pintos/
+cd src
+cd userprog/
+vim syscall.h
+ls
+vim process.h
+vim exception.c
+vim pagedir.c
+vim pagedir.h
+vim pagedir.c
+vim pagedir.h
+cscope
+cd pintos/src/
+ls
+cd userprog
+ls
+vim process.c
+cd ..
+cd threads/
+vim thread.c
+cd ..
+cd userprog/
+vim process.c
+exit
+cd pintos/src/
+cd userprog/
+ls
+cd syscall.c
+vim syscall.c
+cd ..
+cd tests
+cd userprog/
+ls
+vim args.c
+vim create-long.c
+vim exec-arg.c
+vim multi-recurse
+vim multi-recurse.c
+exit
+ls
+cd pintos/src/
+ls
+cd vm
+ls
+cd ..
+cd devices/
+vim block.c
+vim block.h
+clear
+cd pintos/src/
+ls
+cd devices/
+ls
+vim block.c
+cd ..
+cd threads/
+clear
+vim vaddr.h 
+cd ..
+ls
+cd vm
+ls
+cd ..
+cd userprog/
+ls
+vim pagedir.c
+cd pintos/src/
+cd threads/
+vim thread.c
+vim init.c
+cd ..
+cd userprog/
+vim process.c
+cd pintos/src/threads/
+vim pte.h 
+cd ..
+cd vm/
+ls
+clear
+cd ..
+cd tests/vm/
+ls
+vim parallel-merge.c
+cd ..
+cscope
+ls
+cd threads/
+ls
+clear
+cd ..
+cd userprog/
+ls
+cd ..
+cd filesys/
+ls
+cd ..
+cscope
+cd threads/
+vim init.c
+cd ..
+cd devices/
+ls
+vim block.c
+vim block.h
+vim block.c
+cd pintos/src/vm/
+ls
+cd ..
+cd userprog/
+vim process.c
+cd pintos/src/userprog/
+vim process.c
+vim exception.c
+clear
+cd ..
+cd userprog/
+vim pagedir.c
+EXIT
+exit
+cd pintos/src/userprog/
+ls
+vim process.c
+vim exception.c
+vim interrupt.h
+cd ..
+cd threads/
+vim interrupt.c
+vim interrupt.h
+cd ..
+cd userprog/
+vim process.c
+rm .process.c.swp 
+vim process.c
+cd ..
+cd threads/
+vim interrupt.c
+cd ..
+cd filesys/
+ls
+vim file.c
+vim inode.c
+cd ..
+cd devices/
+vim block.c
+vim block.h
+vim block.c
+cd ..
+cscope
+cd userprog/
+clear
+vim process.c
+vim syscall.c
+exit
+cd pintos/src/userprog/
+vim process.c
