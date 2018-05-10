@@ -20,6 +20,7 @@
 #include "threads/malloc.h"
 #include "threads/synch.h"
 #include "userprog/syscall.h"
+#include "vm/frame.h"
 
 static thread_func start_process NO_RETURN;
 static bool load (const char *cmdline, void (**eip) (void), void **esp);
@@ -568,7 +569,7 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
       size_t page_zero_bytes = PGSIZE - page_read_bytes;
 
       /* Get a page of memory. */
-      uint8_t *kpage = palloc_get_page (PAL_USER);
+      uint8_t *kpage = frame_alloc(0); //palloc_get_page (PAL_USER);
       if (kpage == NULL)
         return false;
 
@@ -606,7 +607,7 @@ setup_stack (void **esp, const char *file_name_)
   int fname_size = strlen(file_name_), arg_c;
   char *file_name = malloc(fname_size + 1);
   
-  kpage = palloc_get_page (PAL_USER | PAL_ZERO);
+  kpage = frame_alloc(PAL_ZERO);//palloc_get_page (PAL_USER | PAL_ZERO);
   if (kpage != NULL) 
     {
       success = install_page (((uint8_t *) PHYS_BASE) - PGSIZE, kpage, true);

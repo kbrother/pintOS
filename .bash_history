@@ -1,190 +1,3 @@
-clear
-ls
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-cd pintos/src/threads/
-vim init.c
-cd ..
-cd threads/
-vim init.c
-vim thread.c
-make
-vim thread.c
-cd ..
-cd userprog/
-cd ..
-cd threads/
-vim thread.c
-cd ..
-cd userprog/
-make
-make check
-clear
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none 
-backtrace 0xc002ab55 0xc0021a27 0xc002eba7 0xc0022188 0xc00223e0 0xc0024b1f 0xc0021333 0xc0024b95 0xc0022188 0xc00223e0 0xc0021a2b 0xc00219cc 0xc00253c4 0xc002d20e 0xc002d194 0xc0028136 0xc002d0c5 0xc00280ff 0xc00222e0 0xc002eb33 0xc002ec6b 0xc0022188 0xc00223e0 0xc002128f 0xc002d2ba 0xc00209b1 0xc0020aa4 0xc0020274.
-cd ..
-cd devices/
-vim timer.c
-cd pintos/src/userprog/
-vim process.c
-cd ..
-cd threads/
-vim thread.h
-make
-clear
-vim thread.h
-vim thread.c
-vim thread.h
-vim thread.c
-vim thread.h
-cd ..
-cscope
-clear
-cd threads/
-vim thread.h
-cd ..
-cd userprog/
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q  -f run 'args-multiple some arguments for you!'
-cd ..
-clera
-clear
-make clean
-make
-make check
-cd build/
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-clear
-cd ..
-ls
-clear
-cd ..
-cscope
-cd userprog/
-vim process.c
-make
-cd ..
-cd tests/
-vim userprog/args.c
-ls
-cd userprog/
-ls
-clear
-vim args.c 
-cd ..
-cd lib/
-ls
-cd kernel/
-vim list.c
-cd ..
-cd .
-cd ..
-cd threads/
-ls
-vim thread.c
-ls -al
-rm .thread.c.swp 
-vim thread.c
-cd pintos/sr
-cd pintos/src/
-cscope
-cd threads/
-ls
-vim init.c
-cd ..
-cscope
-cd threads/
-vim init.c
-vim thread.c
-cd pintos/src/userprog/
-ls
-vim syscall.c
-vim process.c
-cd pintos/src/userprog/
-vim exception.c
-cd ..
-cscope
-cd threads/
-clear
-ls
-vim init.c
-cd ..
-cd userprog/
-make
-cd build/
-pintos -v -k -T 60 --qemu --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q  -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
-cd ..
-cd syscall.c
-vim syscall.c
-make
-cd ..
-cscope
-cd userprog/
-make
-clear
-make
-make check
-ls
-clear
-vim process.c
-make
-vim process.c
-cd ..
-cd threads/
-vim thread.c
-vim init.c
-cd pintos/src/
-cd threads/
-vim thread.h
-ls
-cd ..
-cd u
-cd userprog/
-vim process.c
-make
-cd build
-make
-make check
-cd ..
-make check
-cd build
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-backtrace 0xc002aba1 0xc0021a73 0xc002ebf3 0xc00221d4 0xc002242c 0xc0024b6b 0xc002137f 0xc0024be1 0xc00221d4 0xc002242c 0xc002146c 0xc00214b6.
-backtrace 0xc002aba1 0xc0021a73 0xc002ebf3 0xc00221d4 0xc002242c 0xc0024b6b 0xc002137f 0xc0024be1 0xc00221d4 0xc002242c 0xc002a1de 0xc0028b06 0xc0028668 0xc002d111 0xc002814b 0xc002ecac 0xc00221d4 0xc002242c 0xc00212db 0xc002d306 0xc00209b1 0xc0020aa4 0xc0020274
-cd ..
-vim process.c
-make
-make check
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-backtrace 0xc002ab50 0xc0024503 0xc002436c 0xc002d4ad 0xc00209b9 0xc0020aa4 0xc0020274.
-cd ..
-vim process.c
-make
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-make check
-cd ..
-vim process.c
-exit
-ls
-cd pintos/src/
-ls
-cd userprog/
-ls
-vim process.c
-cd ..
-cd threads
-vim thread.c
-cd ..
-cd userprog/
 cd build/
 ls
 make clean
@@ -1998,3 +1811,190 @@ vim syscall.c
 exit
 cd pintos/src/userprog/
 vim process.c
+clear
+cd pintos/src/
+ls
+cd threads/
+vim thread.h
+vim synch.h
+clear
+ls
+cd ..
+cd tests/
+ls
+cd vm/
+ls
+vim child-inherit.c 
+ccd ..
+cd ..
+cd userprog/
+vim Makefile 
+cd ..
+vim Makefile
+vim Makefile.build 
+cd userprog/
+ls
+vim process.h
+vim process.c
+cd ..
+cd threads/
+vim thread.h
+vim thread.c
+vim thread.h
+cd ..
+cd userprog/
+cd ..
+cd vm/
+vim frame.c
+vim frame.h
+vim frame.c
+vim frame.h
+vim frame.c
+clear
+vim frame.c
+cd ..
+cd pintos/
+git commit
+cd ..
+clear
+git add .
+git status
+git commit -m "make struct frame"
+git push
+cd pintos/src/vm/
+ls
+clear
+vim frame.c
+make check
+clear
+ls
+vim frame.c
+cd pintos/src/
+ls
+cd userprog/
+ls
+clear
+vim process.c
+make
+clear
+make check
+cd ..
+clear
+ls
+cd threads/
+ls
+cd ..
+ls
+cd userprog/
+ls
+vim pagedir.c
+ls
+clear
+cd ..
+cd vm
+ls
+cd ..
+cd userprog/
+vim process.c
+cd ..
+cd vm
+ls
+vim frame.c
+vim Makefile 
+vim Make.vars 
+cd ..
+ls
+vim Makefile.build 
+cd vm/
+vim frame.c 
+vim frame.h
+vim frame.c
+vim frame.h
+clear
+ls
+clear
+vim frame.c
+vim frame.h
+vim frame.c
+vim frame.h
+vim frame.c
+vim frame.h
+make
+clear
+make
+clear
+make
+clear
+make
+clear
+make
+clear
+make
+clear
+cd ..
+cd userprog/
+vim pagedir.c
+cd ..
+cscope
+cd userprog/
+vim pagedir.c
+cd ..
+cscope
+cd pintos/src/vm/
+ls
+vim frame.c
+ls -al
+rm .frame.c.swp 
+vim frame.c
+vim frame.h
+vim frame.c
+vim frame.h
+vim frame.c
+make
+vim frame.c
+clear
+vim frame.h
+vim frame.c
+vim frame.h
+make
+vim frame.c
+make
+clear
+vim frame.c
+make
+vim frame.c
+make
+clear
+vim frame.c
+cd pintos/src/userprog/
+vim pagedir.c
+vim process.c
+cd ..
+cd threads/
+vim thread.h
+vim synch.c
+vim init.c
+vim synch.h
+cd ..
+cd userprog/
+clear
+ls
+vim pagedir.c
+cd pintos/src/vm/
+ls
+vim frame.h
+cd pintos/src/userprog/
+vim pagedir.c
+cd ..
+cd lib/
+cd kernel/
+vim list.c
+cd ..
+cd threads/
+lks
+ls
+vim thread.c
+vim thread.h
+exit
+xit
+exit

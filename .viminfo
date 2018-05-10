@@ -11,22 +11,34 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<static\>
+~MSle0~/frame_alloc
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1525779580,,"wq"
+|2,0,1525943674,,"wq"
+:572
+|2,0,1525943617,,"572"
 :q!
-|2,0,1525779431,,"q!"
+|2,0,1525943553,,"q!"
+:67
+|2,0,1525942446,,"67"
 :q!@
-|2,0,1525779063,,"q!@"
+|2,0,1525942014,,"q!@"
+:Q!
+|2,0,1525942013,,"Q!"
+:54
+|2,0,1525941985,,"54"
+:43
+|2,0,1525941726,,"43"
+:39
+|2,0,1525941566,,"39"
+:q@
+|2,0,1525872080,,"q@"
 :WQ
 |2,0,1525779050,,"WQ"
-:Q!
-|2,0,1524926816,,"Q!"
 :q!~
 |2,0,1524926770,,"q!~"
 :q
@@ -193,8 +205,6 @@ $
 |2,0,1523862994,,"85"
 :68
 |2,0,1523862964,,"68"
-:54
-|2,0,1523860917,,"54"
 :292
 |2,0,1523861273,,"292"
 :184
@@ -255,8 +265,6 @@ $
 |2,0,1523799694,,"52"
 :111
 |2,0,1523799660,,"111"
-:q@
-|2,0,1523790842,,"q@"
 :Q
 |2,0,1523730911,,"Q"
 :empty
@@ -599,10 +607,6 @@ $
 |2,0,1521955864,,"set ff=unix"
 :set ff=nuix
 |2,0,1521955860,,"set ff=nuix"
-:39
-|2,0,1521955697,,"39"
-:43
-|2,0,1521955653,,"43"
 :25.29 d
 |2,0,1521955151,,"25.29 d"
 :258
@@ -611,12 +615,78 @@ $
 |2,0,1521117937,,"Q1"
 
 # Search String History (newest to oldest):
+?/frame
+|2,1,1525943616,47,"frame"
+?/frame_alloc
+|2,1,1525943565,47,"frame_alloc"
+?/framealloc
+|2,1,1525943558,47,"framealloc"
+?/palloc_g
+|2,1,1525943331,47,"palloc_g"
+?/list_entry
+|2,1,1525942539,47,"list_entry"
+?/list_pop
+|2,1,1525942484,47,"list_pop"
+?/list_empty
+|2,1,1525942464,47,"list_empty"
+?/palloc_get
+|2,1,1525943229,47,"palloc_get"
+?/page_get
+|2,1,1525943224,47,"page_get"
+?/PALLOC_GET_PAGE
+|2,1,1525943131,47,"PALLOC_GET_PAGE"
+?/palloc_get_page (PAL_USER)
+|2,1,1525943114,47,"palloc_get_page (PAL_USER)"
+?/frame_tabl
+|2,1,1525942437,47,"frame_tabl"
+?/frame_list
+|2,1,1525942433,47,"frame_list"
+?/frame_lock
+|2,1,1525942428,47,"frame_lock"
+?/pagedir_is_acc
+|2,1,1525872940,47,"pagedir_is_acc"
+?/pagedir_a
+|2,1,1525872906,47,"pagedir_a"
+?/pagedir_get
+|2,1,1525872899,47,"pagedir_get"
+?/lock_acquire
+|2,1,1525871298,47,"lock_acquire"
+?/list
+|2,1,1525872032,47,"list"
+?/list_end
+|2,1,1525870447,47,"list_end"
+?/list_init
+|2,1,1525870330,47,"list_init"
+?/list_next
+|2,1,1525870154,47,"list_next"
+?/list_enxt
+|2,1,1525870151,47,"list_enxt"
+?/lock_init
+|2,1,1525870406,47,"lock_init"
+?/load_segment
+|2,1,1525869085,47,"load_segment"
+?/install_page
+|2,1,1525868863,47,"install_page"
+?/load_seg
+|2,1,1525868789,47,"load_seg"
+?/load_pro
+|2,1,1525868787,47,"load_pro"
+?/pagedir_set_ac
+|2,1,1525781704,47,"pagedir_set_ac"
+?/pagedir_set_d
+|2,1,1525781677,47,"pagedir_set_d"
+?/pagedir_set_page
+|2,1,1525781671,47,"pagedir_set_page"
+?/lookup_page
+|2,1,1525781645,47,"lookup_page"
+?/pagedir_set_access
+|2,1,1525781641,47,"pagedir_set_access"
+?/pagedir_set
+|2,1,1525781562,47,"pagedir_set"
 ? \<static\>
 |2,1,1525779290,,"\\<static\\>"
 ?/unused
 |2,1,1525779137,47,"unused"
-?/list
-|2,1,1525776555,47,"list"
 ?/process_exit
 |2,1,1525776491,47,"process_exit"
 ?/.h
@@ -629,8 +699,6 @@ $
 |2,1,1525774813,47,"palloc_get_page"
 ?/palloc
 |2,1,1525774808,47,"palloc"
-?/load_segment
-|2,1,1525774609,47,"load_segment"
 ?/l
 |2,1,1525774587,47,"l"
 ?/pagedir_is_dir
@@ -643,8 +711,6 @@ $
 |2,1,1524990193,47,"deny"
 ?/pagedir_get_page
 |2,1,1524927701,47,"pagedir_get_page"
-?/lookup_page
-|2,1,1524927592,47,"lookup_page"
 ?/lookup
 |2,1,1524927587,47,"lookup"
 ?/pagedir_Get
@@ -687,8 +753,6 @@ $
 |2,1,1524916470,47,"pagefaul"
 ?/start_pr
 |2,1,1524902906,47,"start_pr"
-?/palloc_get
-|2,1,1524902479,47,"palloc_get"
 ?/load_segm
 |2,1,1524902442,47,"load_segm"
 ?/load
@@ -871,8 +935,6 @@ $
 |2,1,1523958079,47,"lock_release ("
 ?/sema_down
 |2,1,1523958058,47,"sema_down"
-?/lock_acquire
-|2,1,1523958000,47,"lock_acquire"
 ?/interrupt
 |2,1,1523959014,47,"interrupt"
 ?/ticks
@@ -977,8 +1039,6 @@ $
 |2,1,1523859306,47,"parent"
 ?/thread_yield
 |2,1,1523857528,47,"thread_yield"
-?/list_init
-|2,1,1523857517,47,"list_init"
 ?/process_create
 |2,1,1523857207,47,"process_create"
 ? \<cur\>
@@ -1101,8 +1161,6 @@ $
 |2,1,1523716834,47,"orpha"
 ?/is_o
 |2,1,1523716831,47,"is_o"
-?/list_entry
-|2,1,1523716298,47,"list_entry"
 ?/thread_creae
 |2,1,1523716160,47,"thread_creae"
 ?/search_all_list
@@ -1169,8 +1227,6 @@ $
 |2,1,1523622848,47,"sys_Exit"
 ?/file_init
 |2,1,1523623528,47,"file_init"
-?/lock_init
-|2,1,1523622779,47,"lock_init"
 ?/all_lis
 |2,1,1523622077,47,"all_lis"
 ?/init_th
@@ -1261,14 +1317,10 @@ $
 |2,1,1523510418,47,"eax"
 ?/esp
 |2,1,1523510409,47,"esp"
-?/install_page
-|2,1,1523440979,47,"install_page"
 ?/vaddr == NULL
 |2,1,1523441634,47,"vaddr == NULL"
 ?/is_user_vaddr
 |2,1,1523441622,47,"is_user_vaddr"
-?/pagedir_get
-|2,1,1523441451,47,"pagedir_get"
 ?/page_get_dir
 |2,1,1523441447,47,"page_get_dir"
 ?/PTE_P
@@ -1551,10 +1603,6 @@ $
 |2,1,1522246082,47,"malloc.h"
 ?/multiple
 |2,1,1522243935,47,"multiple"
-?/list_pop
-|2,1,1522243237,47,"list_pop"
-?/list_next
-|2,1,1522243152,47,"list_next"
 ?/list_insert (
 |2,1,1522242817,47,"list_insert ("
 ?//thread_yiel
@@ -1593,8 +1641,6 @@ $
 |2,1,1522205359,47,"idle_started"
 ?/list_end (
 |2,1,1522167135,47,"list_end ("
-?/list_end
-|2,1,1522167128,47,"list_end"
 ?/list_tail
 |2,1,1522167119,47,"list_tail"
 ?/void thread_current
@@ -1762,8 +1808,20 @@ $
 |3,0,0,0,1,0,1524022677,"    printf (\"non mapped page %x\\n\", uaddr);"
 "1	LINE	0
 	
-|3,0,1,1,1,0,1524056199,""
+	  return a->kpage < b->kpage;
+|3,0,1,1,2,0,1525870243,"","  return a->kpage < b->kpage;"
 "2	LINE	0
+	  const struct frame *a = hash_entry (a_, struct frame, hash_elem);
+	  const struct frame *b = hash_entry (b_, struct frame, hash_elem);
+|3,0,2,1,2,0,1525870243,"  const struct frame *a = hash_entry (a_, struct frame, hash_elem);","  const struct frame *b = hash_entry (b_, struct frame, hash_elem);"
+"3	LINE	0
+	bool frame_less (const struct hash_elem *a_, const struct hash_elem *b_, void *aux UNUSED){
+	
+|3,0,3,1,2,0,1525870243,"bool frame_less (const struct hash_elem *a_, const struct hash_elem *b_, void *aux UNUSED){",""
+"4	LINE	0
+	
+|3,0,4,1,1,0,1524056199,""
+"5	LINE	0
 	  //자식 처리
 	  lock_acquire (&cur->list_lock);
 	  c_list = &cur->child_list;
@@ -1788,16 +1846,16 @@ $
 	
 	  printf("%s: exit(%d)\n", cur->user_file, cur->exit_status);
 	  free(cur->user_file);
-|3,0,2,1,24,0,1523970265,"  //자식 처리","  lock_acquire (&cur->list_lock);","  c_list = &cur->child_list;","  e = list_begin (c_list);","","  while (e != list_end (c_list)){","","    struct child_info *c_info = list_entry (e, struct child_info, child_elem);","    if (!c_info->died){   ","      ","      lock_release (&cur->list_lock);","      sema_down (&c_info->wait_sema);","      lock_acquire (&cur->list_lock);","    }","    ",>30
+|3,0,5,1,24,0,1523970265,"  //자식 처리","  lock_acquire (&cur->list_lock);","  c_list = &cur->child_list;","  e = list_begin (c_list);","","  while (e != list_end (c_list)){","","    struct child_info *c_info = list_entry (e, struct child_info, child_elem);","    if (!c_info->died){   ","      ","      lock_release (&cur->list_lock);","      sema_down (&c_info->wait_sema);","      lock_acquire (&cur->list_lock);","    }","    ",>30
 |<"    list_pop_front (c_list);","    free (c_info);","    e = list_begin(c_list);","  }","","  lock_release (&cur->list_lock);","","  printf(\"%s: exit(%d)\\n\", cur->user_file, cur->exit_status);","  free(cur->user_file);"
-"3	LINE	0
+"6	LINE	0
 	  printf ("%d after lock acq\n", cur->tid);
 	  success = load (file_name, &if_.eip, &if_.esp); 
-|3,0,3,1,2,0,1523963658,"  printf (\"%d after lock acq\\n\", cur->tid);","  success = load (file_name, &if_.eip, &if_.esp); "
-"4	LINE	0
+|3,0,6,1,2,0,1523963658,"  printf (\"%d after lock acq\\n\", cur->tid);","  success = load (file_name, &if_.eip, &if_.esp); "
+"7	LINE	0
 	
-|3,0,4,1,1,0,1523951075,""
-"5	LINE	0
+|3,0,7,1,1,0,1523951075,""
+"8	LINE	0
 	  lock_acquire (t->parent->list_lock);
 	  c_list = &t->parent->child_list;
 	  for (e = list_begin (c_list); e != list_end (c_list); e = next (e)){
@@ -1815,347 +1873,500 @@ $
 	  
 	  lock_release (t->parent->list_lock);
 	  ASSERT (checked);
-|3,0,5,1,17,0,1523803538,"  lock_acquire (t->parent->list_lock);","  c_list = &t->parent->child_list;","  for (e = list_begin (c_list); e != list_end (c_list); e = next (e)){","","    struct child_info *c_info = list_entry (e, struct child_info, child_elem);","    if (c_info->tid == t->tid){","","      checked = true;","      c_info->exit_status = status;","      c_info->died = true;","      sema_up (&c_info->wait_sema);","      break;","    }","  }","  ",>40
+|3,0,8,1,17,0,1523803538,"  lock_acquire (t->parent->list_lock);","  c_list = &t->parent->child_list;","  for (e = list_begin (c_list); e != list_end (c_list); e = next (e)){","","    struct child_info *c_info = list_entry (e, struct child_info, child_elem);","    if (c_info->tid == t->tid){","","      checked = true;","      c_info->exit_status = status;","      c_info->died = true;","      sema_up (&c_info->wait_sema);","      break;","    }","  }","  ",>40
 |<"  lock_release (t->parent->list_lock);","  ASSERT (checked);"
-"6	CHAR	0
+"9	CHAR	0
 	
 	#
-|3,0,6,0,2,0,1523801788,"","#"
-"7	CHAR	0
-	
-	#
-|3,0,7,0,2,0,1523801779,"","#"
-"8	LINE	0
-	  e = list_begin (childs);
-	  while (e != list_end (childs)){
-	    struct thread *temp = list_entry (e, struct thread, child_elem);
-	
-	    if (temp->tid == child_tid){
-	      tid_exist = true;
-	      sema_down (&temp->wait_sema);
-	
-	      exitStatus = temp->exit_status;
-	      list_remove (e);
-	
-	      lock_acquire (&all_lock);
-	      list_remove (&temp->allelem);
-	      lock_release (&all_lock);
-	
-	      free (temp);
-	      break;
-	    }
-	
-	    e = list_next (e);
-	  }
-	
-	  if (!tid_exist)
-	    exitStatus = -1;
-|3,0,8,1,24,0,1523800514,"  e = list_begin (childs);","  while (e != list_end (childs)){","    struct thread *temp = list_entry (e, struct thread, child_elem);","","    if (temp->tid == child_tid){","      tid_exist = true;","      sema_down (&temp->wait_sema);","","      exitStatus = temp->exit_status;","      list_remove (e);","","      lock_acquire (&all_lock);","      list_remove (&temp->allelem);","      lock_release (&all_lock);","","      free (temp);",>14
-|<"      break;","    }","","    e = list_next (e);","  }","","  if (!tid_exist)","    exitStatus = -1;"
-"9	LINE	0
-	  char *fn_copy;
-	  tid_t tid;
-	  struct thread *curr_thread = thread_current ();
-	  struct thread *child_thread;
-	
-	  /* Make a copy of FILE_NAME.
-	     Otherwise there's a race between the caller and load(). */
-	  fn_copy = palloc_get_page (0);
-	  if (fn_copy == NULL)
-	    return TID_ERROR;
-	  strlcpy (fn_copy, file_name, PGSIZE);
-	
-	  /* Create a new thread to execute FILE_NAME. */
-	  tid = thread_create (file_name, PRI_DEFAULT, start_process, fn_copy);
-	  if (tid == TID_ERROR){
-	    palloc_free_page (fn_copy); 
-	  }
-	  else{
-	    
-	    sema_down (&curr_thread->exec_sema);
-	    lock_acquire (&all_lock);
-	    child_thread = search_all_list (tid);
-	    lock_release (&all_lock);
-	
-	    ASSERT (child_thread != NULL)
-	    list_push_back (&curr_thread->child_list, &child_thread->child_elem);
-	  }
-	
-	  return tid;
-|3,0,9,1,29,0,1523799720,"  char *fn_copy;","  tid_t tid;","  struct thread *curr_thread = thread_current ();","  struct thread *child_thread;","","  /* Make a copy of FILE_NAME.","     Otherwise there's a race between the caller and load(). */","  fn_copy = palloc_get_page (0);","  if (fn_copy == NULL)","    return TID_ERROR;","  strlcpy (fn_copy, file_name, PGSIZE);","","  /* Create a new thread to execute FILE_NAME. */",>73
-|<"  tid = thread_create (file_name, PRI_DEFAULT, start_process, fn_copy);","  if (tid == TID_ERROR){","    palloc_free_page (fn_copy); ","  }","  else{","    ","    sema_down (&curr_thread->exec_sema);","    lock_acquire (&all_lock);","    child_thread = search_all_list (tid);","    lock_release (&all_lock);","","    ASSERT (child_thread != NULL)","    list_push_back (&curr_thread->child_list, &child_thread->child_elem);","  }","","  return tid;"
+|3,0,9,0,2,0,1523801788,"","#"
 ""-	CHAR	0
-	#include <debug.h>
-|3,1,36,0,1,0,1525779475,"#include <debug.h>"
+	#include "threads/palloc.h"
+|3,1,36,0,1,0,1525943459,"#include \"threads/palloc.h\""
 
 # File marks:
-'0  14  19  ~/pintos/src/vm/frame.c
-|4,48,14,19,1525779580,"~/pintos/src/vm/frame.c"
-'1  16  28  ~/pintos/src/vm/frame.c
-|4,49,16,28,1525779548,"~/pintos/src/vm/frame.c"
-'2  16  28  ~/pintos/src/vm/frame.c
-|4,50,16,28,1525779548,"~/pintos/src/vm/frame.c"
-'3  6  0  ~/pintos/src/vm/frame.h
-|4,51,6,0,1525779496,"~/pintos/src/vm/frame.h"
-'4  1  20  ~/pintos/src/vm/frame.c
-|4,52,1,20,1525779478,"~/pintos/src/vm/frame.c"
-'5  1  20  ~/pintos/src/vm/frame.c
-|4,53,1,20,1525779478,"~/pintos/src/vm/frame.c"
-'6  1  20  ~/pintos/src/vm/frame.c
-|4,54,1,20,1525779478,"~/pintos/src/vm/frame.c"
-'7  1  20  ~/pintos/src/vm/frame.c
-|4,55,1,20,1525779478,"~/pintos/src/vm/frame.c"
-'8  1  20  ~/pintos/src/vm/frame.c
-|4,56,1,20,1525779464,"~/pintos/src/vm/frame.c"
-'9  1  20  ~/pintos/src/vm/frame.c
-|4,57,1,20,1525779464,"~/pintos/src/vm/frame.c"
+'0  50  28  ~/pintos/src/vm/frame.c
+|4,48,50,28,1525943674,"~/pintos/src/vm/frame.c"
+'1  572  35  ~/pintos/src/userprog/process.c
+|4,49,572,35,1525943646,"~/pintos/src/userprog/process.c"
+'2  610  29  ~/pintos/src/userprog/process.c
+|4,50,610,29,1525943595,"~/pintos/src/userprog/process.c"
+'3  610  29  ~/pintos/src/userprog/process.c
+|4,51,610,29,1525943595,"~/pintos/src/userprog/process.c"
+'4  610  22  ~/pintos/src/userprog/process.c
+|4,52,610,22,1525943553,"~/pintos/src/userprog/process.c"
+'5  610  22  ~/pintos/src/userprog/process.c
+|4,53,610,22,1525943553,"~/pintos/src/userprog/process.c"
+'6  52  82  ~/pintos/src/vm/frame.c
+|4,54,52,82,1525943535,"~/pintos/src/vm/frame.c"
+'7  52  82  ~/pintos/src/vm/frame.c
+|4,55,52,82,1525943535,"~/pintos/src/vm/frame.c"
+'8  6  26  ~/pintos/src/vm/frame.h
+|4,56,6,26,1525943455,"~/pintos/src/vm/frame.h"
+'9  51  1  ~/pintos/src/vm/frame.c
+|4,57,51,1,1525943417,"~/pintos/src/vm/frame.c"
 
 # Jumplist (newest first):
--'  14  19  ~/pintos/src/vm/frame.c
-|4,39,14,19,1525779580,"~/pintos/src/vm/frame.c"
+-'  50  28  ~/pintos/src/vm/frame.c
+|4,39,50,28,1525943674,"~/pintos/src/vm/frame.c"
 -'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779555,"~/pintos/src/vm/frame.c"
--'  16  28  ~/pintos/src/vm/frame.c
-|4,39,16,28,1525779548,"~/pintos/src/vm/frame.c"
--'  16  28  ~/pintos/src/vm/frame.c
-|4,39,16,28,1525779548,"~/pintos/src/vm/frame.c"
+|4,39,1,0,1525943664,"~/pintos/src/vm/frame.c"
+-'  572  35  ~/pintos/src/userprog/process.c
+|4,39,572,35,1525943646,"~/pintos/src/userprog/process.c"
+-'  572  35  ~/pintos/src/userprog/process.c
+|4,39,572,35,1525943646,"~/pintos/src/userprog/process.c"
+-'  1  0  ~/pintos/src/userprog/process.c
+|4,39,1,0,1525943607,"~/pintos/src/userprog/process.c"
+-'  1  0  ~/pintos/src/userprog/process.c
+|4,39,1,0,1525943607,"~/pintos/src/userprog/process.c"
+-'  610  29  ~/pintos/src/userprog/process.c
+|4,39,610,29,1525943595,"~/pintos/src/userprog/process.c"
+-'  610  29  ~/pintos/src/userprog/process.c
+|4,39,610,29,1525943595,"~/pintos/src/userprog/process.c"
+-'  610  29  ~/pintos/src/userprog/process.c
+|4,39,610,29,1525943595,"~/pintos/src/userprog/process.c"
+-'  610  29  ~/pintos/src/userprog/process.c
+|4,39,610,29,1525943595,"~/pintos/src/userprog/process.c"
+-'  573  23  ~/pintos/src/userprog/process.c
+|4,39,573,23,1525943568,"~/pintos/src/userprog/process.c"
+-'  573  23  ~/pintos/src/userprog/process.c
+|4,39,573,23,1525943568,"~/pintos/src/userprog/process.c"
+-'  573  23  ~/pintos/src/userprog/process.c
+|4,39,573,23,1525943568,"~/pintos/src/userprog/process.c"
+-'  573  23  ~/pintos/src/userprog/process.c
+|4,39,573,23,1525943568,"~/pintos/src/userprog/process.c"
+-'  82  14  ~/pintos/src/userprog/process.c
+|4,39,82,14,1525943565,"~/pintos/src/userprog/process.c"
+-'  82  14  ~/pintos/src/userprog/process.c
+|4,39,82,14,1525943565,"~/pintos/src/userprog/process.c"
+-'  82  14  ~/pintos/src/userprog/process.c
+|4,39,82,14,1525943565,"~/pintos/src/userprog/process.c"
+-'  82  14  ~/pintos/src/userprog/process.c
+|4,39,82,14,1525943565,"~/pintos/src/userprog/process.c"
+-'  23  13  ~/pintos/src/userprog/process.c
+|4,39,23,13,1525943561,"~/pintos/src/userprog/process.c"
+-'  23  13  ~/pintos/src/userprog/process.c
+|4,39,23,13,1525943561,"~/pintos/src/userprog/process.c"
+-'  23  13  ~/pintos/src/userprog/process.c
+|4,39,23,13,1525943561,"~/pintos/src/userprog/process.c"
+-'  23  13  ~/pintos/src/userprog/process.c
+|4,39,23,13,1525943561,"~/pintos/src/userprog/process.c"
+-'  1  0  ~/pintos/src/userprog/process.c
+|4,39,1,0,1525943560,"~/pintos/src/userprog/process.c"
+-'  1  0  ~/pintos/src/userprog/process.c
+|4,39,1,0,1525943560,"~/pintos/src/userprog/process.c"
+-'  610  22  ~/pintos/src/userprog/process.c
+|4,39,610,22,1525943553,"~/pintos/src/userprog/process.c"
+-'  610  22  ~/pintos/src/userprog/process.c
+|4,39,610,22,1525943553,"~/pintos/src/userprog/process.c"
+-'  52  82  ~/pintos/src/vm/frame.c
+|4,39,52,82,1525943535,"~/pintos/src/vm/frame.c"
+-'  52  82  ~/pintos/src/vm/frame.c
+|4,39,52,82,1525943535,"~/pintos/src/vm/frame.c"
+-'  52  82  ~/pintos/src/vm/frame.c
+|4,39,52,82,1525943535,"~/pintos/src/vm/frame.c"
+-'  52  82  ~/pintos/src/vm/frame.c
+|4,39,52,82,1525943535,"~/pintos/src/vm/frame.c"
+-'  52  82  ~/pintos/src/vm/frame.c
+|4,39,52,82,1525943535,"~/pintos/src/vm/frame.c"
+-'  572  23  ~/pintos/src/userprog/process.c
+|4,39,572,23,1525943495,"~/pintos/src/userprog/process.c"
+-'  572  23  ~/pintos/src/userprog/process.c
+|4,39,572,23,1525943495,"~/pintos/src/userprog/process.c"
+-'  572  23  ~/pintos/src/userprog/process.c
+|4,39,572,23,1525943495,"~/pintos/src/userprog/process.c"
+-'  572  23  ~/pintos/src/userprog/process.c
+|4,39,572,23,1525943495,"~/pintos/src/userprog/process.c"
+-'  1  0  ~/pintos/src/userprog/process.c
+|4,39,1,0,1525943494,"~/pintos/src/userprog/process.c"
+-'  1  0  ~/pintos/src/userprog/process.c
+|4,39,1,0,1525943494,"~/pintos/src/userprog/process.c"
 -'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779504,"~/pintos/src/vm/frame.c"
--'  6  0  ~/pintos/src/vm/frame.h
-|4,39,6,0,1525779496,"~/pintos/src/vm/frame.h"
--'  6  0  ~/pintos/src/vm/frame.h
-|4,39,6,0,1525779496,"~/pintos/src/vm/frame.h"
--'  6  0  ~/pintos/src/vm/frame.h
-|4,39,6,0,1525779496,"~/pintos/src/vm/frame.h"
--'  6  0  ~/pintos/src/vm/frame.h
-|4,39,6,0,1525779496,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779480,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779480,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779480,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779480,"~/pintos/src/vm/frame.h"
--'  1  20  ~/pintos/src/vm/frame.c
-|4,39,1,20,1525779478,"~/pintos/src/vm/frame.c"
--'  1  20  ~/pintos/src/vm/frame.c
-|4,39,1,20,1525779478,"~/pintos/src/vm/frame.c"
--'  1  20  ~/pintos/src/vm/frame.c
-|4,39,1,20,1525779464,"~/pintos/src/vm/frame.c"
--'  1  20  ~/pintos/src/vm/frame.c
-|4,39,1,20,1525779464,"~/pintos/src/vm/frame.c"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  5  0  ~/pintos/src/vm/frame.h
-|4,39,5,0,1525779454,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
--'  1  0  ~/pintos/src/vm/frame.h
-|4,39,1,0,1525779433,"~/pintos/src/vm/frame.h"
+|4,39,1,0,1525943457,"~/pintos/src/vm/frame.c"
 -'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779431,"~/pintos/src/vm/frame.c"
+|4,39,1,0,1525943457,"~/pintos/src/vm/frame.c"
 -'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779431,"~/pintos/src/vm/frame.c"
+|4,39,1,0,1525943457,"~/pintos/src/vm/frame.c"
 -'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779431,"~/pintos/src/vm/frame.c"
--'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779431,"~/pintos/src/vm/frame.c"
--'  1  20  ~/pintos/src/vm/frame.c
-|4,39,1,20,1525779418,"~/pintos/src/vm/frame.c"
--'  1  20  ~/pintos/src/vm/frame.c
-|4,39,1,20,1525779418,"~/pintos/src/vm/frame.c"
--'  1  20  ~/pintos/src/vm/frame.c
-|4,39,1,20,1525779418,"~/pintos/src/vm/frame.c"
--'  1  20  ~/pintos/src/vm/frame.c
-|4,39,1,20,1525779418,"~/pintos/src/vm/frame.c"
--'  2  0  ~/pintos/src/vm/frame.c
-|4,39,2,0,1525779385,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  2  0  ~/pintos/src/vm/frame.c
-|4,39,2,0,1525779385,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  2  0  ~/pintos/src/vm/frame.c
-|4,39,2,0,1525779385,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779385,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  2  0  ~/pintos/src/vm/frame.c
-|4,39,2,0,1525779385,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779385,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  4  0  ~/pintos/src/vm/frame.c
-|4,39,4,0,1525779385,"~/pintos/src/vm/frame.c"
--'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779304,"~/pintos/src/vm/frame.c"
--'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779304,"~/pintos/src/vm/frame.c"
--'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779304,"~/pintos/src/vm/frame.c"
--'  1  0  ~/pintos/src/vm/frame.c
-|4,39,1,0,1525779304,"~/pintos/src/vm/frame.c"
--'  2  0  ~/pintos/src/vm/frame.c
-|4,39,2,0,1525779297,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779297,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779297,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779297,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779297,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779297,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779297,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779297,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779297,"~/pintos/src/vm/frame.c"
--'  2  0  ~/pintos/src/vm/frame.c
-|4,39,2,0,1525779297,"~/pintos/src/vm/frame.c"
--'  3  0  ~/pintos/src/vm/frame.c
-|4,39,3,0,1525779297,"~/pintos/src/vm/frame.c"
+|4,39,1,0,1525943457,"~/pintos/src/vm/frame.c"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  6  26  ~/pintos/src/vm/frame.h
+|4,39,6,26,1525943455,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  1  0  ~/pintos/src/vm/frame.h
+|4,39,1,0,1525943419,"~/pintos/src/vm/frame.h"
+-'  51  1  ~/pintos/src/vm/frame.c
+|4,39,51,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  51  1  ~/pintos/src/vm/frame.c
+|4,39,51,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  52  1  ~/pintos/src/vm/frame.c
+|4,39,52,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  52  1  ~/pintos/src/vm/frame.c
+|4,39,52,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  51  1  ~/pintos/src/vm/frame.c
+|4,39,51,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  52  1  ~/pintos/src/vm/frame.c
+|4,39,52,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  52  1  ~/pintos/src/vm/frame.c
+|4,39,52,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  51  1  ~/pintos/src/vm/frame.c
+|4,39,51,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  52  1  ~/pintos/src/vm/frame.c
+|4,39,52,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  52  1  ~/pintos/src/vm/frame.c
+|4,39,52,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  51  1  ~/pintos/src/vm/frame.c
+|4,39,51,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  52  1  ~/pintos/src/vm/frame.c
+|4,39,52,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  52  1  ~/pintos/src/vm/frame.c
+|4,39,52,1,1525943417,"~/pintos/src/vm/frame.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
+-'  1  0  ~/pintos/src/threads/palloc.c
+|4,39,1,0,1525943332,"~/pintos/src/threads/palloc.c"
 
 # History of marks within files (newest to oldest):
 
 > ~/pintos/src/vm/frame.c
-	*	1525779579	0
-	"	14	19
-	^	14	20
-	.	14	19
+	*	1525943674	0
+	"	50	28
+	^	50	29
+	.	50	28
 	+	1	18
-	+	20	0
-	+	3	31
-	+	20	1
-	+	4	0
-	+	9	0
-	+	8	29
-	+	17	1
-	+	22	0
+	+	11	0
+	+	6	31
+	+	11	1
+	+	7	0
+	+	7	30
+	+	7	59
+	+	7	31
+	+	15	0
 	+	1	38
 	+	1	39
 	+	1	20
 	+	1	21
-	+	2	0
-	+	8	46
-	+	11	61
-	+	13	19
-	+	14	19
+	+	7	76
+	+	7	91
+	+	7	49
+	+	15	0
+	+	16	37
+	+	17	0
+	+	6	17
+	+	7	30
+	+	8	0
+	+	12	25
+	+	1	21
+	+	14	12
+	+	8	30
+	+	13	25
+	+	15	0
+	+	2	26
+	+	14	16
+	+	16	0
+	+	23	39
+	+	73	2
+	+	72	1
+	+	22	15
+	+	23	1
+	+	25	3
+	+	23	4
+	+	27	66
+	+	29	28
+	+	2	55
+	+	71	0
+	+	38	37
+	+	38	36
+	+	59	0
+	+	38	17
+	+	38	16
+	+	43	4
+	+	20	0
+	+	27	4
+	+	43	18
+	+	38	17
+	+	42	0
+	+	39	18
+	+	41	2
+	+	43	19
+	+	56	0
+	+	2	2
+	+	2	52
+	+	52	41
+	+	54	0
+	+	56	2
+	+	56	0
+	+	56	3
+	+	57	0
+	+	56	0
+	+	57	0
+	+	56	0
+	+	54	0
+	+	53	0
+	+	53	21
+	+	56	0
+	+	39	16
+	+	40	16
+	+	39	20
+	+	40	20
+	+	39	21
+	+	40	20
+	+	56	0
+	+	56	12
+	+	4	18
+	+	61	29
+	+	70	2
+	+	63	37
+	+	66	52
+	+	68	0
+	+	70	0
+	+	50	40
+	+	2	26
+	+	3	0
+	+	52	41
+	+	54	0
+	+	52	82
+	+	50	28
+
+> ~/pintos/src/userprog/process.c
+	*	1525943645	0
+	"	572	35
+	^	572	36
+	.	572	35
+	+	65	32
+	+	54	0
+	+	58	0
+	+	65	32
+	+	65	8
+	+	65	5
+	+	59	4
+	+	57	25
+	+	58	5
+	+	60	1
+	+	61	3
+	+	62	5
+	+	63	5
+	+	64	5
+	+	65	7
+	+	65	4
+	+	66	10
+	+	68	33
+	+	71	0
+	+	238	0
+	+	57	19
+	+	95	2
+	+	97	29
+	+	96	24
+	+	57	22
+	+	240	27
+	+	241	40
+	+	242	0
+	+	66	10
+	+	67	33
+	+	69	0
+	+	67	30
+	+	187	0
+	+	176	1
+	+	187	26
+	+	192	79
+	+	192	63
+	+	198	21
+	+	192	90
+	+	199	3
+	+	182	30
+	+	182	51
+	+	183	0
+	+	183	31
+	+	199	3
+	+	198	21
+	+	192	68
+	+	192	132
+	+	31	0
+	+	192	97
+	+	192	64
+	+	192	0
+	+	192	113
+	+	185	0
+	+	199	5
+	+	199	3
+	+	192	69
+	+	183	43
+	+	192	68
+	+	192	64
+	+	185	0
+	+	200	0
+	+	192	109
+	+	192	69
+	+	175	19
+	+	187	6
+	+	192	78
+	+	192	64
+	+	192	63
+	+	192	79
+	+	192	72
+	+	192	83
+	+	187	23
+	+	189	30
+	+	189	31
+	+	190	0
+	+	191	29
+	+	192	67
+	+	192	63
+	+	192	68
+	+	193	5
+	+	193	0
+	+	183	31
+	+	184	30
+	+	199	3
+	+	200	0
+	+	181	19
+	+	183	0
+	+	194	32
+	+	197	0
+	+	514	0
+	+	202	0
+	+	177	0
+	+	211	0
+	+	209	34
+	+	23	21
+	+	572	37
+	+	610	29
+	+	572	34
+	+	572	35
+	n	467	19
 
 > ~/pintos/src/vm/frame.h
-	*	1525779496	0
-	"	6	0
-	^	6	0
-	.	5	18
+	*	1525943455	0
+	"	6	26
+	^	6	27
+	.	6	26
+	+	21	22
+	+	17	0
+	+	17	8
+	+	17	13
 	+	18	22
-	+	14	0
-	+	16	8
-	+	15	13
-	+	17	22
-	+	4	17
+	+	3	17
 	+	5	18
+	+	9	26
+	+	17	0
+	+	18	0
+	+	4	16
+	+	3	0
+	+	4	0
+	+	6	0
+	+	10	31
+	+	14	17
+	+	16	15
+	+	19	33
+	+	20	24
+	+	15	15
+	+	22	0
+	+	21	22
+	+	20	35
+	+	6	26
+
+> ~/pintos/src/threads/palloc.c
+	*	1525943331	0
+	"	1	0
+
+> ~/pintos/src/lib/kernel/list.c
+	*	1525943302	0
+	"	128	26
+	^	126	0
+	.	1	0
+	+	128	0
+	+	1	0
+
+> ~/pintos/src/userprog/pagedir.c
+	*	1525876277	0
+	"	193	0
 
 > ~/pintos/src/threads/thread.h
-	*	1525779138	0
-	"	163	0
-	^	113	20
-	.	113	19
+	*	1525873433	0
+	"	117	0
+	^	117	0
+	.	117	0
 	+	94	63
 	+	96	79
 	+	16	52
@@ -2177,7 +2388,7 @@ $
 	+	105	20
 	+	105	54
 	+	106	26
-	+	132	52
+	+	133	52
 	+	106	43
 	+	107	23
 	+	7	26
@@ -2185,14 +2396,14 @@ $
 	+	105	51
 	+	105	53
 	+	109	31
-	+	165	75
-	+	165	31
-	+	166	0
-	+	165	31
-	+	166	0
-	+	153	41
-	+	151	25
-	+	153	42
+	+	166	75
+	+	166	31
+	+	167	0
+	+	166	31
+	+	167	0
+	+	154	41
+	+	152	25
+	+	154	42
 	+	98	0
 	+	105	22
 	+	105	23
@@ -2202,35 +2413,36 @@ $
 	+	104	61
 	+	105	0
 	+	109	25
-	+	128	0
+	+	129	0
 	+	98	0
-	+	127	28
-	+	122	11
-	+	132	25
-	+	133	0
+	+	128	28
+	+	123	11
+	+	133	25
+	+	134	0
 	+	106	27
 	+	107	0
 	+	109	20
-	+	126	30
-	+	127	0
-	+	124	10
-	+	123	18
+	+	127	30
+	+	128	0
+	+	125	10
+	+	124	18
 	+	110	30
 	+	109	26
-	+	128	1
+	+	129	1
 	+	97	59
 	+	98	0
 	+	111	19
-	+	127	27
+	+	128	27
 	+	112	21
 	+	109	16
 	+	112	22
 	+	114	27
 	+	113	19
+	+	117	0
 
 > ~/pintos/src/threads/thread.c
-	*	1525779064	0
-	"	51	0
+	*	1525873381	0
+	"	75	0
 	^	299	0
 	.	300	0
 	+	307	125
@@ -2336,112 +2548,139 @@ $
 	i	559	105
 	n	619	40
 
-> ~/pintos/src/userprog/process.c
-	*	1525776495	0
-	"	167	0
-	^	208	35
-	.	208	34
-	+	64	67
-	+	64	60
-	+	64	73
-	+	64	63
-	+	64	56
-	+	64	32
-	+	53	0
-	+	57	0
-	+	64	32
-	+	64	8
-	+	64	5
-	+	58	4
-	+	56	25
-	+	57	5
-	+	59	1
-	+	60	3
-	+	61	5
-	+	62	5
-	+	63	5
-	+	64	7
-	+	64	4
-	+	65	10
-	+	67	33
-	+	70	0
-	+	237	0
-	+	56	19
-	+	94	2
-	+	96	29
-	+	95	24
-	+	56	22
-	+	239	27
-	+	240	40
-	+	241	0
-	+	65	10
-	+	66	33
-	+	68	0
-	+	66	30
-	+	186	0
-	+	175	1
-	+	186	26
-	+	191	79
-	+	191	63
-	+	197	21
-	+	191	90
-	+	198	3
-	+	181	30
-	+	181	51
-	+	182	0
-	+	182	31
-	+	198	3
-	+	197	21
-	+	191	68
-	+	191	132
-	+	30	0
-	+	191	97
-	+	191	64
-	+	191	0
-	+	191	113
-	+	184	0
-	+	198	5
-	+	198	3
-	+	191	69
-	+	182	43
-	+	191	68
-	+	191	64
-	+	184	0
-	+	199	0
-	+	191	109
-	+	191	69
-	+	174	19
-	+	186	6
-	+	191	78
-	+	191	64
-	+	191	63
-	+	191	79
-	+	191	72
-	+	191	83
-	+	186	23
-	+	188	30
-	+	188	31
-	+	189	0
-	+	190	29
-	+	191	67
-	+	191	63
-	+	191	68
-	+	192	5
-	+	192	0
-	+	182	31
-	+	183	30
-	+	198	3
-	+	199	0
-	+	180	19
-	+	182	0
-	+	193	32
-	+	196	0
-	+	513	0
-	+	201	0
-	+	176	0
-	+	210	0
-	+	208	34
-	n	500	49
+> ~/pintos/src/threads/synch.h
+	*	1525872081	0
+	"	29	5
+	^	25	70
+	.	26	0
+	+	23	74
+	+	25	69
+	+	33	58
+	+	33	59
+	+	45	2
+	+	45	74
+	+	25	70
+	+	26	0
+
+> ~/pintos/src/threads/init.c
+	*	1525870580	0
+	"	25	20
+	^	25	21
+	.	25	20
+	+	341	0
+	+	342	0
+	+	291	2
+	+	133	0
+	+	125	0
+	+	25	20
+	m	136	2
+
+> ~/pintos/src/threads/synch.c
+	*	1525870460	0
+	"	208	0
+	^	149	29
+	.	149	28
+	+	411	0
+	+	411	30
+	+	411	19
+	+	411	90
+	+	411	26
+	+	411	20
+	+	411	5
+	+	411	7
+	+	411	9
+	+	411	7
+	+	411	5
+	+	411	0
+	+	411	5
+	+	411	23
+	+	411	12
+	+	411	98
+	+	410	3
+	+	411	5
+	+	411	20
+	+	411	6
+	+	411	28
+	+	410	2
+	+	411	4
+	+	411	11
+	+	411	97
+	+	411	5
+	+	413	68
+	+	411	101
+	+	411	29
+	+	411	58
+	+	411	103
+	+	409	88
+	+	413	98
+	+	414	30
+	+	410	0
+	+	415	0
+	+	414	0
+	+	411	139
+	+	411	31
+	+	411	54
+	+	411	24
+	+	411	73
+	+	413	67
+	+	411	4
+	+	411	102
+	+	411	60
+	+	411	66
+	+	411	19
+	+	1	0
+	+	2	0
+	+	411	43
+	+	411	45
+	+	411	28
+	+	411	5
+	+	411	12
+	+	411	98
+	+	411	97
+	+	411	0
+	+	419	0
+	+	425	0
+	+	419	73
+	+	423	34
+	+	410	3
+	+	410	21
+	+	411	5
+	+	411	194
+	+	411	97
+	+	411	11
+	+	411	29
+	+	418	67
+	+	411	52
+	+	421	44
+	+	422	44
+	+	421	45
+	+	422	45
+	+	411	0
+	+	410	0
+	+	213	62
+	+	235	79
+	+	262	81
+	+	245	52
+	+	252	0
+	+	251	41
+	+	250	32
+	+	245	101
+	+	254	63
+	+	250	37
+	+	248	0
+	+	247	19
+	+	248	55
+	+	249	106
+	+	301	71
+	+	307	88
+	+	251	17
+	+	213	34
+	+	214	0
+	+	145	4
+	+	146	22
+	+	147	21
+	+	149	28
+	n	393	2
 
 > ~/pintos/src/userprog/process.h
 	*	1525776486	0
@@ -2470,27 +2709,9 @@ $
 	*	1525776153	0
 	"	1	0
 
-> ~/pintos/src/userprog/pagedir.c
-	*	1525774587	0
-	"	164	0
-
 > ~/pintos/src/tests/vm/child-inherit.c
 	*	1525766348	0
 	"	1	0
-
-> ~/pintos/src/threads/synch.h
-	*	1525766327	0
-	"	31	5
-	^	25	70
-	.	26	0
-	+	23	74
-	+	25	69
-	+	33	58
-	+	33	59
-	+	45	2
-	+	45	74
-	+	25	70
-	+	26	0
 
 > ~/pintos/src/userprog/syscall.c
 	*	1524929874	0
@@ -2671,16 +2892,6 @@ $
 > ~/pintos/src/userprog/interrupt.h
 	*	1524917283	0
 	"	1	0
-
-> ~/pintos/src/threads/init.c
-	*	1524818497	0
-	"	418	20
-	^	288	2
-	.	288	2
-	+	338	0
-	+	339	0
-	+	288	2
-	m	133	2
 
 > ~/pintos/src/tests/vm/parallel-merge.c
 	*	1524815720	0
@@ -2928,128 +3139,9 @@ $
 	.	95	34
 	+	95	34
 
-> ~/pintos/src/threads/palloc.c
-	*	1523967405	0
-	"	85	0
-
 > ~/pintos/src/devices/timer.
 	*	1523959193	0
 	"	1	0
-
-> ~/pintos/src/threads/synch.c
-	*	1523959116	0
-	"	154	0
-	^	149	29
-	.	149	28
-	+	411	0
-	+	411	30
-	+	411	19
-	+	411	90
-	+	411	26
-	+	411	20
-	+	411	5
-	+	411	7
-	+	411	9
-	+	411	7
-	+	411	5
-	+	411	0
-	+	411	5
-	+	411	23
-	+	411	12
-	+	411	98
-	+	410	3
-	+	411	5
-	+	411	20
-	+	411	6
-	+	411	28
-	+	410	2
-	+	411	4
-	+	411	11
-	+	411	97
-	+	411	5
-	+	413	68
-	+	411	101
-	+	411	29
-	+	411	58
-	+	411	103
-	+	409	88
-	+	413	98
-	+	414	30
-	+	410	0
-	+	415	0
-	+	414	0
-	+	411	139
-	+	411	31
-	+	411	54
-	+	411	24
-	+	411	73
-	+	413	67
-	+	411	4
-	+	411	102
-	+	411	60
-	+	411	66
-	+	411	19
-	+	1	0
-	+	2	0
-	+	411	43
-	+	411	45
-	+	411	28
-	+	411	5
-	+	411	12
-	+	411	98
-	+	411	97
-	+	411	0
-	+	419	0
-	+	425	0
-	+	419	73
-	+	423	34
-	+	410	3
-	+	410	21
-	+	411	5
-	+	411	194
-	+	411	97
-	+	411	11
-	+	411	29
-	+	418	67
-	+	411	52
-	+	421	44
-	+	422	44
-	+	421	45
-	+	422	45
-	+	411	0
-	+	410	0
-	+	213	62
-	+	235	79
-	+	262	81
-	+	245	52
-	+	252	0
-	+	251	41
-	+	250	32
-	+	245	101
-	+	254	63
-	+	250	37
-	+	248	0
-	+	247	19
-	+	248	55
-	+	249	106
-	+	301	71
-	+	307	88
-	+	251	17
-	+	213	34
-	+	214	0
-	+	145	4
-	+	146	22
-	+	147	21
-	+	149	28
-	n	393	2
-
-> ~/pintos/src/lib/kernel/list.c
-	*	1523956580	0
-	"	298	0
-	^	126	0
-	.	1	0
-	+	128	0
-	+	1	0
 
 > ~/pintos/src/tests/userprog/rox-simple.c
 	*	1523950169	0

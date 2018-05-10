@@ -22,6 +22,7 @@
 #include "threads/palloc.h"
 #include "threads/pte.h"
 #include "threads/thread.h"
+#include "vm/frame.h"
 #ifdef USERPROG
 #include "userprog/process.h"
 #include "userprog/exception.h"
@@ -119,6 +120,8 @@ main (void)
   thread_start ();
   serial_init_queue ();
   timer_calibrate ();
+
+  frame_init ();
 
 #ifdef FILESYS
   /* Initialize file system. */

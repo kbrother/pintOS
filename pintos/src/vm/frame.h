@@ -2,17 +2,22 @@
 #define VM_FRAME_H
 
 #include <hash.h>
-#include <debug.h>
+#include <list.h>
+#include "threads/palloc.h"
 
 struct frame
   {
-    struct hash_elem hash_elem;
+    struct thread *frame_thread;
+    struct list_elem frame_elem;
     uint32_t *pd;
     void *upage, *kpage;
     bool mmapped;
+    bool pinned;
   };
 
-unsigned frame_hash (const struct hash_elem *p_, void *aux UNUSED);
-bool frame_less (const struct hash_elem *a_, const struct hash_elem *b_, void *aux UNUSED);
 void frame_init (void);
+struct frame *frame_evict (void);
+void *frame_alloc (enum palloc_flags);
+void frame_free (void);
+
 #endif /* vm/frame.h */
