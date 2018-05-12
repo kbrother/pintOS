@@ -4,20 +4,21 @@
 #include <hash.h>
 #include <list.h>
 #include "threads/palloc.h"
+#include "filesys/file.h"
 
 struct frame
   {
     struct thread *frame_thread;
     struct list_elem frame_elem;
-    uint32_t *pd;
     void *upage, *kpage;
-    bool mmapped;
-    bool pinned;
+    bool mmapped, pinned;
+    uint32_t file_ofs;
+    struct file *frame_file;
   };
 
 void frame_init (void);
 struct frame *frame_evict (void);
 void *frame_alloc (enum palloc_flags);
-void frame_free (void);
+void frame_free (struct list_elem *);
 
 #endif /* vm/frame.h */

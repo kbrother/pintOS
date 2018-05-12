@@ -1,189 +1,3 @@
-cd build/
-ls
-make clean
-make
-clear
-make check
-cd ..
-cd threads
-vim thread.c
-vim thread.h
-vim thread.c
-exit
-cd pintos/src/
-cd userprog/
-vim syscall.c
-exit
-cd pintos/src/lib/
-vim list.c
-ls
-cd ..
-ls
-cd devices/
-ls
-cd ..
-cd lib
-ls
-cd kernel/
-ls
-vim list.c
-exit
-cd pintos/src/threads/
-ls
-vim process.c
-exit
-cd pintos/src/lib/
-cd kernel/
-vim list.c
-cd ..
-cd userprog/
-ls
-vim syscall.c
-make
-clear
-make
-clear
-make
-vim process.c
-vim syscall.c
-make
-vim process.c
-vim syscall.c
-vim syscall.h
-vim process.h
-make
-vim syscall.h
-make
-clear
-make
-clear
-make
-vim process.c
-vim syscall.c
-vim process.c
-tmux
-cd pintos/src/userprog/
-ls
-clear
-ls
-cd ..
-cd tests/userprog/
-ls
-vim multi-recurse.c
-cd lib/
-ls
-cd user/
-ls
-cd ..
-clar
-clear
-ls
-vim Make.tests 
-cd internal/
-ls
-cd ..
-cd userprog/
-ls
-cd ..
-cd threads/
-cd ..
-cd userprog/
-vim process.c
-cd ..
-cd threads/
-vim thread.h
-vim thread.c
-vim thread.h
-vim synch.h
-vim thread.h
-vim thread.c
-vim thread.h
-vim thread.c
-vim thread.h
-cd ..
-cd userprog/
-vim process.c
-vim syscall.c
-vim process.c
-clear
-cd ..
-cd threads/
-vim thread.h
-make
-clear
-cd ../userprog/
-vim process.c
-cd pintos/src/
-ls
-cd lib/
-cd ..
-cd tests/
-ls
-cd userprog/
-clear
-ls
-vim multi-child-fd.c
-clear
-cd ..
-cd userprog/
-ls
-vim process.c
-cd ..
-cd threads/
-clear
-ls
-clear
-vim init.c
-vim thread.c
-vim synch.c
-vim thread.c
-make
-clear
-cd ..
-cd userprog/
-vim syscall.c
-cd ..
-cd threads/
-vim thread.c
-vim thread.h
-vim thread.c
-vim thread.h
-vim thread.c
-vim thread.h
-cd pintos/src/
-ls
-cd userprog/
-ls
-cd ..
-cd threads/
-ls
-vim thread.h
-vim synch.h
-cd ,,
-cd ..
-cd lib/kernel/
-vim list.c
-cd ..
-cd userprog/
-vim process.c
-cd pintos/src/userprog/
-vim syscall.c
-vim process.c
-make
-clear
-make
-vim process.c
-vim syscall.c
-make
-clear
-make
-make check
-clear
-make check
-clear
-make clean
-make 
-clear
 make check
 clear
 vim process.c
@@ -1997,4 +1811,190 @@ vim thread.c
 vim thread.h
 exit
 xit
+exit
+cd pintos/src/vm/
+lsa
+ls
+clear
+vim frame.c
+vim frame.h
+make
+clear
+cd ..
+ls
+cd lib/kernel/
+vim list.c
+cd ../..
+cd vm/
+vim frame.c
+vim frame.h
+vim frame.c
+make
+vim frame.c
+make
+clear
+make check
+c d..
+cd ../../
+cd ..
+git add .
+git statgus
+git status
+git commit -m "Suggeted order 1 done"
+git push
+clear
+cd pintos/src/vm/
+clear
+vim page.c
+vim page.h
+cd ..
+vim Makefile.build 
+cd vm/
+cd pintos/src/threads/
+vim palloc.c
+vim palloc.h
+cd pintos/src/vm/
+lks
+ls
+vim frame.c
+vim frame.h
+cd ..
+cd userprog/
+vim exception.c
+cd ..
+cd vm
+vim frame.c
+cd pintos/src/userprog/
+ls
+vim process.c
+vim exception.c
+cd ..
+cd vm
+ls
+vim frame.h
+cd ..
+cd userprog/
+vim process.h
+vim process.c
+cd ..
+cd vm/
+vim frame.c
+vim page.c
+make
+clear
+make
+clear
+make
+vim page.c
+make
+makle
+make
+clear
+make
+make check
+cd ..
+cd userprog/
+make check
+make
+clear
+make
+cd ..
+cd vm/
+cd ..
+cd threads/
+vim init.c
+cd ..
+clear
+cd lib/
+ls
+cd kernel/
+ls
+cd ..
+ls
+cd ..
+cd tests/
+ls
+cd vm/
+ls
+vim pt-write-code
+vim pt-write-code.c
+clear
+exit
+cd pintos/src/vm
+ls
+clear
+ls
+vim page.c
+cd ..
+cd filesys/
+vim filevim file.c
+vim file.c
+cd ..
+cscope
+cd threads/
+vim synch.h
+cd ..
+cd vm
+vim frame.h
+cd ..
+cd threads/
+vim init.c
+cd ..
+cd userprog/
+vim pagedir.c
+vim process.c
+cd ..
+cd lib/kernel/
+ls
+cd ..
+ls
+vim inttypes.h 
+cd ..
+cscope
+cd threads/
+vim init.c
+make
+cd ..
+cd userprog/
+make
+vim init.c
+clear
+make
+make clean
+clear
+make
+cd ..
+cd vm
+make
+make check
+clear
+vim page.c
+exit
+cd pintos/src/vm/
+ls
+vim page.c
+vim page.h
+cd ..
+cd userprog/
+vim exception.c
+cd ..
+cd vm
+ls
+vim frame.c
+vim page.h
+vim page.c
+vim page.h
+cd ..
+cd userprog/
+ls
+vim exception.c
+cd ..
+cd vm
+vim page.h
+vim page.c
+vim page.h
+clear
+ls
+clear
+vim frame.c
 exit

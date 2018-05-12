@@ -116,12 +116,13 @@ main (void)
   syscall_init ();
 #endif
 
+  /* Initialization for VM */
+  frame_init ();
+
   /* Start thread scheduler and enable interrupts. */
   thread_start ();
   serial_init_queue ();
   timer_calibrate ();
-
-  frame_init ();
 
 #ifdef FILESYS
   /* Initialize file system. */
