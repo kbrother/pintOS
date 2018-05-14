@@ -5,6 +5,7 @@
 #include "threads/malloc.h"
 #include "threads/vaddr.h"
 #include "userprog/pagedir.h"
+#include "userprog/syscall.h"
 #include <debug.h>
 
 static struct list frame_table;
@@ -41,7 +42,7 @@ struct frame *frame_evict (void){
     else
       break;
   }
-
+  
   /*
      implement 2.B.iii
      implement 2.B.iv
@@ -49,7 +50,7 @@ struct frame *frame_evict (void){
   lock_acquire (&t->page_lock);
   pagedir_clear_page (t->pagedir, f->upage);
 
-  p = page_search (t->page_table, f->upage);
+  p = page_search (&t->page_table, f->upage);
   p->kpage = NULL;
   p->frame_index = NULL;
 
@@ -57,8 +58,11 @@ struct frame *frame_evict (void){
   
     if (f->mmapped){
 
+      lock_acquire (&filesys_lock);
       file_seek (f->frame_file, f->file_ofs);
       file_write (f->frame_file, f->kpage, PGSIZE);
+      lock_release (&filesys_lock);
+
       p->in_file = true;
       p->in_swap = false;
     }
@@ -84,15 +88,16 @@ struct frame *frame_evict (void){
   return f;
 }
 
-void *frame_alloc (enum palloc_flags flags){
+struct frame *frame_alloc (enum palloc_flags flags){
   
   void *add = palloc_get_page (PAL_USER | flags);
+  struct frame *f;
 
   if (add == NULL)
-    add = frame_evict ();
+    f = frame_evict ();
   else
   {
-    struct frame *f = malloc (sizeof (struct frame));
+    f = malloc (sizeof (struct frame));
     
     f->frame_thread = thread_current ();
     f->kpage = add;
@@ -101,9 +106,10 @@ void *frame_alloc (enum palloc_flags flags){
     lock_acquire (&frame_lock);
     list_push_back (&frame_table, &f->frame_elem);
     lock_release (&frame_lock);
+
   }
 
-  return add;
+  return f;
 }
 
 void frame_free (struct list_elem *e){

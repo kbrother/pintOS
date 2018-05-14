@@ -1,10 +1,15 @@
 #include "userprog/exception.h"
 #include <inttypes.h>
 #include <stdio.h>
+#include <string.h>
+#include <debug.h>
 #include "userprog/gdt.h"
 #include "threads/interrupt.h"
 #include "threads/thread.h"
 #include "userprog/syscall.h"
+#include "userprog/pagedir.h"
+#include "vm/page.h"
+#include "vm/frame.h"
 
 /* Number of page faults processed. */
 static long long page_fault_cnt;
@@ -132,6 +137,11 @@ page_fault (struct intr_frame *f)
   bool write;        /* True: access was write, false: access was read. */
   bool user;         /* True: access by user, false: access by kernel. */
   void *fault_addr;  /* Fault address. */
+  void *fault_page;
+  struct page *fp_info;
+  struct thread *t = thread_current ();
+  void *kpage;
+  struct frame *earned_frame;
 
   /* Obtain faulting address, the virtual address that was
      accessed to cause the fault.  It may point to code or to
@@ -154,16 +164,64 @@ page_fault (struct intr_frame *f)
   write = (f->error_code & PF_W) != 0;
   user = (f->error_code & PF_U) != 0;
 
-  if (not_present) 
+  /* writing to r/o page */
+  if (!not_present)
+    sysExit();
+
+  /* page lies within kernel virtual memory */
+  if (user && fault_addr >= 0xC0000000)
+    sysExit();
+
+  fault_page = (uint32_t)fault_addr >> 12 << 12;
+  
+  /* user process should not expect that any data at address */
+  lock_acquire (&t->page_lock);
+  fp_info = page_search (&t->page_table, fault_page);
+  lock_release (&t->page_lock);
+   
+  if (fp_info == NULL)
     sysExit ();
 
-  if (user && fault_addr >= 0xC0000000)
-    sysExit ();
+  /* read page and write page to frame */
+  earned_frame = frame_alloc (0);
+  kpage = earned_frame->kpage;
+
+  if (fp_info->in_file){
+
+    if (fp_info->read_bytes != 0){
    
+      lock_acquire (&filesys_lock);
+      
+      file_seek (fp_info->page_file, fp_info->file_ofs);
+      ASSERT (file_read (fp_info->page_file, kpage, 
+            fp_info->read_bytes) == fp_info->read_bytes)
+     
+      lock_release (&filesys_lock);
+    }
+
+    memset ((char *)kpage + fp_info->read_bytes, 0, fp_info->zero_bytes);
+  }
+  else if (fp_info->in_swap) {
+
+    /* read page from swap partition */
+  }
+  
+  /* add mappig form faulted upage to kpage */
+  pagedir_set_page (t->pagedir, fp_info->upage, kpage, fp_info->writable);
+
+  /* edit supplemental page table entry */
+  fp_info->kpage = kpage;
+  fp_info->in_file = false;
+  fp_info->in_swap = false;
+  fp_info->frame_index = earned_frame;
+
+  /* remove the pin of the frame */
+  earned_frame->pinned = false;
+
   /* To implement virtual memory, delete the rest of the function
      body, and replace it with code that brings in the page to
-     which fault_addr refers. */
-  /*
+     which fault_addr refers. 
+  
      printf ("Page fault at %p: %s error %s page in %s context.\n",
           fault_addr,
           not_present ? "not present" : "rights violation",

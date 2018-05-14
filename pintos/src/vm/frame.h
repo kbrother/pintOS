@@ -18,7 +18,7 @@ struct frame
 
 void frame_init (void);
 struct frame *frame_evict (void);
-void *frame_alloc (enum palloc_flags);
+struct frame *frame_alloc (enum palloc_flags);
 void frame_free (struct list_elem *);
 
 #endif /* vm/frame.h */

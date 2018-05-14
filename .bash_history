@@ -1,541 +1,3 @@
-make check
-clear
-vim process.c
-make
-make check
-clear
-make check
-clear
-make clean
-make
-clear
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-cd ..
-vim process.c
-clear
-make
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-clear
-cd ..
-clear
-ls
-vim process.c
-make
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-cd ..
-vim process.c
-make
-cd build/
-clera
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-cd ..
-vim process.c
-make
-cd build/
-cd pintos/src/lib/te
-cd pintos/src/lib/
-ls
-cd ..
-cd tests/
-ls
-cd userprog/
-ls
-vim args-none.ck 
-vim args.c
-vim sc-bad-sp.c
-cd ..
-cd userprog/
-ls
-clear
-vim syscall.c
-make
-make check
-cd pintos/src/threads/
-vim thread.c
-vim synch.c
-vim init.c
-vim thread.c
-clera
-cd ..
-cd filesys/
-ls
-vim filesys.c
-cd ..
-cd threads/
-vim thread.c
-cd ..
-cscope
-clear
-cd threads/
-ls
-vim thread.c
-clear
-cd pintos/src/threads/
-lks
-ls
-cleafr
-clear
-vim thread.c
-vim synch.h
-cd ..
-cd userprog/
-cd ..
-vim threads/
-ls
-cd threads/
-clear
-vim thread.c
-vim init.c
-cd ..
-cd userprog/
-ls
-clear
-vim process.c
-clear
-male
-make
-make check
-make
-make check
-clear
-vim process.c
-vim syscall.c
-cd ..
-cd tests/userprog/
-ls
-vim create-long.c
-vim create-normal.c
-vim create-long.c
-vim create-normal.c
-vim create-normal.ck
-vim create-long.ck
-vim create-normal.ck
-vim create-long.ck
-vim create-normal.ck
-clear
-cd ..
-cd threads/
-clear
-cd ..
-cd threads/
-ls
-vim thread.c
-cd ..
-cscope
-cd ..
-cd src/tests/use
-cd src/tests/userprog/
-ls
-clear
-vim create-normal.c
-ls
-cd ..
-cd lib.
-ls
-vim lib.c
-cd pintos/src/userprog/
-ls
-cd ..
-cd tests/lis
-cd tests/lib
-ls
-cd tests/
-ls
-cd userprog/
-cd lib/
-ls
-cd user/
-ls
-cd ..
-clar
-cd..
-cd ..
-clear
-cd ..
-cd lib/user/
-ls
-vim syscall.c
-cd pintos/src/userprog/build/
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-clear
-cd ..
-vim syscall.c
-cd pintos/src/threads/
-vim thread.h
-vim thread.c
-vim thread.h
-vim init.c
-vim thread.c
-vim thread.h
-vim thread.c
-cd ,,
-cd ..
-cscope
-cd userprog/
-make
-clear
-make check
-vim syscall.c
-make
-vim syscall.c
-make
-cd build/
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-backtrace Call stack: 0xc002aab7 0xc002d5a4 0xc0021150 0xc002eee9 0xc002f14e 0xc00220ea 0xc0022342 0x804aa2b 0x8048893.
-cd ..
-vim process.c
-cd build/
-pintos-gdb kernel.
-pintos-gdb kernel.o
-cd ..
-pintos-gdb kernel.o
-cd build/
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-cd ..
-cd build/
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-cd ..
-vim process.c
-clear
-vim process.c
-cd ..
-cd threads/
-vim interrupt.c
-vim intr-stubs.S
-cd ..
-cd lib/user/
-vim syscall.c
-ls
-ls -al
-rm .syscall.c.swp 
-vim syscall.c
-ls
-cscope
-ls
-cd ..
-cscope
-clear
-cd pintos/src/userprog/
-ls
-vim syscall.c
-clera
-clear
-vim syscall.c
-cd pintos/src/tests/use
-cd pintos/src/tests/userprog/
-vim create-normal.c
-vim create-normal.ck
-vim create-long.ck
-cd ..
-cd lib/
-vim string.c
-cd ..
-cd threads/
-vim thread.h
-cd ..
-cd filesys/
-ls
-vim file.h
-vim file.c
-vim file.h
-clear
-vim file.c
-vim file.h
-vim file.c
-cd ..
-cd lib/
-ls
-cd ..
-cd tests/
-ls
-cd userprog/
-ls
-vim open-normal.c
-vim open-missing.c
-clear
-vim open-null.c
-vim close-normal.c
-vim close-twice.c
-cd pintos/src/userprog/
-ls
-cd build/
-ls
-pintos-gdb kernel.o
-clear
-cd pintos/src/threads/
-ls
-vim thread.c
-cd ../userprog/
-vim syscall.c
-cd ..
-cscope
-cd userprog/
-clear
-vim syscall.
-vim syscall.c
-clear
-vim syscall.c
-make
-vim syscall.c
-clear
-vim syscall.c
-cd pintos/src/tests/
-ls
-cd userprog/
-vim create-normal.c
-vim create-normal.ck
-vim create-normal.c
-vim create-long.c
-vim create-long.ck
-vim create-long.c
-cd ..
-cd filesys/
-ls
-clearcd ..
-cd ..
-cd filesys/
-ls
-clear
-vim filesys.c
-vim file.c
-vim file.h
-cd pintos/src/tests/userprog/
-ls
-vim args.c
-cd ..
-cd userprog/
-cd build/
-clear
-ls
-pintos --gdb -v --bochs  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-cd ..
-cd build/
-make
-cd ..
-make clean
-make
-cd build/
-clear
-pintos --gdb -v --bochs  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-clear
-cd ..
-make check
-clear
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-cd ..
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-pintos --gdb -v --bochs  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-make
-cd ..
-make check
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-cd ..
-make clean
-make
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-clera
-clear
-pintos --gdb -v --bochs  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q  -f run args-none
-cd ..
-cd use
-clear
-vim syscall.c
-make
-make check
-make
-clear
-make check
-clear
-sl
-ls
-clera
-clear
-vim syscall.c
-make
-clear
-make
-make check
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q  -f run create-long 
-clera
-clear
-cd ..
-vim syscall.c
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q  -f run create-long 
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q  -f run create-long 
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q  -f run create-long 
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q  -f run create-long 
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q  -f run create-long 
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q  -f run create-long 
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q  -f run create-long 
-makecheck
-make check
-cd ..
-clear
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-normal -- -q  -f run create-long
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q  -f run create-long
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-cd ..
-cd build/
-clear
-ls
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-ls
-clear
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-clear
-make
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-clear
-make
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-pintos -v -k --bochs  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-make
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q  -f run create-normal
-make
-cd ..
-make check
-clear
-ls
-vim syscall.c
-make
-vim syscall.c
-make
-vim syscall.h
-make
-vim syscall.c
-cd ..
-cscope
-clear
-cd threads/
-ls
-vim thread.h
-cd ..
-cd userprog/
-vim syscall.c
-make
-clear
-make
-clear
-make check
-make
-clear
-make check
-clear
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-normal
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-normal
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-normal
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-normal
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-normal
-make
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run open-normal
-cd ..
-make check
-clear
-make
-clear
-make check
-clear
-make
-clear
-make check
-clear
-make
-make check
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/close-twice -a close-twice -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run close-twice
-clear
-cd build/
-pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/close-twice -a close-twice -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run close-twice
-backtrace Call stack: 0xc002aac4 0xc002ec6d 0xc002ed81 0xc00220f7 0xc002234f 0xc002f31f 0xc002f617 0xc00220f7 0xc002234f 0x804ab6b 0x80480f5 0x804812f 0x8048885.
-pintos --gdb -v --bochs  --filesys-size=2 -p tests/userprog/close-twice -a close-twice -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run close-twice
-make
-clear
-pintos -v --bochs  --filesys-size=2 -p tests/userprog/close-twice -a close-twice -p ../../tests/userprog/sample.txt -a sample.txt -- -q  -f run close-twice
-clear
-cd ..
-make check
-cd pintos/src/lib/
-cd kernel/
-vim list.c
-cd pintos/src/threads/
-vim synch.c
-vim thread.c
-vim synch.c
-vim thread.c
-vim synch.c
-vim thread.c
-vim synch.c
-vim thread.c
-vim synch.c
-vim thread.c
-vim synch.c
-cd ..
-cd devices/
-vim timer.c
-cd ..
-cd threads/
-vim thread.h
-vim thread.c
-clear
-vim synch.c
-cd ..
-cd userprog/
-ls
-vim process.c
-make clean
-make
-cd build/
-pintos --gdb -v -k -j 1 --bochs  --filesys-size=2 -p tests/userprog/exec-missing -a exec-missing -- -q  -f run exec-missing
-pintos -v -k -j 1 --bochs  --filesys-size=2 -p tests/userprog/exec-missing -a exec-missing -- -q  -f run exec-missing
-cd ..
-vim process.c
 clear
 make
 cd build/
@@ -1998,3 +1460,541 @@ ls
 clear
 vim frame.c
 exit
+cd pintos/src/threads/
+ls
+vim thread.h
+vim thread.c
+cd ..
+clear
+ls
+cd vm/
+vim frame.h
+cd ..
+cd threads/
+vim thread.h
+cd ..
+cd vm/
+vim frame.h
+vim page.h
+vim frame.c
+make
+cd ..
+cd threads/
+vim init.c
+cd ..
+cd vm/
+make
+clar
+clear
+make 
+make
+clear
+cd ..
+git add .
+git status
+git commit -m "finish frame.c"
+cd pintos/src/vm/
+ls
+clear
+vim page.c
+vim frame.c
+vim page.h
+make
+vim page.c
+vim page.h
+clear
+make
+clear
+make
+cd ..
+cscope
+cd vm
+clear
+make
+cd ..
+cd vm/
+make
+clear
+make
+cd pintos/src/vm
+vim page.c
+vim frame.c
+vim frame.h
+vim vim page.c
+vim page.c
+vim page.h
+clear
+cd ..
+cd userprog/
+vim syscall.c
+vim syscall.h
+cd ..
+cd vm
+vim frame.c
+cd ..
+cd userprog/
+vim pagedir.c
+cd ..
+cd vm/
+vim frame.c
+vim frame.h
+vim frame.c
+vim frame.h
+vim page.c
+vim page.h
+maek
+make
+vim frame.c
+cd pintos/src/filesys/
+vim file.c
+cd ..
+cd vm
+vim frame.h
+cd ..
+cd threads/
+vim thread.c
+cd ..
+cd userprog/
+vim process.c
+vim page.c
+clear
+vim exception.c
+vim process.c
+vim exception.c
+vim process.c
+vim exception.c
+vim process.c
+vim exception.c
+vim process.c
+vim exception.c
+cd ..
+cd vm
+clear
+vim frame.c
+CD ..
+cd ..
+cd userprog/
+vim exception.c
+vim exception.h
+vim exception.c
+vim exception.j
+vim exception.h
+cd ..
+cd vm/
+vim frame.c
+cd pintos/src/filesys/
+vim file.c
+cd ..
+cd userprog/
+vim pagedir.c
+vim process.c
+vim exception.c
+vim pagedir.c
+cd ..
+cd lib/kernel/
+vim list.c
+cd pintos/src/
+cd lib/kernel/
+vim hash.h
+cd ../..
+cd threads/
+vim thread.h
+cd ..
+cd userprog/
+vim pagedir.c
+cd ..
+cd filesys/
+cd ..
+cd vm
+ls
+clear
+ls
+vim page.c
+vim page.h
+vim frame.c
+vim page.c
+vim frame.c
+cd ..
+cd userprog/
+vim process.c
+cd ..
+cd vm
+vim frame.c
+vim frame.h
+cd pintos/src/vm
+ls
+cd ..
+cd userprog/
+ls
+vim process.c
+vim exception.c
+cd ..
+cd vm/
+make
+make check
+cd pintos/src/vm/
+vim frame.c
+cd ..
+ls
+cd lib/kernel/
+ls
+cd ..
+ls
+vim string.g
+vim string.h
+vim string.c
+cd ..
+cscope
+cd vm
+ls
+cd build/
+cd ..
+make clean
+makec heck
+make check
+cd build/
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/args-none -a args-none --swap-size=4 -- -q  -f run args-none 
+clear
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/args-none -a args-none --swap-size=4 -- -q  -f run args-none 
+c d..
+cd ..
+clear
+vim page.c
+clear
+vim page.h
+vim page.c
+vim frame.c
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none --swap-size=4 -- -q  -f run args-none 
+cd ..
+make
+clear
+make check
+make
+clear
+make check
+cd pintos/src/vm/
+make clean
+make check
+c d..
+cd ..
+cd threads/
+ls
+clear
+vim thread.c
+cd ..
+cd vm
+make
+make check
+clear
+cd ..
+cd userprog/
+vim exception.v
+vim exception.c
+vim process.c
+make
+clear
+vim process.c
+cd pintos/src/vm/build/
+pintos-gdb kernel.o
+clear
+pintos-gdb kernel.o
+cd ..
+cd vm
+cd build/
+pintos-gdb kernel.
+pintos-gdb kernel.o
+clear
+ls
+cd pintos/src/vm
+ls
+clear
+cd ..
+cd tests/
+ls
+cd userprog/
+ls
+vim read-boundary.c
+make
+vim read-boundary.c
+cd pintos/src/vm
+vim page.c
+vim page.h
+make
+vim frame.c
+make
+vim frame.c
+make
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none --swap-size=4 -- -q  -f run args-none 
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/args-none -a args-none --swap-size=4 -- -q  -f run args-none 
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary 
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary --swap-size=4 -- -q  -f run open-boundary 
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+cd ..
+cd lib/
+vim round.h 
+cd ..
+cd vm/
+cd build/
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make check
+cd pintos/src/vm
+ls
+clear
+vim page.c
+vim page.h
+vim page.c
+ls -al
+rm .page.c.swp 
+vim page.c
+make
+clear
+make check
+make
+clear
+make
+make check
+cd build/
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/args-none -a args-none --swap-size=4 -- -q  -f run args-none 
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary 
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+clear
+cd ..
+make
+cd build/
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+pintos -v -k --bochs  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+clear
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+clear
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+make
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+cd ..
+make check
+clear
+make
+makecheck
+make check
+clear
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary --swap-size=4 -- -q  -f run read-boundary
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-boundary
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-normal
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-normal
+make
+clear
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-normal
+CD ..
+cd ..
+vim page.c
+clear
+make
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-normal
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary
+clear
+cd ..
+cd filesys/
+vim file.c
+vim inode.c
+ls
+cd ..
+cd threads/
+cd ..
+ls
+cscope
+cd vm
+make check
+ls
+cd pintos/
+cd src
+ls
+cd tests/
+ls
+cd vm
+ls
+cd ..
+cd userprog/
+ls
+vim read-boundary.c
+vim open-boundary.c
+vim read-boundary.c
+vim read-bad-ptr.c
+vim read-boundary.c
+vim open-boundary.c
+vim boundary.c
+vim read-boundary.c
+clear
+ls
+vim read-normal.c
+vim open-empty.c
+clear
+ls
+vim open-boundary.c
+vim boundary.c
+vim open-normal.c
+vim boundary.c
+vim open-boundary.c
+clear
+ls
+vim open-boundary.c
+vim read-boundary.c
+vim open-bad-ptr.c
+cd pintos/src/tests/
+ls
+cd userprog/
+ls
+vim open-boundary.c
+cd lib/
+ls
+cd ..
+vim sample.inc 
+cd ..
+cd vm/
+cd ..
+cd vm/
+cd build/
+pintos-gdb kernel.o
+cd ..
+cd build/
+clear
+make
+pintos-gdb kernel.o
+clear
+cd ..
+cd build/
+pintos-gdb kernel.o
+cd ..
+cd userprog/
+ls
+vim exception.c
+vim process.c
+vim exception.c
+vim syscall.c
+cd pintos/src/userprog/
+vim exception.c
+vim process.c
+cd ..
+vim threads/
+cd threads/
+vim thread.c
+cd ..
+celar
+clear
+ls
+cd userprog/
+vim exception.c
+make
+clear
+vim exception.c
+ls
+vim syscall.c
+vim syscall.h
+vim syscall.c
+vim process.c
+vim syscall.c
+cd ..
+cd lib/
+ls
+cd ..
+cd tests/
+ls
+cd ..
+cd userprog/
+vim syscall.c
+vim exception.c
+vim syscall.c
+vim exception.c
+clear
+vim syscall.c
+vim exception.c
+vim syscall.c
+vim process.c
+cd pintos/src/vm
+make check
+exit
+cd pintos/src/vm
+cd ..
+ls
+cd lib/
+ls
+vim kernel/
+cd kernel/
+ls
+vim bitmap.c
+clear
+cd pintos/src/vm/
+ls
+cd ..
+cd vm
+ls
+clear
+ls
+cd ..
+cd threads/
+ls
+cd ..
+cd devices/
+vim block.c
+vim block.h
+vim block.c
+vim block.h
+vim block.c
+ls
+vim block.c
+ls
+vim block.h
+ls
+vim block.c

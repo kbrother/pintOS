@@ -54,7 +54,7 @@ static bool valid_memory(void *uaddr){
     return false;
 
   if (pagedir_get_page (pd, uaddr) == NULL)
-    return false;
+    return false; 
 
   return true;
 }
