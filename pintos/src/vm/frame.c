@@ -1,5 +1,6 @@
 #include "vm/frame.h"
 #include "vm/page.h"
+#include "vm/swap.h"
 #include "threads/thread.h"
 #include "threads/synch.h"
 #include "threads/malloc.h"
@@ -24,6 +25,7 @@ struct frame *frame_evict (void){
   struct frame *f;
   struct thread *t;
   struct page *p;
+
   lock_acquire (&frame_lock);
 
   while (true){
@@ -34,25 +36,26 @@ struct frame *frame_evict (void){
     f = list_entry (hand, struct frame, frame_elem);
     t = f->frame_thread;
 
-    if (pagedir_is_accessed (t->pagedir, f->upage)){
+    hand = list_next (hand);
 
-      pagedir_set_accessed (t->pagedir, f->upage, 0);
-      hand = list_next (hand);
+    if (f->pinned)
+      continue;
+
+    if (pagedir_is_accessed (t->pagedir, f->upage)){
+      
+      pagedir_set_accessed (t->pagedir, f->upage, false);
+      continue;
+
     }
-    else
-      break;
+    
+    break;
   }
   
-  /*
-     implement 2.B.iii
-     implement 2.B.iv
-  */
   lock_acquire (&t->page_lock);
-  pagedir_clear_page (t->pagedir, f->upage);
 
   p = page_search (&t->page_table, f->upage);
   p->kpage = NULL;
-  p->frame_index = NULL;
+  p->frame_index  = NULL;
 
   if (pagedir_is_dirty (t->pagedir, f->upage)){
   
@@ -69,6 +72,7 @@ struct frame *frame_evict (void){
     else{
       //write frame to swap partition
 
+      p->swap_index = swap_alloc (f->kpage);
       p->in_file = false;
       p->in_swap = true;
     }
@@ -79,10 +83,10 @@ struct frame *frame_evict (void){
     p->in_swap = false;
   }
 
+  pagedir_clear_page (t->pagedir, f->upage);  
   lock_release (&t->page_lock);
 
   f->pinned = true;
-  hand = list_next (hand);
   lock_release (&frame_lock);
 
   return f;
@@ -102,6 +106,7 @@ struct frame *frame_alloc (enum palloc_flags flags){
     f->frame_thread = thread_current ();
     f->kpage = add;
     f->pinned = true;
+    f->mmapped = false;
 
     lock_acquire (&frame_lock);
     list_push_back (&frame_table, &f->frame_elem);

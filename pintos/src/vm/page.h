@@ -3,6 +3,7 @@
 #include <hash.h>
 #include <stdio.h>
 #include <list.h>
+#include "devices/block.h"
 #include "filesys/file.h"
 #include "vm/frame.h"
 
@@ -16,6 +17,7 @@ struct page
     uint32_t file_ofs;
     uint32_t read_bytes, zero_bytes;
     struct file *page_file;
+    block_sector_t swap_index;
   };
 
 unsigned page_hash (const struct hash_elem *, void *);

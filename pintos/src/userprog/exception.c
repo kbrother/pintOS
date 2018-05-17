@@ -6,10 +6,13 @@
 #include "userprog/gdt.h"
 #include "threads/interrupt.h"
 #include "threads/thread.h"
+#include "threads/vaddr.h"
+#include "threads/malloc.h"
 #include "userprog/syscall.h"
 #include "userprog/pagedir.h"
 #include "vm/page.h"
 #include "vm/frame.h"
+#include "vm/swap.h"
 
 /* Number of page faults processed. */
 static long long page_fault_cnt;
@@ -142,6 +145,7 @@ page_fault (struct intr_frame *f)
   struct thread *t = thread_current ();
   void *kpage;
   struct frame *earned_frame;
+  bool is_dirty;
 
   /* Obtain faulting address, the virtual address that was
      accessed to cause the fault.  It may point to code or to
@@ -173,7 +177,37 @@ page_fault (struct intr_frame *f)
     sysExit();
 
   fault_page = (uint32_t)fault_addr >> 12 << 12;
-  
+
+  /* stack growth */
+  if (f->esp < t->stack_end || (uint32_t)fault_addr == ((uint32_t) f->esp) - 4
+      || (uint32_t)fault_addr == ((uint32_t) f->esp) - 32)
+  {
+    if (t->stack_end > fault_addr)
+    {
+      earned_frame = frame_alloc (PAL_ZERO);
+      kpage = earned_frame->kpage;
+      
+      t->stack_end = (char *)(t->stack_end) - PGSIZE;
+
+      fp_info = malloc (sizeof (struct page));
+      fp_info->pd = t->pagedir;
+      fp_info->upage = t->stack_end;
+      fp_info->kpage = kpage;
+      fp_info->in_file = false;
+      fp_info->in_swap = false;
+      fp_info->writable = true;
+      fp_info->frame_index  = earned_frame;
+
+      page_insert (&t->page_table, fp_info);
+      pagedir_set_page (t->pagedir, t->stack_end, kpage, true);
+      pagedir_set_dirty (t->pagedir, t->stack_end, true);
+
+      earned_frame->pinned = false;
+    }
+
+    return ;
+  }
+
   /* user process should not expect that any data at address */
   lock_acquire (&t->page_lock);
   fp_info = page_search (&t->page_table, fault_page);
@@ -203,11 +237,19 @@ page_fault (struct intr_frame *f)
   }
   else if (fp_info->in_swap) {
 
+    swap_free (true, kpage, fp_info->swap_index);
     /* read page from swap partition */
-  }
   
+  }
+ 
+  if (pagedir_is_dirty (t->pagedir, fp_info->upage))
+    is_dirty =  true;
+  else
+    is_dirty = false;
+
   /* add mappig form faulted upage to kpage */
   pagedir_set_page (t->pagedir, fp_info->upage, kpage, fp_info->writable);
+  pagedir_set_dirty (t->pagedir, fp_info->upage, is_dirty);
 
   /* edit supplemental page table entry */
   fp_info->kpage = kpage;
@@ -216,6 +258,8 @@ page_fault (struct intr_frame *f)
   fp_info->frame_index = earned_frame;
 
   /* remove the pin of the frame */
+  earned_frame->upage = fault_page; 
+  earned_frame->frame_thread =  thread_current ();
   earned_frame->pinned = false;
 
   /* To implement virtual memory, delete the rest of the function

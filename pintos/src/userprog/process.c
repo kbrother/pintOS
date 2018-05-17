@@ -179,8 +179,10 @@ process_exit (void)
   /* Destroy the current process's page directory and switch back
      to the kernel-only page directory. */
 
-  //CLOSE executable
-  lock_acquire (&filesys_lock);
+  //CLOSE executable 
+  if (!lock_held_by_current_thread (&filesys_lock))
+    lock_acquire (&filesys_lock);
+ 
   file_close (cur->executable);
   lock_release (&filesys_lock);
 
@@ -609,7 +611,7 @@ setup_stack (void **esp, const char *file_name_)
 {
 
   struct frame *earned_frame;
-  uint8_t *kpage;
+  uint8_t *kpage, *upage;
   bool success = false;
   int fname_size = strlen(file_name_), arg_c;
   char *file_name = malloc(fname_size + 1);
@@ -618,10 +620,11 @@ setup_stack (void **esp, const char *file_name_)
 
   earned_frame = frame_alloc(PAL_ZERO);//palloc_get_page (PAL_USER | PAL_ZERO);
   kpage = earned_frame->kpage;
+  upage = ((uint8_t *) PHYS_BASE) - PGSIZE;
 
   if (kpage != NULL) 
     {
-      success = install_page (((uint8_t *) PHYS_BASE) - PGSIZE, kpage, true);
+      success = install_page (upage, kpage, true);
       if (success){
         
         char *token, *save_ptr;
@@ -680,12 +683,13 @@ setup_stack (void **esp, const char *file_name_)
 
   //hex_dump (*esp, *esp, 0xc0000000 - (uint32_t)*esp, true);
   free(file_name);
+  pagedir_set_dirty (t->pagedir, upage, true);
 
   lock_acquire (&t->page_lock);
   
   p = malloc (sizeof (struct page));
   p->pd = t->pagedir;
-  p->upage = (uint8_t *)PHYS_BASE - PGSIZE;
+  p->upage = upage;
   p->kpage = kpage;
   p->in_file = false;
   p->in_swap = false;
@@ -695,6 +699,8 @@ setup_stack (void **esp, const char *file_name_)
   page_insert (&t->page_table, p);
   lock_release (&t->page_lock);
 
+  t->stack_end = upage;
+  earned_frame->upage = upage;
   earned_frame->pinned = false;
   return success; 
 }
