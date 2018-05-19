@@ -6,6 +6,7 @@
 #include "threads/palloc.h"
 #include "filesys/file.h"
 
+extern struct lock frame_lock;
 struct frame
   {
     struct thread *frame_thread;
@@ -19,6 +20,6 @@ struct frame
 void frame_init (void);
 struct frame *frame_evict (void);
 struct frame *frame_alloc (enum palloc_flags);
-void frame_free (struct list_elem *);
+void frame_free (struct frame *);
 
 #endif /* vm/frame.h */

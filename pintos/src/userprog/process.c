@@ -22,6 +22,7 @@
 #include "userprog/syscall.h"
 #include "vm/frame.h"
 #include "vm/page.h"
+#include "vm/swap.h"
 
 static thread_func start_process NO_RETURN;
 static bool load (const char *cmdline, void (**eip) (void), void **esp);
@@ -164,28 +165,58 @@ process_wait (tid_t child_tid)
   return exitStatus;
 }
 
-/* Free the current process's resources. */
-void
-process_exit (void)
+static void free_resource (struct thread *cur)
 {
-  struct thread *cur = thread_current ();
-  uint32_t *pd;
-  struct list_elem *e;
-  struct list *c_list;
-  bool checked = false;
   struct list *fd_l;
-  struct list *lock_l;
+  struct list_elem *e;
+  struct hash_elem *he;
+  struct hash_iterator i;
+  struct hash *h = &cur->page_table;
+  uint32_t *pd;
 
-  /* Destroy the current process's page directory and switch back
-     to the kernel-only page directory. */
+  //free page
+  lock_acquire (&frame_lock);
 
-  //CLOSE executable 
-  if (!lock_held_by_current_thread (&filesys_lock))
-    lock_acquire (&filesys_lock);
+  hash_first (&i, h);
+
+  while (hash_size (h) > 0)
+  {
+    hash_first (&i, h);
+    he = hash_next (&i);
+
+    struct page *p = hash_entry (he, struct page, page_elem);
+
+    if (p->in_swap){
+    
+      swap_free (false, NULL, p->swap_index);
+    }
+    else if (p->in_file) {
+      
+      /*after implementing mmap */
+    }
+    else 
+      frame_free (p->frame_index);
+
+    hash_delete (h, he);
+  }
  
-  file_close (cur->executable);
-  lock_release (&filesys_lock);
-
+  pd = cur->pagedir;
+  if (pd != NULL) 
+    {
+      /* Correct ordering here is crucial.  We must set
+         cur->pagedir to NULL before switching page directories,
+         so that a timer interrupt can't switch back to the
+         process page directory.  We must activate the base page
+         directory before destroying the process's page
+         directory, or our active page directory will be one
+         that's been freed (and cleared). */
+      cur->pagedir = NULL;
+      pagedir_activate (NULL);
+      pagedir_destroy (pd);
+    }
+ 
+  lock_release (&frame_lock);
+  
   //close all file
   fd_l = &cur->fd_list;
 
@@ -201,16 +232,28 @@ process_exit (void)
     free (fd_to_close);
   }
 
-  //release all lock
-  lock_l = &cur->acquired_locks;
+}
 
-  while (list_size (lock_l) > 0){
-    
-    e = list_pop_front (lock_l);
-    struct lock *lock_to_release = list_entry (e, struct lock, elem);
+/* Free the current process's resources. */
+void
+process_exit (void)
+{
+  struct thread *cur = thread_current ();
+  struct list_elem *e;
+  struct list *c_list;
 
-    lock_release (lock_to_release);
-  }
+  /* Destroy the current process's page directory and switch back
+     to the kernel-only page directory. */
+
+  //CLOSE executable 
+  if (!lock_held_by_current_thread (&filesys_lock))
+    lock_acquire (&filesys_lock);
+ 
+  file_close (cur->executable);
+  lock_release (&filesys_lock);
+
+  //free resource
+  free_resource (cur);
 
   //자식 처리
   lock_acquire (&cur->list_lock);
@@ -251,7 +294,6 @@ process_exit (void)
       struct child_info *c_info = list_entry (e, struct child_info, child_elem);
       if (c_info->tid == cur->tid){
  
-        checked = true;
         c_info->exit_status = cur->exit_status;
         c_info->died = true;
         sema_up (&c_info->wait_sema);
@@ -261,21 +303,6 @@ process_exit (void)
 
     lock_release (&cur->parent->list_lock);
 	}
-
-  pd = cur->pagedir;
-  if (pd != NULL) 
-    {
-      /* Correct ordering here is crucial.  We must set
-         cur->pagedir to NULL before switching page directories,
-         so that a timer interrupt can't switch back to the
-         process page directory.  We must activate the base page
-         directory before destroying the process's page
-         directory, or our active page directory will be one
-         that's been freed (and cleared). */
-      cur->pagedir = NULL;
-      pagedir_activate (NULL);
-      pagedir_destroy (pd);
-    }
 }
 
 /* Sets up the CPU for running user code in the current
@@ -589,17 +616,18 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
       p->read_bytes = page_read_bytes;
       p->zero_bytes = page_zero_bytes;
       p->page_file = file;
-
+      
       /* add to supplemental page table */
       lock_acquire (&t->page_lock);
       page_insert (&t->page_table, p);
       lock_release (&t->page_lock);
 
+      //printf ("upage %x\n", upage);
       /* Advance. */
       read_bytes -= page_read_bytes;
       zero_bytes -= page_zero_bytes;
       upage += PGSIZE;
-      ofs += page_read_bytes;
+      ofs += page_read_bytes;   
     }
   return true;
 }
@@ -684,8 +712,6 @@ setup_stack (void **esp, const char *file_name_)
   //hex_dump (*esp, *esp, 0xc0000000 - (uint32_t)*esp, true);
   free(file_name);
   pagedir_set_dirty (t->pagedir, upage, true);
-
-  lock_acquire (&t->page_lock);
   
   p = malloc (sizeof (struct page));
   p->pd = t->pagedir;
@@ -697,10 +723,10 @@ setup_stack (void **esp, const char *file_name_)
   p->frame_index = earned_frame;
 
   page_insert (&t->page_table, p);
-  lock_release (&t->page_lock);
 
   t->stack_end = upage;
   earned_frame->upage = upage;
+  earned_frame->frame_thread = t;
   earned_frame->pinned = false;
   return success; 
 }

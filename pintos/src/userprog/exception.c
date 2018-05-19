@@ -122,6 +122,33 @@ static void sysExit (void){
   thread_exit ();
 }
 
+static void stack_growth (struct thread *t){
+
+  struct frame *earned_frame;
+  void *kpage;
+  struct page *fp_info;
+
+  earned_frame = frame_alloc (PAL_ZERO);
+  kpage = earned_frame->kpage;
+
+  t->stack_end = (char *)(t->stack_end) - PGSIZE;
+  
+  fp_info = malloc (sizeof (struct page));
+  fp_info->pd = t->pagedir;
+  fp_info->upage = t->stack_end;
+  fp_info->kpage = kpage;
+  fp_info->in_file = false;
+  fp_info->in_swap = false;
+  fp_info->writable = true;
+  fp_info->frame_index  = earned_frame;
+
+  page_insert (&t->page_table, fp_info);
+  pagedir_set_page (t->pagedir, t->stack_end, kpage, true);
+  pagedir_set_dirty (t->pagedir, t->stack_end, true);
+  
+  earned_frame->pinned = false;
+}
+
 /* Page fault handler.  This is a skeleton that must be filled in
    to implement virtual memory.  Some solutions to project 2 may
    also require modifying this code.
@@ -176,45 +203,36 @@ page_fault (struct intr_frame *f)
   if (user && fault_addr >= 0xC0000000)
     sysExit();
 
-  fault_page = (uint32_t)fault_addr >> 12 << 12;
+  fault_page = pg_round_down (fault_addr);
 
   /* stack growth */
-  if (f->esp < t->stack_end || (uint32_t)fault_addr == ((uint32_t) f->esp) - 4
+  if (user && f->esp < t->stack_end)
+  {
+    stack_growth (t);
+    return ;
+  }
+
+  if ((uint32_t)fault_addr == ((uint32_t) f->esp) - 4
       || (uint32_t)fault_addr == ((uint32_t) f->esp) - 32)
   {
-    if (t->stack_end > fault_addr)
+    if (user && t->stack_end > fault_addr)
     {
-      earned_frame = frame_alloc (PAL_ZERO);
-      kpage = earned_frame->kpage;
-      
-      t->stack_end = (char *)(t->stack_end) - PGSIZE;
-
-      fp_info = malloc (sizeof (struct page));
-      fp_info->pd = t->pagedir;
-      fp_info->upage = t->stack_end;
-      fp_info->kpage = kpage;
-      fp_info->in_file = false;
-      fp_info->in_swap = false;
-      fp_info->writable = true;
-      fp_info->frame_index  = earned_frame;
-
-      page_insert (&t->page_table, fp_info);
-      pagedir_set_page (t->pagedir, t->stack_end, kpage, true);
-      pagedir_set_dirty (t->pagedir, t->stack_end, true);
-
-      earned_frame->pinned = false;
+      stack_growth (t);
+      return ;
     }
 
-    return ;
+    if (pagedir_get_page (t->pagedir, fault_page) != NULL)
+      return;
   }
 
   /* user process should not expect that any data at address */
   lock_acquire (&t->page_lock);
   fp_info = page_search (&t->page_table, fault_page);
   lock_release (&t->page_lock);
-   
-  if (fp_info == NULL)
+
+  if (fp_info == NULL){
     sysExit ();
+  }
 
   /* read page and write page to frame */
   earned_frame = frame_alloc (0);

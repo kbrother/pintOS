@@ -8,10 +8,11 @@
 #include "userprog/pagedir.h"
 #include "userprog/syscall.h"
 #include <debug.h>
+#include <stdbool.h>
 
 static struct list frame_table;
 static struct list_elem *hand;
-static struct lock frame_lock;
+struct lock frame_lock;
 
 void frame_init (void){
   
@@ -26,13 +27,13 @@ struct frame *frame_evict (void){
   struct thread *t;
   struct page *p;
 
-  lock_acquire (&frame_lock);
-
+  /* select victm */
   while (true){
     
     if (hand == list_end (&frame_table))
       hand = list_begin (&frame_table);
 
+    ASSERT (t != NULL);
     f = list_entry (hand, struct frame, frame_elem);
     t = f->frame_thread;
 
@@ -51,9 +52,12 @@ struct frame *frame_evict (void){
     break;
   }
   
-  lock_acquire (&t->page_lock);
+  f->pinned = true;
 
+  /* update victim's page table */
   p = page_search (&t->page_table, f->upage);
+  pagedir_clear_page (t->pagedir, f->upage);
+
   p->kpage = NULL;
   p->frame_index  = NULL;
 
@@ -64,7 +68,6 @@ struct frame *frame_evict (void){
       lock_acquire (&filesys_lock);
       file_seek (f->frame_file, f->file_ofs);
       file_write (f->frame_file, f->kpage, PGSIZE);
-      lock_release (&filesys_lock);
 
       p->in_file = true;
       p->in_swap = false;
@@ -83,17 +86,13 @@ struct frame *frame_evict (void){
     p->in_swap = false;
   }
 
-  pagedir_clear_page (t->pagedir, f->upage);  
-  lock_release (&t->page_lock);
-
-  f->pinned = true;
-  lock_release (&frame_lock);
-
   return f;
 }
 
 struct frame *frame_alloc (enum palloc_flags flags){
-  
+ 
+  lock_acquire (&frame_lock);
+
   void *add = palloc_get_page (PAL_USER | flags);
   struct frame *f;
 
@@ -108,24 +107,23 @@ struct frame *frame_alloc (enum palloc_flags flags){
     f->pinned = true;
     f->mmapped = false;
 
-    lock_acquire (&frame_lock);
     list_push_back (&frame_table, &f->frame_elem);
-    lock_release (&frame_lock);
-
   }
 
+  lock_release (&frame_lock);
   return f;
 }
 
-void frame_free (struct list_elem *e){
+void frame_free (struct frame *f){
 
-  lock_acquire (&frame_lock);
-  
+  struct list_elem *e = &f->frame_elem;
+
   if (hand == e)
     hand = list_next (hand);
 
   list_remove (e);
-  lock_release (&frame_lock);
+  free (f);
+
 }
 
   

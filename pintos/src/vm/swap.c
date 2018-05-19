@@ -1,6 +1,7 @@
 #include "vm/swap.h"
 #include <bitmap.h>
 #include "threads/synch.h"
+#include <debug.h>
 
 static struct bitmap *swap_table;
 static struct lock swap_lock;
@@ -28,7 +29,7 @@ block_sector_t swap_alloc (void *buffer)
   index = bitmap_scan (swap_table, 0, 8, false);
 
   for (i = 0; i < 8; i++){
-    
+
     block_write (swap_block, index, buffer);
     bitmap_mark (swap_table, index);
 
@@ -50,11 +51,12 @@ void swap_free (bool read_back, void *buffer, block_sector_t index)
   for (i = 0; i < 8; i++){
     bitmap_reset (swap_table, index);
 
-    if (read_back)
+    if (read_back){
       block_read (swap_block, index, buffer);
+      buffer = (char *)buffer + BLOCK_SECTOR_SIZE;
+    }
 
     index += 1;
-    buffer = (char *)buffer + BLOCK_SECTOR_SIZE;
   }
 
   lock_release (&swap_lock);
