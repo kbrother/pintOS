@@ -55,9 +55,9 @@ struct frame *frame_evict (void){
   f->pinned = true;
 
   /* update victim's page table */
-  p = page_search (&t->page_table, f->upage);
   pagedir_clear_page (t->pagedir, f->upage);
 
+  p = page_search (&t->page_table, f->upage);
   p->kpage = NULL;
   p->frame_index  = NULL;
 
@@ -126,5 +126,30 @@ void frame_free (struct frame *f){
 
 }
 
+bool frame_search_and_pin (int tid, void *upage, struct frame **frame_pt){
+
+  lock_acquire (&frame_lock);
+  struct list_elem *e = list_begin (&frame_table);
+ 
+  while (e != list_end (&frame_table))
+  {
+    struct frame *f = list_entry (e, struct frame, frame_elem);
+    if (f->frame_thread->tid == tid)
+    {
+      if (f->upage == upage)
+      {
+        f->pinned = true;
+        *frame_pt = f;
+        lock_release (&frame_lock);
+        return true;
+      }
+    }
+
+    e = list_next (e);
+  }
+
+  lock_release (&frame_lock);
+  return false;
+}
   
   

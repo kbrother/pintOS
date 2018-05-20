@@ -4,15 +4,18 @@
 #include <string.h>
 #include "threads/interrupt.h"
 #include "threads/thread.h"
-#include "userprog/pagedir.h"
 #include "threads/vaddr.h"
 #include "threads/malloc.h"
-#include "devices/shutdown.h"
 #include "threads/synch.h"
+#include "userprog/pagedir.h"
 #include "userprog/process.h"
+#include "userprog/exception.h"
+#include "vm/frame.h"
+#include "vm/page.h"
 #include "filesys/filesys.h"
 #include "filesys/file.h"
 #include "devices/input.h"
+#include "devices/shutdown.h"
 
 struct lock filesys_lock;
 static void syscall_handler (struct intr_frame *);
@@ -46,7 +49,21 @@ syscall_init (void)
 
 static bool valid_memory(void *uaddr){
 
-  uint32_t *pd = thread_current()->pagedir;
+  if (uaddr == NULL)
+    return false;
+
+  if (!is_user_vaddr (uaddr))
+    return false;
+
+  return true;
+}
+
+
+static bool vm_with_pinning (void *uaddr, struct frame **frame_pt){
+
+  struct thread *t = thread_current ();
+  void *upage = pg_round_down (uaddr);
+  struct page *fp_info;
 
   if (uaddr == NULL)
     return false;
@@ -54,8 +71,15 @@ static bool valid_memory(void *uaddr){
   if (!is_user_vaddr (uaddr))
     return false;
 
-  if (pagedir_get_page (pd, uaddr) == NULL)
-    return false; 
+  if (!frame_search_and_pin (t->tid, upage, frame_pt))
+  { 
+    fp_info = page_search (&t->page_table, upage);
+
+    if (fp_info == NULL)
+      return false;
+
+    *frame_pt = page_claim_and_set (t, fp_info);
+  }
 
   return true;
 }
@@ -79,8 +103,9 @@ static void get_arg (uint32_t **syscall_arg, int arg_num, void *esp){
   }
 }
 
-static void sys_halt (void){
- shutdown_power_off(); 
+static void sys_halt (void)
+{
+  shutdown_power_off(); 
 }
 
 static void sys_exit (uint32_t *syscall_arg){
@@ -117,7 +142,7 @@ static void sys_wait (uint32_t *syscall_arg, uint32_t *eax){
 
 static void sys_create (uint32_t *syscall_arg, uint32_t *eax){
 
-  char *file = syscall_arg[0];
+  void *file = (void *)syscall_arg[0];
   unsigned initial_size = syscall_arg[1];
   struct thread *cur = thread_current ();
   uint32_t success;
@@ -142,19 +167,42 @@ static void sys_create (uint32_t *syscall_arg, uint32_t *eax){
 
 static void sys_remove (uint32_t *syscall_arg, uint32_t *eax){
 
-  char *file = (char *)syscall_arg[0];
+  char *file_name = (char *)syscall_arg[0];
   uint32_t success;
   struct thread *cur = thread_current ();
+  struct frame *ef_1, *ef_2;
+  uint32_t name_len = strlen (file_name);
+  bool check_twice = false;
 
-  if (!valid_memory (file)){
+  if (pg_ofs (file_name) != 0)
+  {
+    if ((uint32_t) (name_len + file_name) > (uint32_t) pg_round_up (file_name))
+      check_twice = true;
+  }
+
+  if (!vm_with_pinning (file_name, &ef_1)){
     free (syscall_arg);
     cur->exit_status = -1;
     thread_exit ();
   }
 
+  if (check_twice)
+  {
+    if (!vm_with_pinning (file_name + name_len, &ef_2)){
+      free (syscall_arg);
+      cur->exit_status = -1;
+      thread_exit ();
+    }
+  }
+
   lock_acquire (&filesys_lock);
-  success = filesys_remove (file);
+  success = filesys_remove (file_name);
   lock_release (&filesys_lock);
+
+  ef_1->pinned = false;
+
+  if (check_twice)
+    ef_2->pinned = false;
 
   *(uint32_t *)eax = success;
 }
@@ -165,16 +213,39 @@ static void sys_open (uint32_t *syscall_arg, uint32_t *eax){
   struct file *opened_file;
   struct fd *fd_entry;
   struct thread *cur = thread_current ();
+  struct frame *ef_1, *ef_2;
+  uint32_t name_len = strlen (file_name);
+  bool check_twice = false;
 
-  if (!valid_memory (file_name)){
+  if (pg_ofs (file_name) != 0)
+  {
+    if ((uint32_t) (name_len + file_name) > (uint32_t) pg_round_up (file_name))
+      check_twice = true;
+  }
+
+  if (!vm_with_pinning (file_name, &ef_1)){
     free (syscall_arg);
     cur->exit_status = -1;
     thread_exit ();
   }
  
+  if (check_twice)
+  {
+    if (!vm_with_pinning (file_name + name_len, &ef_2)){
+     free (syscall_arg);
+     cur->exit_status = -1;
+     thread_exit ();
+    }
+  }
+
   lock_acquire (&filesys_lock);
   opened_file = filesys_open (file_name);
   lock_release (&filesys_lock);
+
+  ef_1->pinned = false;
+
+  if (check_twice)
+    ef_2->pinned = false;
 
   if (opened_file != NULL){
  
@@ -207,16 +278,10 @@ static void sys_filesize (uint32_t *syscall_arg, uint32_t *eax){
 static void sys_read (uint32_t *syscall_arg, uint32_t *eax){
   
   int fd = syscall_arg[0];
-  char *buffer = syscall_arg[1];
+  char *buffer = (char *)syscall_arg[1];
   unsigned size = syscall_arg[2];
   int i;
   struct fd *fd_to_read;
-
-  if (!valid_memory (buffer)){
-    free (syscall_arg);
-    thread_current ()->exit_status = -1;
-    thread_exit ();
-  }
 
   if (fd == 0){
     for (i = 0; i < size; i++)
@@ -224,16 +289,42 @@ static void sys_read (uint32_t *syscall_arg, uint32_t *eax){
 
     *eax = size;
   }
-  else{
+  else
+  {
     fd_to_read = search_by_fd (fd);
-     
+    *eax = 0;
+
     if (fd_to_read != NULL){
-      lock_acquire (&filesys_lock);
-      *eax = file_read (fd_to_read->f, buffer, size);
-      lock_release (&filesys_lock);
+
+      while (size > 0)
+      {
+        uint32_t byte_read;
+        uint32_t br_candi;
+        struct frame *earned_frame;
+
+        if (pg_ofs (buffer) != 0)
+          br_candi = (uint32_t)pg_round_up (buffer) - (uint32_t)buffer;   
+        else
+          br_candi = PGSIZE;
+
+        byte_read = size < br_candi ? size : br_candi;
+
+        if (!vm_with_pinning (buffer, &earned_frame))
+        {
+          free (syscall_arg);
+          thread_current ()->exit_status = -1;
+          thread_exit ();
+        }
+
+        lock_acquire (&filesys_lock);
+        *eax += file_read (fd_to_read->f, buffer, byte_read);
+        lock_release (&filesys_lock);
+    
+        size -= byte_read;
+        buffer = (char *)buffer + byte_read;
+        earned_frame->pinned = false;
+      }
     }
-    else
-      *eax = 0;
   }
 }
 
@@ -244,12 +335,6 @@ static void sys_write (uint32_t *syscall_arg, uint32_t *eax){
   unsigned size = syscall_arg[2];
   int printed_size = 0;
   struct fd *fd_to_write;
-
-  if (!valid_memory (buffer)){
-    free (syscall_arg);
-    thread_current ()->exit_status = -1;
-    thread_exit ();
-  }
 
   if (fd == 1){
 
@@ -263,16 +348,44 @@ static void sys_write (uint32_t *syscall_arg, uint32_t *eax){
 
     *(int *)eax = size;
   }
-  else{
+  else
+  {
     fd_to_write = search_by_fd (fd);
+    *eax = 0;
 
     if (fd_to_write != NULL){
-      lock_acquire (&filesys_lock);
-      *eax = file_write (fd_to_write->f, buffer, size);
-      lock_release (&filesys_lock);
+
+      while (size > 0)
+      {
+        uint32_t byte_write;
+        uint32_t bw_candi;
+        struct frame *earned_frame;
+
+        if (pg_ofs (buffer) != 0)
+          bw_candi = (uint32_t)pg_round_up (buffer) - (uint32_t)buffer;
+        else
+          bw_candi = PGSIZE;
+
+        byte_write = size < bw_candi ? size : bw_candi;
+
+        if (!vm_with_pinning (buffer, &earned_frame))
+        {
+          free (syscall_arg);
+          thread_current ()->exit_status = -1;
+          thread_exit ();
+        }
+
+        lock_acquire (&filesys_lock);
+        *eax += file_write (fd_to_write->f, buffer, byte_write);
+        lock_release (&filesys_lock);
+
+        size -= byte_write;
+        buffer = (char *)buffer + byte_write;
+        earned_frame->pinned = false;
+
+      }
     }
-    else
-      *eax = 0;
+
   }
 }
 

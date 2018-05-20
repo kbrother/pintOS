@@ -618,9 +618,8 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
       p->page_file = file;
       
       /* add to supplemental page table */
-      lock_acquire (&t->page_lock);
       page_insert (&t->page_table, p);
-      lock_release (&t->page_lock);
+   
 
       //printf ("upage %x\n", upage);
       /* Advance. */

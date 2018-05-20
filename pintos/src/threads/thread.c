@@ -526,11 +526,8 @@ init_thread (struct thread *t, const char *name, int priority)
   t->exit_status = 0;
   list_init (&t->fd_list);
 
-  if (strcmp (name, "main") != 0){
-  
-    lock_init (&t->page_lock);
+  if (strcmp (name, "main") != 0)
     page_init (&t->page_table);
-  }
 
   list_push_back (&all_list, &t->allelem);
 }

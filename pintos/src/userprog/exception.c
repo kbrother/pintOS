@@ -5,7 +5,6 @@
 #include <debug.h>
 #include "userprog/gdt.h"
 #include "threads/interrupt.h"
-#include "threads/thread.h"
 #include "threads/vaddr.h"
 #include "threads/malloc.h"
 #include "userprog/syscall.h"
@@ -145,8 +144,63 @@ static void stack_growth (struct thread *t){
   page_insert (&t->page_table, fp_info);
   pagedir_set_page (t->pagedir, t->stack_end, kpage, true);
   pagedir_set_dirty (t->pagedir, t->stack_end, true);
-  
+ 
+  earned_frame->upage = t->stack_end;
+  earned_frame->frame_thread = t;
   earned_frame->pinned = false;
+}
+
+struct frame *
+page_claim_and_set (struct thread *t, struct page *fp_info) {
+
+  struct frame *earned_frame;
+  void *kpage;
+  bool is_dirty;
+
+  /* read page and write page to frame */
+  earned_frame = frame_alloc (0);
+  kpage = earned_frame->kpage;
+
+  if (fp_info->in_file){
+
+    if (fp_info->read_bytes != 0){
+   
+      lock_acquire (&filesys_lock);
+      
+      file_seek (fp_info->page_file, fp_info->file_ofs);
+      ASSERT (file_read (fp_info->page_file, kpage, 
+            fp_info->read_bytes) == fp_info->read_bytes)
+     
+      lock_release (&filesys_lock);
+    }
+
+    memset ((char *)kpage + fp_info->read_bytes, 0, fp_info->zero_bytes);
+  }
+  else if (fp_info->in_swap) {
+
+    swap_free (true, kpage, fp_info->swap_index);
+    /* read page from swap partition */
+  
+  }
+ 
+  if (pagedir_is_dirty (t->pagedir, fp_info->upage))
+    is_dirty =  true;
+  else
+    is_dirty = false;
+
+  /* add mappig form faulted upage to kpage */
+  pagedir_set_page (t->pagedir, fp_info->upage, kpage, fp_info->writable);
+  pagedir_set_dirty (t->pagedir, fp_info->upage, is_dirty);
+
+  /* edit supplemental page table entry */
+  fp_info->kpage = kpage;
+  fp_info->in_file = false;
+  fp_info->in_swap = false;
+  fp_info->frame_index = earned_frame;
+
+  earned_frame->upage = fp_info->upage;
+  earned_frame->frame_thread = t;
+  return earned_frame;
 }
 
 /* Page fault handler.  This is a skeleton that must be filled in
@@ -168,12 +222,10 @@ page_fault (struct intr_frame *f)
   bool user;         /* True: access by user, false: access by kernel. */
   void *fault_addr;  /* Fault address. */
   void *fault_page;
-  struct page *fp_info;
   struct thread *t = thread_current ();
-  void *kpage;
   struct frame *earned_frame;
-  bool is_dirty;
-
+  struct page *fp_info;
+  
   /* Obtain faulting address, the virtual address that was
      accessed to cause the fault.  It may point to code or to
      data.  It is not necessarily the address of the instruction
@@ -221,74 +273,20 @@ page_fault (struct intr_frame *f)
       return ;
     }
 
-    if (pagedir_get_page (t->pagedir, fault_page) != NULL)
-      return;
+    ASSERT (pagedir_get_page (t->pagedir, fault_page) == NULL)
   }
 
   /* user process should not expect that any data at address */
-  lock_acquire (&t->page_lock);
   fp_info = page_search (&t->page_table, fault_page);
-  lock_release (&t->page_lock);
 
   if (fp_info == NULL){
     sysExit ();
   }
 
-  /* read page and write page to frame */
-  earned_frame = frame_alloc (0);
-  kpage = earned_frame->kpage;
-
-  if (fp_info->in_file){
-
-    if (fp_info->read_bytes != 0){
-   
-      lock_acquire (&filesys_lock);
-      
-      file_seek (fp_info->page_file, fp_info->file_ofs);
-      ASSERT (file_read (fp_info->page_file, kpage, 
-            fp_info->read_bytes) == fp_info->read_bytes)
-     
-      lock_release (&filesys_lock);
-    }
-
-    memset ((char *)kpage + fp_info->read_bytes, 0, fp_info->zero_bytes);
-  }
-  else if (fp_info->in_swap) {
-
-    swap_free (true, kpage, fp_info->swap_index);
-    /* read page from swap partition */
-  
-  }
- 
-  if (pagedir_is_dirty (t->pagedir, fp_info->upage))
-    is_dirty =  true;
-  else
-    is_dirty = false;
-
-  /* add mappig form faulted upage to kpage */
-  pagedir_set_page (t->pagedir, fp_info->upage, kpage, fp_info->writable);
-  pagedir_set_dirty (t->pagedir, fp_info->upage, is_dirty);
-
-  /* edit supplemental page table entry */
-  fp_info->kpage = kpage;
-  fp_info->in_file = false;
-  fp_info->in_swap = false;
-  fp_info->frame_index = earned_frame;
+  earned_frame = page_claim_and_set (t, fp_info);
 
   /* remove the pin of the frame */
-  earned_frame->upage = fault_page; 
-  earned_frame->frame_thread =  thread_current ();
   earned_frame->pinned = false;
 
-  /* To implement virtual memory, delete the rest of the function
-     body, and replace it with code that brings in the page to
-     which fault_addr refers. 
-  
-     printf ("Page fault at %p: %s error %s page in %s context.\n",
-          fault_addr,
-          not_present ? "not present" : "rights violation",
-          write ? "writing" : "reading",
-          user ? "user" : "kernel");
-    kill (f); */
 }
 

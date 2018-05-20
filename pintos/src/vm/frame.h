@@ -3,6 +3,7 @@
 
 #include <hash.h>
 #include <list.h>
+#include <stdbool.h>
 #include "threads/palloc.h"
 #include "filesys/file.h"
 
@@ -21,5 +22,5 @@ void frame_init (void);
 struct frame *frame_evict (void);
 struct frame *frame_alloc (enum palloc_flags);
 void frame_free (struct frame *);
-
+bool frame_search_and_pin (int , void *, struct frame **);
 #endif /* vm/frame.h */

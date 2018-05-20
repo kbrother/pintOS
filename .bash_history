@@ -1,193 +1,3 @@
-git status
-git commit -m "requirement 2 finished"
-git push
-clear
-cd pintos/src/
-vim Makefile.build 
-cd threads/
-vim init.c
-cd ..
-cscope
-clear
-cd vm
-ls
-vim swap.c
-vim swap.h
-vim swap.c
-make
-vim swap.c
-make
-vim swap.c
-make
-clea
-clear
-vim swap.c
-make
-vim swap.c
-make
-clear
-ls
-vim swap.c
-ls -al
-rm .swap.h.swp 
-ls
-vim swap.c
-make
-ls -al
-clear
-make
-vim swap.c
-make
-clear
-vim swap.c
-make
-clear
-make
-cd pintos/src/vm
-ls
-vim swap.c
-make
-vim swap.c
-make
-make check
-clear
-make
-make check
-clear
-ls
-cd pintos/src/
-ls
-cd vm/
-vim frame.c
-cd ..
-cd userprog/
-vim exception.c
-cd ,,
-cd ..
-cd devices/
-vim block.h
-vim block.c
-cd pintos/src/vm
-ls
-cd ..
-ls
-cd lib/
-ls
-cd kernel/
-ls
-clear
-vim bitmap.c
-cd ..
-ls
-cd threads/
-cd ..
-cd userprog/
-vim pagedir.c
-cd pintos/src/vm
-ls
-make
-clear
-make check
-cd ..
-cd userprog/
-clear
-vim process.c
-vim exception.c
-vim process.c
-vim exception.c
-cd pintos/src/vm
-vim page.h
-vim frame.c
-vim page.h
-vim frame.c
-clear
-vim page.c
-cd ..
-ls
-cd tests/
-ls
-cd vm
-ls
-vim page-parallel.c
-clear
-cd pintos/src/threads/
-vim interrupt.h
-cd ..
-cd vm/
-vim frame.c
-vim frame.h
-clear
-cd build/
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-cd ..
-make
-cd build/
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-cd ..
-makje
-make
-cd build/
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-backtrace Call stack: 0xc002ab92 0xc0023437 0xc0032361 0xc0032110 0xc0032180 0xc002f089 0xc00221c5 0xc002241d 0xc0027087 0xc002706e 0xc0026e0f 0xc0025d3a 0xc002651f 0xc0025d3a 0xc0032446 0xc002f2c0 0xc00221c5 0xc002241d 0x804a45c
-cd ..
-cd build/
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-cd ..
-make
-cd build/
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-CLEAR
-clear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-cd ..
-make
-cd build/
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-make
-clear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-cd ..
-cd build/
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-make
-cd ..
-cd build/
-ls
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-cd ..
-cd userprog/
-vim pagedir.c
-cd ..
-cd devices/
 ls
 vim block.h
 ls
@@ -1998,3 +1808,193 @@ clear
 ls
 vim page-merge-seq.c
 vim child-sort.c 
+git add .
+git status
+git commit -m "page parallel"
+git push
+cd pintos/src/userprog/
+ls
+clear
+vim exception.c
+vim exception.h
+vim exception.c
+vim exception.h
+vim exception.c
+vim exception.h
+vim exception.c
+vim exception.h
+vim exception.c
+cd ..
+cd vm/
+cd build/
+make
+pintos-gdb kernel.o
+deb
+pintos-gdb kernel.o
+clear
+pintos-gdb kernel.o
+make
+clear
+make
+cd pintos/src/tests/vm/
+ls
+cd ..
+cd userprog/
+ls
+vim open-boundary.c
+vim read-boundary.c
+cd ..
+cd vm
+ls
+clear
+ls
+vim pt-grow-stk-sc.c
+cd pintos/src/vm
+make
+clear
+make
+make check
+cd ..
+cd userprog/
+ls
+clear
+vim exception.c
+vim exception.h
+vim exception.c
+cd ..
+cd threads/
+ls
+vim thread.h
+vim thread.c
+cd ..
+cd userprog/
+ls
+vim exception.c
+cd ..
+cd threads/
+ls
+vim thread.
+vim thread.h
+clear
+cd pintos/src/lib/l
+cd pintos/src/lib/
+vim string.h
+vim string.c
+cd ..
+cd vm
+cd build/
+ls
+make
+pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-boundary
+make
+clear
+pintos -v -k --bochs  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-boundary
+cd ..
+make check
+clear
+make
+amke
+make
+make clean
+clear
+make
+clear]
+make
+clear
+make
+clear
+make 
+make clean
+make
+clear
+make
+make check
+make
+clear
+cd build/
+In kernel.o:
+0xc002ab82: debug_panic (.../../lib/kernel/debug.c:38)
+0xc00235fa: lock_release (...../../threads/synch.c:292)
+0xc00326ed: frame_search_and_pin (...uild/../../vm/frame.c:152)
+0xc002f5a2: vm_with_pinning (.../../userprog/syscall.c:74)
+0xc002fbf6: sys_read (...../userprog/syscall.c:312)
+0xc00300f4: syscall_handler (...../userprog/syscall.c:484)
+0xc00221b5: intr_handler (..../threads/interrupt.c:367)
+0xc002240d: intr_entry (threads/intr-stubs.S:38)
+In tests/userprog/read-boundary:
+0x0804ac2a: read (...../lib/user/syscall.c:117)
+0x080480ec: test_main (...erprog/read-boundary.c:21)
+0x08048254: main (...ild/../../tests/main.c:13)
+0x080489aa: _start (.../../../lib/user/entry.c:9)
+clear
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run read-boundary 
+cd ..
+make check
+cd pintos/src/userprog/
+vim process.c
+vim exception.c
+vim process.c
+vim exception.c
+vim syscall.c
+cd ..
+cscope
+ckear
+clear
+ls
+cd vm
+cd ..
+cd userprog/
+vim syscall.c
+vim exception.c
+vim syscall.c
+ls
+cd pintos/src/userprog/
+ls
+vim syscall.c
+cd ..
+cd vm
+clear
+vim frame.h
+vim frame.c
+vim frame.h
+vim page.h
+clear
+vim page.c
+vim swap.c
+vim frame.c
+vim frame.h
+vim frame.c
+vim frame.h
+vim frame.c
+ls
+cd pintos/src/
+cscope
+clear
+ls
+cd vm
+ls
+vim frame.c
+make
+makje
+maek
+make
+clear
+make
+clear
+make
+clear
+make
+maek
+make
+amek
+make
+clear
+make
+make check
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-boundary
+clear
+cd build/
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-boundary
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-boundary
+cd ..
