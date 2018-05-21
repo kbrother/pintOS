@@ -73,7 +73,7 @@ static bool vm_with_pinning (void *uaddr, struct frame **frame_pt){
 
   if (!frame_search_and_pin (t->tid, upage, frame_pt))
   { 
-    fp_info = page_search (&t->page_table, upage);
+    fp_info = page_search (t, upage);
 
     if (fp_info == NULL)
       return false;

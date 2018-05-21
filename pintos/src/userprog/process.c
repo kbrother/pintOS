@@ -618,7 +618,7 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
       p->page_file = file;
       
       /* add to supplemental page table */
-      page_insert (&t->page_table, p);
+      page_insert (t, p);
    
 
       //printf ("upage %x\n", upage);
@@ -721,7 +721,7 @@ setup_stack (void **esp, const char *file_name_)
   p->writable = true;
   p->frame_index = earned_frame;
 
-  page_insert (&t->page_table, p);
+  page_insert (t, p);
 
   t->stack_end = upage;
   earned_frame->upage = upage;

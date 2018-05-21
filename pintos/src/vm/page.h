@@ -3,6 +3,7 @@
 #include <hash.h>
 #include <stdio.h>
 #include <list.h>
+#include "threads/thread.h"
 #include "devices/block.h"
 #include "filesys/file.h"
 #include "vm/frame.h"
@@ -23,7 +24,7 @@ struct page
 unsigned page_hash (const struct hash_elem *, void *);
 bool page_less (const struct hash_elem *, const struct hash_elem *, void *);
 void page_init (struct hash *);
-struct page *page_search (struct hash *, void *);
-void page_insert (struct hash *, struct page *);
+struct page *page_search (struct thread *, void *);
+void page_insert (struct thread *, struct page *);
     
 #endif

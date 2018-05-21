@@ -141,7 +141,7 @@ static void stack_growth (struct thread *t){
   fp_info->writable = true;
   fp_info->frame_index  = earned_frame;
 
-  page_insert (&t->page_table, fp_info);
+  page_insert (t, fp_info);
   pagedir_set_page (t->pagedir, t->stack_end, kpage, true);
   pagedir_set_dirty (t->pagedir, t->stack_end, true);
  
@@ -277,7 +277,7 @@ page_fault (struct intr_frame *f)
   }
 
   /* user process should not expect that any data at address */
-  fp_info = page_search (&t->page_table, fault_page);
+  fp_info = page_search (t, fault_page);
 
   if (fp_info == NULL){
     sysExit ();

@@ -1,47 +1,3 @@
-ls
-vim block.h
-ls
-cd ..
-cd lib/kernel/
-vim bitmap.c
-cd ,,
-cd ..
-cd vm/
-ls
-cd build/
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-clear
-pintos -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-amke
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-pintos -ul 2 -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-pintos --ul 2 -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-pintos -ul 2 -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-pintos ul 2 -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
 pintos-v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
 pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
 pintos ul -2 -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
@@ -1997,4 +1953,48 @@ cd build/
 pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-boundary
 make
 pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q  -f run open-boundary
+cd ..
+cd pintos/src/tests/vm
+vim pt-grow-stk-sc.c
+cd pintos/src/vm
+ls
+cd build/
+pintos-gdb kernel.o
+clear
+cd pintos/src/userprog/
+ls
+vim exception.c
+cd pintos/src/vm/build/
+pintos --gdb -v -k --bochs --filesys-size=2 -p tests/vm/pt-grow-stk-sc -a pt-grow-stk-sc --swap-size=4 -- -q  -f run pt-grow-stk-sc
+make
+pintos --gdb -v -k --bochs --filesys-size=2 -p tests/vm/pt-grow-stk-sc -a pt-grow-stk-sc --swap-size=4 -- -q  -f run pt-grow-stk-sc
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/vm/pt-grow-stk-sc -a pt-grow-stk-sc --swap-size=4 -- -q  -f run pt-grow-stk-sc
+backtrace Call stack: 0xc002ab82 0xc002e894 0xc002f23c 0xc002f5e4 0xc002fbf6 0xc00300f4 0xc00221b5 0xc002240d 0x804ac64 0x80481c0 0x80489b2 0x80489e4.
+make
+pintos --gdb -v -k --bochs --filesys-size=2 -p tests/vm/pt-grow-stk-sc -a pt-grow-stk-sc --swap-size=4 -- -q  -f run pt-grow-stk-sc
+make
+pintos -v -k -T 60 --qemu  --filesys-size=2 -p tests/vm/pt-grow-stk-sc -a pt-grow-stk-sc --swap-size=4 -- -q  -f run pt-grow-stk-sc
+make check
+make clean
+make check
+make clean
+make check
+cd ..
+git add .
+git status
+git commit -m "mm left"
+git push
+cd pintos/src/vm/
+make clean
+make check
+make clean
+make check
+cd pintos/src/userprog/
+vim pagedir.c
+cd ..
+cd vm
+vim frame.c
+makecheck
+make chekc
+make check
 cd ..

@@ -57,7 +57,7 @@ struct frame *frame_evict (void){
   /* update victim's page table */
   pagedir_clear_page (t->pagedir, f->upage);
 
-  p = page_search (&t->page_table, f->upage);
+  p = page_search (t, f->upage);
   p->kpage = NULL;
   p->frame_index  = NULL;
 

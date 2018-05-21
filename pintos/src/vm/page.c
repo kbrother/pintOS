@@ -1,5 +1,4 @@
 #include "vm/page.h"
-#include <hash.h>
 #include "threads/synch.h"
 
 unsigned
@@ -25,18 +24,26 @@ void page_init (struct hash *page_table){
   hash_init (page_table, page_hash, page_less, NULL);
 }
 
-struct page *page_search (struct hash *page_table, void *address)
+struct page *page_search (struct thread *t, void *address)
 {
   struct page p;
   struct hash_elem *e;
-
+  struct hash *page_table = &t->page_table;
   p.upage = address;
 
+  lock_acquire (&t->page_lock);
   e = hash_find (page_table, &p.page_elem);
+  lock_release (&t->page_lock);
+
   return e != NULL ? hash_entry (e, struct page, page_elem) : NULL;
 }
 
-void page_insert (struct hash *page_table, struct page *p)
+void page_insert (struct thread *t, struct page *p)
 {
+  struct hash *page_table = &t->page_table;
+
+  lock_acquire (&t->page_lock);
   hash_insert (page_table, &p->page_elem);
+  lock_release (&t->page_lock);
+
 }
