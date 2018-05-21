@@ -174,13 +174,22 @@ static void free_resource (struct thread *cur)
   struct hash *h = &cur->page_table;
   uint32_t *pd;
 
-  //free page
-  lock_acquire (&frame_lock);
+  //remove all mmapping
+  while (list_size (&cur->mfd_list) > 0)
+  {
+    e = list_begin (&cur->mfd_list);
+    struct mfd *m = list_entry (e, struct mfd, mfd_elem);
 
+    unmap (cur, m);
+  }
+
+  //free page and page table
   hash_first (&i, h);
 
   while (hash_size (h) > 0)
   {
+    lock_acquire (&frame_lock);
+
     hash_first (&i, h);
     he = hash_next (&i);
 
@@ -195,9 +204,10 @@ static void free_resource (struct thread *cur)
       /*after implementing mmap */
     }
     else 
-      frame_free (p->frame_index);
+      frame_free (cur, p->frame_index);
 
-    hash_delete (h, he);
+    page_delete (cur, p);
+    lock_release (&frame_lock);
   }
  
   pd = cur->pagedir;
@@ -214,8 +224,6 @@ static void free_resource (struct thread *cur)
       pagedir_activate (NULL);
       pagedir_destroy (pd);
     }
- 
-  lock_release (&frame_lock);
   
   //close all file
   fd_l = &cur->fd_list;
@@ -616,7 +624,8 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
       p->read_bytes = page_read_bytes;
       p->zero_bytes = page_zero_bytes;
       p->page_file = file;
-      
+      p->mmapped = false;
+
       /* add to supplemental page table */
       page_insert (t, p);
    
@@ -720,13 +729,16 @@ setup_stack (void **esp, const char *file_name_)
   p->in_swap = false;
   p->writable = true;
   p->frame_index = earned_frame;
+  p->mmapped = false;
 
   page_insert (t, p);
 
   t->stack_end = upage;
   earned_frame->upage = upage;
   earned_frame->frame_thread = t;
+  earned_frame->mmapped = false;
   earned_frame->pinned = false;
+
   return success; 
 }
 

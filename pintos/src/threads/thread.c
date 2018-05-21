@@ -530,6 +530,8 @@ init_thread (struct thread *t, const char *name, int priority)
   {
     lock_init (&t->page_lock);
     page_init (&t->page_table);
+    list_init (&t->mfd_list);
+    t->mfd_index = 0;
   }
 
   list_push_back (&all_list, &t->allelem);

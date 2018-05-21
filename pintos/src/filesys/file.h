@@ -5,6 +5,15 @@
 #include <list.h>
 
 struct inode;
+
+struct mfd
+{
+  struct file *f;
+  uint32_t mfd_num, file_len;
+  void *addr;
+  struct list_elem mfd_elem;
+};
+
 struct fd
 {
   struct file *f;

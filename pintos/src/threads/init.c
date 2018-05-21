@@ -139,6 +139,7 @@ main (void)
   run_actions (argv);
 
   /* Finish up. */
+  swap_destroy ();
   shutdown ();
   thread_exit ();
 }

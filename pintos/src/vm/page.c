@@ -47,3 +47,15 @@ void page_insert (struct thread *t, struct page *p)
   lock_release (&t->page_lock);
 
 }
+
+void page_delete (struct thread *t, struct page *p)
+{
+  struct hash *page_table = &t->page_table;
+
+  lock_acquire (&t->page_lock);
+  hash_delete (page_table, &p->page_elem);
+  lock_release (&t->page_lock);
+
+  free (p);
+}
+

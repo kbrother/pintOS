@@ -3,7 +3,6 @@
 #include <syscall-nr.h>
 #include <string.h>
 #include "threads/interrupt.h"
-#include "threads/thread.h"
 #include "threads/vaddr.h"
 #include "threads/malloc.h"
 #include "threads/synch.h"
@@ -13,7 +12,6 @@
 #include "vm/frame.h"
 #include "vm/page.h"
 #include "filesys/filesys.h"
-#include "filesys/file.h"
 #include "devices/input.h"
 #include "devices/shutdown.h"
 
@@ -58,6 +56,12 @@ static bool valid_memory(void *uaddr){
   return true;
 }
 
+static void exit_by_fail (struct thread *t, uint32_t *syscall_arg)
+{
+  free (syscall_arg);
+  t->exit_status = -1;
+  thread_exit ();
+}
 
 static bool vm_with_pinning (void *uaddr, struct frame **frame_pt){
 
@@ -92,11 +96,8 @@ static void get_arg (uint32_t **syscall_arg, int arg_num, void *esp){
 
   for (i = 0; i < arg_num; i++){
 
-    if (!valid_memory (arg_pointer)){
-      free(*syscall_arg);
-      thread_current ()->exit_status = -1;
-      thread_exit();
-    }
+    if (!valid_memory (arg_pointer))
+      exit_by_fail (thread_current (), *syscall_arg);
 
     (*syscall_arg)[i] = *arg_pointer;
     arg_pointer += 1;
@@ -123,11 +124,8 @@ static void sys_exec (uint32_t *syscall_arg, uint32_t *eax){
   char *cmd_line = (char *)syscall_arg[0];
   struct thread *curr_thread = thread_current ();
 
-  if (!valid_memory (cmd_line)){
-    free (syscall_arg);
-    curr_thread->exit_status = -1;
-    thread_exit ();
-  }
+  if (!valid_memory (cmd_line))
+    exit_by_fail (curr_thread, syscall_arg);
 
   child_id = process_execute (cmd_line);
   *(int *)eax = child_id;
@@ -147,11 +145,8 @@ static void sys_create (uint32_t *syscall_arg, uint32_t *eax){
   struct thread *cur = thread_current ();
   uint32_t success;
 
-  if (!valid_memory (file)){
-    free (syscall_arg);
-    cur->exit_status = -1;
-    thread_exit ();
-  }
+  if (!valid_memory (file))
+    exit_by_fail (cur, syscall_arg);
 
   if (strlen (file) > 100)
     success = 0;
@@ -180,19 +175,13 @@ static void sys_remove (uint32_t *syscall_arg, uint32_t *eax){
       check_twice = true;
   }
 
-  if (!vm_with_pinning (file_name, &ef_1)){
-    free (syscall_arg);
-    cur->exit_status = -1;
-    thread_exit ();
-  }
+  if (!vm_with_pinning (file_name, &ef_1))
+    exit_by_fail (cur, syscall_arg);
 
   if (check_twice)
   {
-    if (!vm_with_pinning (file_name + name_len, &ef_2)){
-      free (syscall_arg);
-      cur->exit_status = -1;
-      thread_exit ();
-    }
+    if (!vm_with_pinning (file_name + name_len, &ef_2))
+      exit_by_fail (cur, syscall_arg);
   }
 
   lock_acquire (&filesys_lock);
@@ -223,19 +212,13 @@ static void sys_open (uint32_t *syscall_arg, uint32_t *eax){
       check_twice = true;
   }
 
-  if (!vm_with_pinning (file_name, &ef_1)){
-    free (syscall_arg);
-    cur->exit_status = -1;
-    thread_exit ();
-  }
+  if (!vm_with_pinning (file_name, &ef_1))
+    exit_by_fail (cur, syscall_arg);
  
   if (check_twice)
   {
-    if (!vm_with_pinning (file_name + name_len, &ef_2)){
-     free (syscall_arg);
-     cur->exit_status = -1;
-     thread_exit ();
-    }
+    if (!vm_with_pinning (file_name + name_len, &ef_2))
+      exit_by_fail (cur, syscall_arg);
   }
 
   lock_acquire (&filesys_lock);
@@ -310,11 +293,7 @@ static void sys_read (uint32_t *syscall_arg, uint32_t *eax){
         byte_read = size < br_candi ? size : br_candi;
 
         if (!vm_with_pinning (buffer, &earned_frame))
-        {
-          free (syscall_arg);
-          thread_current ()->exit_status = -1;
-          thread_exit ();
-        }
+          exit_by_fail (thread_current (), syscall_arg);
 
         lock_acquire (&filesys_lock);
         *eax += file_read (fd_to_read->f, buffer, byte_read);
@@ -369,11 +348,7 @@ static void sys_write (uint32_t *syscall_arg, uint32_t *eax){
         byte_write = size < bw_candi ? size : bw_candi;
 
         if (!vm_with_pinning (buffer, &earned_frame))
-        {
-          free (syscall_arg);
-          thread_current ()->exit_status = -1;
-          thread_exit ();
-        }
+          exit_by_fail (thread_current (), syscall_arg);
 
         lock_acquire (&filesys_lock);
         *eax += file_write (fd_to_write->f, buffer, byte_write);
@@ -426,11 +401,170 @@ static void sys_close (uint32_t *syscall_arg){
   }
 }
 
+static void sys_mmap (uint32_t *syscall_arg, uint32_t *eax)
+{
+  int fd = syscall_arg[0];
+  void *addr = (void *)syscall_arg[1];
+  void *addr_cp;
+  struct thread *cur = thread_current ();
+  struct fd *fd_to_search;
+  uint32_t file_len, file_len_cp;
+  struct mfd *m;
+
+  if (!valid_memory (addr)){
+    *eax = -1;
+    return ;
+  }
+
+  if (fd == 0 || fd == 1){
+    *eax = -1;
+    return ;
+  }
+
+  if (pg_ofs (addr) != 0){
+    *eax = -1;
+    return ;
+  }
+
+  fd_to_search = search_by_fd (fd);
+  
+  if (fd_to_search == NULL) {
+    *eax = -1;
+    return ;
+  }
+  
+  lock_acquire (&filesys_lock);
+  file_len = file_length (fd_to_search->f);
+  lock_release (&filesys_lock);
+
+  if (file_len == 0){
+    *eax = -1;
+    return ;
+  }
+
+  file_len_cp = file_len;
+  addr_cp = addr;
+
+  while (file_len_cp > 0)
+  {
+    uint32_t adv = file_len_cp < PGSIZE ? file_len_cp : PGSIZE;
+    
+    if (page_search (cur, addr_cp) != NULL){
+      *eax = -1;
+      return ;
+    }
+
+    file_len_cp -= adv;
+    addr_cp = (char *)addr_cp + adv;
+  }
+
+  file_len_cp = file_len;
+  addr_cp = addr;
+  
+  m = malloc (sizeof (struct mfd));
+  m->f = file_reopen (fd_to_search->f);
+  m->mfd_num = cur->mfd_index;
+  m->addr = addr;
+  m->file_len = file_len;
+  list_push_back (&cur->mfd_list, &m->mfd_elem);
+  
+  *eax = cur->mfd_index++;
+
+  while (file_len_cp > 0)
+  {
+    uint32_t adv = file_len_cp < PGSIZE ? file_len_cp : PGSIZE;
+    struct page *p = malloc (sizeof (struct page));
+
+    p->pd = cur->pagedir;
+    p->upage = addr_cp;
+    p->kpage = NULL;
+    p->in_file = true;
+    p->in_swap = false;
+    p->writable = true;
+    p->mmapped = true;
+    p->frame_index = NULL;
+    p->file_ofs = file_len - file_len_cp;
+    p->read_bytes = adv;
+    p->zero_bytes = PGSIZE - adv;
+    p->page_file = m->f;
+
+    page_insert (cur, p);
+
+    file_len_cp -= adv;
+    addr_cp = (char *)addr_cp + adv;
+  }
+
+}
+
+void unmap (struct thread *cur, struct mfd *m)
+{
+  void *addr = m->addr;
+  uint32_t file_len = m->file_len;
+
+  list_remove (&m->mfd_elem);
+
+  while (file_len > 0)
+  {
+    lock_acquire (&frame_lock);
+
+    uint32_t adv = file_len < PGSIZE ? file_len : PGSIZE;
+    struct page *p = page_search (cur, addr);
+
+    if (!p->in_file)
+    {
+      if (pagedir_is_dirty (cur->pagedir, addr))
+      {
+        lock_acquire (&filesys_lock);
+        file_seek (p->page_file, p->file_ofs);
+        file_write (p->page_file, p->kpage, p->read_bytes);
+        lock_release (&filesys_lock);
+        
+        frame_free (cur, p->frame_index);
+      }
+    }
+
+    page_delete (cur, p);    
+    file_len -= adv;
+    addr = (char *)addr + adv;
+
+    lock_release (&frame_lock);
+  }
+
+  file_close (m->f);
+  free (m);
+}
+
+static void sys_munmap (uint32_t *syscall_arg)
+{
+  uint32_t mapping = syscall_arg[0];
+  struct thread *cur = thread_current ();
+  struct list_elem *e;
+  struct mfd *m;
+  bool exist = false;
+
+  for (e = list_begin (&cur->mfd_list); e != list_end (&cur->mfd_list); e = list_next (e))
+  {
+    m = list_entry (e, struct mfd, mfd_elem);
+    if (m->mfd_num == mapping)
+    {
+      exist = true;
+      break;
+    }
+  }
+
+  if (!exist)
+    return;
+  
+  unmap (cur, m);
+}
+
 static void
 syscall_handler (struct intr_frame *f) 
 {  
+  struct thread *cur = thread_current ();
+
   if (!valid_memory (f->esp)){
-    thread_current ()->exit_status = -1;
+    cur->exit_status = -1;
     thread_exit();
   }
 
@@ -503,7 +637,18 @@ syscall_handler (struct intr_frame *f)
       sys_close (syscall_arg);
       break;
 
+    case SYS_MMAP:
+      get_arg (&syscall_arg, 2, f->esp);
+      sys_mmap (syscall_arg, &f->eax);
+      break;
+
+    case SYS_MUNMAP:
+      get_arg (&syscall_arg, 1, f->esp);
+      sys_munmap (syscall_arg);
+      break;
+
     default :
+      cur->exit_status = -1;
       thread_exit ();
   }
 

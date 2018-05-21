@@ -13,7 +13,7 @@ struct page
     struct hash_elem page_elem;
     uint32_t *pd;
     void *upage, *kpage;
-    bool in_file, in_swap, writable;
+    bool in_file, in_swap, writable, mmapped;
     struct frame *frame_index;
     uint32_t file_ofs;
     uint32_t read_bytes, zero_bytes;
@@ -26,5 +26,5 @@ bool page_less (const struct hash_elem *, const struct hash_elem *, void *);
 void page_init (struct hash *);
 struct page *page_search (struct thread *, void *);
 void page_insert (struct thread *, struct page *);
-    
+void page_delete (struct thread *, struct page *);    
 #endif

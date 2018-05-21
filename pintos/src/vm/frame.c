@@ -67,7 +67,8 @@ struct frame *frame_evict (void){
 
       lock_acquire (&filesys_lock);
       file_seek (f->frame_file, f->file_ofs);
-      file_write (f->frame_file, f->kpage, PGSIZE);
+      file_write (f->frame_file, f->kpage, f->read_bytes);
+      lock_release (&filesys_lock);
 
       p->in_file = true;
       p->in_swap = false;
@@ -105,7 +106,6 @@ struct frame *frame_alloc (enum palloc_flags flags){
     f->frame_thread = thread_current ();
     f->kpage = add;
     f->pinned = true;
-    f->mmapped = false;
 
     list_push_back (&frame_table, &f->frame_elem);
   }
@@ -114,12 +114,15 @@ struct frame *frame_alloc (enum palloc_flags flags){
   return f;
 }
 
-void frame_free (struct frame *f){
+void frame_free (struct thread *t, struct frame *f){
 
   struct list_elem *e = &f->frame_elem;
 
   if (hand == e)
     hand = list_next (hand);
+
+  pagedir_clear_page (t->pagedir, f->upage);
+  palloc_free_page (f->kpage);
 
   list_remove (e);
   free (f);

@@ -140,11 +140,13 @@ static void stack_growth (struct thread *t){
   fp_info->in_swap = false;
   fp_info->writable = true;
   fp_info->frame_index  = earned_frame;
+  fp_info->mmapped = false;
 
   page_insert (t, fp_info);
   pagedir_set_page (t->pagedir, t->stack_end, kpage, true);
   pagedir_set_dirty (t->pagedir, t->stack_end, true);
- 
+
+  earned_frame->mmapped = false;
   earned_frame->upage = t->stack_end;
   earned_frame->frame_thread = t;
   earned_frame->pinned = false;
@@ -183,7 +185,7 @@ page_claim_and_set (struct thread *t, struct page *fp_info) {
   
   }
  
-  if (pagedir_is_dirty (t->pagedir, fp_info->upage))
+  if (pagedir_is_dirty (t->pagedir, fp_info->upage) && !fp_info->mmapped)
     is_dirty =  true;
   else
     is_dirty = false;
@@ -198,8 +200,12 @@ page_claim_and_set (struct thread *t, struct page *fp_info) {
   fp_info->in_swap = false;
   fp_info->frame_index = earned_frame;
 
+  earned_frame->mmapped = fp_info->mmapped;
+  earned_frame->frame_file = fp_info->page_file;
   earned_frame->upage = fp_info->upage;
   earned_frame->frame_thread = t;
+  earned_frame->read_bytes = fp_info->read_bytes;
+
   return earned_frame;
 }
 

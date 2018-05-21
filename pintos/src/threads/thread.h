@@ -119,6 +119,9 @@ struct thread
     struct hash page_table;
     struct lock page_lock;
     void *stack_end;
+    struct list mfd_list;
+    uint32_t mfd_index;
+
     /* Owned by thread.c. */
     unsigned magic;                     /* Detects stack overflow. */
   };
