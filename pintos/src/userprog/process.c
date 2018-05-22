@@ -91,9 +91,7 @@ start_process (void *file_name_)
   if_.cs = SEL_UCSEG;
   if_.eflags = FLAG_IF | FLAG_MBS;
   
-  lock_acquire (&filesys_lock);
   success = load (file_name, &if_.eip, &if_.esp); 
-  lock_release (&filesys_lock);
   
   cur->parent->load_reply = success;
   cur->load_success = success;
@@ -199,11 +197,7 @@ static void free_resource (struct thread *cur)
     
       swap_free (false, NULL, p->swap_index);
     }
-    else if (p->in_file) {
-      
-      /*after implementing mmap */
-    }
-    else 
+    else if (!p->in_file)
       frame_free (cur, p->frame_index);
 
     page_delete (cur, p);
@@ -405,6 +399,8 @@ static bool load_segment (struct file *file, off_t ofs, uint8_t *upage,
 bool
 load (const char *file_name, void (**eip) (void), void **esp) 
 {
+  lock_acquire (&filesys_lock);
+
   struct thread *t = thread_current ();
   struct Elf32_Ehdr ehdr;
   struct file *file = NULL;
@@ -512,6 +508,8 @@ load (const char *file_name, void (**eip) (void), void **esp)
         }
     }
 
+  lock_release (&filesys_lock);
+  
   /* Set up stack. */
   if (!setup_stack (esp, file_name))
     goto done;
@@ -523,6 +521,10 @@ load (const char *file_name, void (**eip) (void), void **esp)
 
  done:
   /* We arrive here whether the load is successful or not. */
+
+  if (lock_held_by_current_thread (&filesys_lock))
+    lock_release (&filesys_lock);
+
   return success;
 }
 

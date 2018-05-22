@@ -11,26 +11,38 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/unmap
+~MSle0~/&filesys_lock
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:q!
+|2,0,1526907194,,"q!"
 :wq
-|2,0,1526901144,,"wq"
+|2,0,1526907048,,"wq"
+:q1
+|2,0,1526907007,,"q1"
+:Q!
+|2,0,1526906774,,"Q!"
+:170
+|2,0,1526904942,,"170"
+:57
+|2,0,1526905608,,"57"
+:253
+|2,0,1526905491,,"253"
+:254
+|2,0,1526904871,,"254"
+:183
+|2,0,1526902021,,"183"
 :q
 |2,0,1526901092,,"q"
-:q!
-|2,0,1526901067,,"q!"
 :q@
 |2,0,1526900876,,"q@"
 :557
 |2,0,1526900521,,"557"
 :522
 |2,0,1526899121,,"522"
-:Q!
-|2,0,1526897244,,"Q!"
 :487
 |2,0,1526893303,,"487"
 :71
@@ -99,8 +111,6 @@ $
 |2,0,1526809234,,"76"
 :12
 |2,0,1526809203,,"12"
-:253
-|2,0,1526809193,,"253"
 :169
 |2,0,1526809180,,"169"
 :252
@@ -149,8 +159,6 @@ $
 |2,0,1526635060,,"293, 306 y"
 :234
 |2,0,1526629646,,"234"
-:q1
-|2,0,1526628141,,"q1"
 :221,231 d
 |2,0,1526627764,,"221,231 d"
 :221,231 D
@@ -541,8 +549,6 @@ $
 |2,0,1523513194,,"109"
 :106
 |2,0,1523512079,,"106"
-:57
-|2,0,1523512068,,"57"
 :202
 |2,0,1523510544,,"202"
 :153
@@ -687,8 +693,6 @@ $
 |2,0,1522245975,,"306"
 :143, 152 d
 |2,0,1522243325,,"143, 152 d"
-:183
-|2,0,1522236178,,"183"
 :69
 |2,0,1522224540,,"69"
 :600
@@ -801,8 +805,48 @@ $
 |2,0,1521117937,,"Q1"
 
 # Search String History (newest to oldest):
+?/&filesys_lock
+|2,1,1526907095,47,"&filesys_lock"
+?/msg
+|2,1,1526901931,47,"msg"
+?/lock_held_by
+|2,1,1526907015,47,"lock_held_by"
+?/load (
+|2,1,1526906918,47,"load ("
+?/filesys_
+|2,1,1526906854,47,"filesys_"
+?/file
+|2,1,1526906810,47,"file"
+?/process_exec
+|2,1,1526906791,47,"process_exec"
+?/load
+|2,1,1526906725,47,"load"
+?/process_Execute
+|2,1,1526906713,47,"process_Execute"
+?/process_Exit
+|2,1,1526906351,47,"process_Exit"
+?/setup_stack
+|2,1,1526906222,47,"setup_stack"
+?/process_execute
+|2,1,1526906700,47,"process_execute"
 ?/unmap
-|2,1,1526901022,47,"unmap"
+|2,1,1526902056,47,"unmap"
+?/frame_alloc
+|2,1,1526905473,47,"frame_alloc"
+?/lock_release (&frame_lock)
+|2,1,1526905779,47,"lock_release (&frame_lock)"
+?/lock_acquire (&frame_lock)
+|2,1,1526905746,47,"lock_acquire (&frame_lock)"
+?/lock_acquire (&fi
+|2,1,1526905306,47,"lock_acquire (&fi"
+?/page_fault
+|2,1,1526904096,47,"page_fault"
+?/process_exit
+|2,1,1526904038,47,"process_exit"
+?/file_close
+|2,1,1526900899,47,"file_close"
+?/file_write
+|2,1,1526899978,47,"file_write"
 ?/page_delete
 |2,1,1526900451,47,"page_delete"
 ?/free_resou
@@ -817,14 +861,8 @@ $
 |2,1,1526897930,47,"sys_mmap"
 ?/valid
 |2,1,1526897763,47,"valid"
-?/process_exit
-|2,1,1526895152,47,"process_exit"
 ?/list_push_back
 |2,1,1526890513,47,"list_push_back"
-?/file_write
-|2,1,1526891664,47,"file_write"
-?/setup_stack
-|2,1,1526892272,47,"setup_stack"
 ?/mmapped
 |2,1,1526892099,47,"mmapped"
 ?/f->mmapped
@@ -873,8 +911,6 @@ $
 |2,1,1526883228,47,"search_by_fd"
 ?/filesys_open
 |2,1,1526883138,47,"filesys_open"
-?/page_fault
-|2,1,1526881885,47,"page_fault"
 ?/lock_acquire (&frame_lock
 |2,1,1526881144,47,"lock_acquire (&frame_lock"
 ?/lock
@@ -905,8 +941,6 @@ $
 |2,1,1526813479,47,"vm_with_"
 ?/strlen
 |2,1,1526811776,47,"strlen"
-?/file
-|2,1,1526811316,47,"file"
 ?/sys_remove
 |2,1,1526811184,47,"sys_remove"
 ?/sys_Read
@@ -957,8 +991,6 @@ $
 |2,1,1526726615,47,"stack_Groth"
 ?/page
 |2,1,1526726400,47,"page"
-?/process_Exit
-|2,1,1526725798,47,"process_Exit"
 ?/exec
 |2,1,1526724711,47,"exec"
 ?/sort_chunk
@@ -1009,8 +1041,6 @@ $
 |2,1,1526628120,47,"f->pinned"
 ?/lock_acquire
 |2,1,1526627644,47,"lock_acquire"
-?/frame_alloc
-|2,1,1526627277,47,"frame_alloc"
 ?/thread_exit
 |2,1,1526626548,47,"thread_exit"
 ?/page_rault
@@ -1019,8 +1049,6 @@ $
 |2,1,1526624573,47,"intr_yield_on_return"
 ?/yield_on_return
 |2,1,1526624999,47,"yield_on_return"
-?/load
-|2,1,1526616967,47,"load"
 ?/load_segmetn
 |2,1,1526577606,47,"load_segmetn"
 ?/fault_addr
@@ -1045,12 +1073,8 @@ $
 |2,1,1526566163,47,"checked"
 ?/file_open
 |2,1,1526565236,47,"file_open"
-?/load (
-|2,1,1526565222,47,"load ("
 ?/process_start
 |2,1,1526565148,47,"process_start"
-?/file_close
-|2,1,1526565540,47,"file_close"
 ?/sys_Exec
 |2,1,1526565177,47,"sys_Exec"
 ?/filesys_close
@@ -1123,8 +1147,6 @@ $
 |2,1,1526390021,47,"upage"
 ?/pg_ofs
 |2,1,1526386897,47,"pg_ofs"
-?/lock_held_by
-|2,1,1526386189,47,"lock_held_by"
 ?/pagedir_set_dir
 |2,1,1526383769,47,"pagedir_set_dir"
 ?/setup_
@@ -1431,8 +1453,6 @@ $
 |2,1,1524026284,47,"handler"
 ?/user_file
 |2,1,1524026150,47,"user_file"
-?/process_execute
-|2,1,1524026029,47,"process_execute"
 ?/opened
 |2,1,1524025186,47,"opened"
 ?/file_allow_write
@@ -1451,10 +1471,6 @@ $
 |2,1,1523982569,47,"fd_entry"
 ?/process_execu
 |2,1,1523983827,47,"process_execu"
-?/process_exec
-|2,1,1523983539,47,"process_exec"
-?/process_Execute
-|2,1,1523982593,47,"process_Execute"
 ?/close
 |2,1,1523981642,47,"close"
 ?/PHYS
@@ -2320,9 +2336,9 @@ $
 	    thread_exit ();
 	  }
 |3,0,0,1,5,0,1526814720,"  if (!vm_with_pinning (file_name, &earned_frame)){","    free (syscall_arg);","    cur->exit_status = -1;","    thread_exit ();","  }"
-""1	LINE	0
+"1	LINE	0
 	
-|3,1,1,1,1,0,1526901129,""
+|3,0,1,1,1,0,1526901129,""
 "2	LINE	0
 	  /* user process should not expect that any data at address */
 	  lock_acquire (&t->page_lock);
@@ -2410,253 +2426,555 @@ $
 	  /* Check that it's all zeros. */
 	  for (i = 0; i < SIZE; i++) {
 |3,0,9,1,2,0,1526645264,"  /* Check that it's all zeros. */","  for (i = 0; i < SIZE; i++) {"
-"-	CHAR	0
-	#include "filesys/file.h"
-|3,0,36,0,1,0,1526901129,"#include \"filesys/file.h\""
+""-	CHAR	0
+	Ilock_release (&filesys_lock);
+|3,1,36,0,1,0,1526906903,"Ilock_release (&filesys_lock);"
 
 # File marks:
-'0  7  0  ~/pintos/src/userprog/syscall.h
-|4,48,7,0,1526901144,"~/pintos/src/userprog/syscall.h"
-'1  14  27  ~/pintos/src/userprog/syscall.c
-|4,49,14,27,1526901132,"~/pintos/src/userprog/syscall.c"
-'2  6  0  ~/pintos/src/userprog/syscall.h
-|4,50,6,0,1526901100,"~/pintos/src/userprog/syscall.h"
-'3  6  0  ~/pintos/src/userprog/syscall.h
-|4,51,6,0,1526901100,"~/pintos/src/userprog/syscall.h"
-'4  1  0  ~/pintos/src/userprog/syscall.c
-|4,52,1,0,1526901067,"~/pintos/src/userprog/syscall.c"
-'5  1  0  ~/pintos/src/userprog/syscall.c
-|4,53,1,0,1526901067,"~/pintos/src/userprog/syscall.c"
-'6  499  5  ~/pintos/src/userprog/syscall.c
-|4,54,499,5,1526901025,"~/pintos/src/userprog/syscall.c"
-'7  499  5  ~/pintos/src/userprog/syscall.c
-|4,55,499,5,1526901025,"~/pintos/src/userprog/syscall.c"
-'8  501  5  ~/pintos/src/userprog/syscall.c
-|4,56,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
-'9  501  5  ~/pintos/src/userprog/syscall.c
-|4,57,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
+'0  511  16  ~/pintos/src/userprog/process.c
+|4,48,511,16,1526907194,"~/pintos/src/userprog/process.c"
+'1  11  6  ~/pintos/src/tests/vm/parallel-merge.c
+|4,49,11,6,1526907190,"~/pintos/src/tests/vm/parallel-merge.c"
+'2  1  0  ~/pintos/src/tests/vm/child-qsort-mm.c
+|4,50,1,0,1526907188,"~/pintos/src/tests/vm/child-qsort-mm.c"
+'3  330  0  ~/pintos/src/threads/synch.c
+|4,51,330,0,1526907174,"~/pintos/src/threads/synch.c"
+'4  535  1  ~/pintos/src/userprog/process.c
+|4,52,535,1,1526907048,"~/pintos/src/userprog/process.c"
+'5  535  1  ~/pintos/src/userprog/process.c
+|4,53,535,1,1526907048,"~/pintos/src/userprog/process.c"
+'6  130  0  ~/pintos/src/threads/thread.h
+|4,54,130,0,1526907007,"~/pintos/src/threads/thread.h"
+'7  162  0  ~/pintos/src/userprog/syscall.c
+|4,55,162,0,1526906775,"~/pintos/src/userprog/syscall.c"
+'8  185  1  ~/pintos/src/userprog/exception.c
+|4,56,185,1,1526906767,"~/pintos/src/userprog/exception.c"
+'9  113  14  ~/pintos/src/vm/frame.c
+|4,57,113,14,1526906764,"~/pintos/src/vm/frame.c"
 
 # Jumplist (newest first):
--'  7  0  ~/pintos/src/userprog/syscall.h
-|4,39,7,0,1526901144,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901134,"~/pintos/src/userprog/syscall.h"
--'  14  27  ~/pintos/src/userprog/syscall.c
-|4,39,14,27,1526901132,"~/pintos/src/userprog/syscall.c"
--'  14  27  ~/pintos/src/userprog/syscall.c
-|4,39,14,27,1526901132,"~/pintos/src/userprog/syscall.c"
+-'  511  16  ~/pintos/src/userprog/process.c
+|4,39,511,16,1526907194,"~/pintos/src/userprog/process.c"
+-'  11  6  ~/pintos/src/tests/vm/parallel-merge.c
+|4,39,11,6,1526907190,"~/pintos/src/tests/vm/parallel-merge.c"
+-'  1  0  ~/pintos/src/tests/vm/child-qsort-mm.c
+|4,39,1,0,1526907188,"~/pintos/src/tests/vm/child-qsort-mm.c"
+-'  330  0  ~/pintos/src/threads/synch.c
+|4,39,330,0,1526907174,"~/pintos/src/threads/synch.c"
+-'  402  16  ~/pintos/src/userprog/process.c
+|4,39,402,16,1526907099,"~/pintos/src/userprog/process.c"
+-'  255  16  ~/pintos/src/userprog/process.c
+|4,39,255,16,1526907097,"~/pintos/src/userprog/process.c"
+-'  252  18  ~/pintos/src/userprog/process.c
+|4,39,252,18,1526907097,"~/pintos/src/userprog/process.c"
+-'  251  36  ~/pintos/src/userprog/process.c
+|4,39,251,36,1526907096,"~/pintos/src/userprog/process.c"
+-'  232  18  ~/pintos/src/userprog/process.c
+|4,39,232,18,1526907096,"~/pintos/src/userprog/process.c"
+-'  230  18  ~/pintos/src/userprog/process.c
+|4,39,230,18,1526907096,"~/pintos/src/userprog/process.c"
+-'  6  0  ~/pintos/src/userprog/process.c
+|4,39,6,0,1526907095,"~/pintos/src/userprog/process.c"
+-'  1  0  ~/pintos/src/userprog/process.c
+|4,39,1,0,1526907091,"~/pintos/src/userprog/process.c"
+-'  535  1  ~/pintos/src/userprog/process.c
+|4,39,535,1,1526907048,"~/pintos/src/userprog/process.c"
+-'  535  1  ~/pintos/src/userprog/process.c
+|4,39,535,1,1526907048,"~/pintos/src/userprog/process.c"
+-'  290  10  ~/pintos/src/threads/synch.c
+|4,39,290,10,1526907018,"~/pintos/src/threads/synch.c"
+-'  273  11  ~/pintos/src/threads/synch.c
+|4,39,273,11,1526907017,"~/pintos/src/threads/synch.c"
+-'  229  11  ~/pintos/src/threads/synch.c
+|4,39,229,11,1526907017,"~/pintos/src/threads/synch.c"
+-'  1  0  ~/pintos/src/threads/synch.c
+|4,39,1,0,1526907015,"~/pintos/src/threads/synch.c"
+-'  130  0  ~/pintos/src/threads/thread.h
+|4,39,130,0,1526907007,"~/pintos/src/threads/thread.h"
+-'  130  0  ~/pintos/src/threads/thread.h
+|4,39,130,0,1526907007,"~/pintos/src/threads/thread.h"
+-'  130  0  ~/pintos/src/threads/thread.h
+|4,39,130,0,1526907007,"~/pintos/src/threads/thread.h"
+-'  94  12  ~/pintos/src/userprog/process.c
+|4,39,94,12,1526906929,"~/pintos/src/userprog/process.c"
+-'  94  12  ~/pintos/src/userprog/process.c
+|4,39,94,12,1526906929,"~/pintos/src/userprog/process.c"
+-'  28  12  ~/pintos/src/userprog/process.c
+|4,39,28,12,1526906928,"~/pintos/src/userprog/process.c"
+-'  400  0  ~/pintos/src/userprog/process.c
+|4,39,400,0,1526906928,"~/pintos/src/userprog/process.c"
+-'  28  12  ~/pintos/src/userprog/process.c
+|4,39,28,12,1526906928,"~/pintos/src/userprog/process.c"
+-'  400  0  ~/pintos/src/userprog/process.c
+|4,39,400,0,1526906928,"~/pintos/src/userprog/process.c"
+-'  401  0  ~/pintos/src/userprog/process.c
+|4,39,401,0,1526906919,"~/pintos/src/userprog/process.c"
+-'  401  0  ~/pintos/src/userprog/process.c
+|4,39,401,0,1526906919,"~/pintos/src/userprog/process.c"
+-'  258  21  ~/pintos/src/userprog/process.c
+|4,39,258,21,1526906918,"~/pintos/src/userprog/process.c"
+-'  258  21  ~/pintos/src/userprog/process.c
+|4,39,258,21,1526906918,"~/pintos/src/userprog/process.c"
+-'  471  8  ~/pintos/src/userprog/process.c
+|4,39,471,8,1526906892,"~/pintos/src/userprog/process.c"
+-'  471  8  ~/pintos/src/userprog/process.c
+|4,39,471,8,1526906892,"~/pintos/src/userprog/process.c"
+-'  255  17  ~/pintos/src/userprog/process.c
+|4,39,255,17,1526906858,"~/pintos/src/userprog/process.c"
+-'  252  19  ~/pintos/src/userprog/process.c
+|4,39,252,19,1526906857,"~/pintos/src/userprog/process.c"
+-'  251  37  ~/pintos/src/userprog/process.c
+|4,39,251,37,1526906857,"~/pintos/src/userprog/process.c"
+-'  232  19  ~/pintos/src/userprog/process.c
+|4,39,232,19,1526906857,"~/pintos/src/userprog/process.c"
+-'  230  19  ~/pintos/src/userprog/process.c
+|4,39,230,19,1526906857,"~/pintos/src/userprog/process.c"
+-'  93  19  ~/pintos/src/userprog/process.c
+|4,39,93,19,1526906855,"~/pintos/src/userprog/process.c"
+-'  93  19  ~/pintos/src/userprog/process.c
+|4,39,93,19,1526906855,"~/pintos/src/userprog/process.c"
+-'  428  9  ~/pintos/src/userprog/process.c
+|4,39,428,9,1526906854,"~/pintos/src/userprog/process.c"
+-'  428  9  ~/pintos/src/userprog/process.c
+|4,39,428,9,1526906854,"~/pintos/src/userprog/process.c"
+-'  200  20  ~/pintos/src/userprog/process.c
+|4,39,200,20,1526906815,"~/pintos/src/userprog/process.c"
+-'  200  20  ~/pintos/src/userprog/process.c
+|4,39,200,20,1526906815,"~/pintos/src/userprog/process.c"
+-'  138  19  ~/pintos/src/userprog/process.c
+|4,39,138,19,1526906810,"~/pintos/src/userprog/process.c"
+-'  138  19  ~/pintos/src/userprog/process.c
+|4,39,138,19,1526906810,"~/pintos/src/userprog/process.c"
+-'  32  10  ~/pintos/src/userprog/process.c
+|4,39,32,10,1526906798,"~/pintos/src/userprog/process.c"
+-'  32  10  ~/pintos/src/userprog/process.c
+|4,39,32,10,1526906798,"~/pintos/src/userprog/process.c"
+-'  225  0  ~/pintos/src/userprog/process.c
+|4,39,225,0,1526906791,"~/pintos/src/userprog/process.c"
+-'  225  0  ~/pintos/src/userprog/process.c
+|4,39,225,0,1526906791,"~/pintos/src/userprog/process.c"
+-'  162  0  ~/pintos/src/userprog/syscall.c
+|4,39,162,0,1526906775,"~/pintos/src/userprog/syscall.c"
+-'  162  0  ~/pintos/src/userprog/syscall.c
+|4,39,162,0,1526906775,"~/pintos/src/userprog/syscall.c"
+-'  162  0  ~/pintos/src/userprog/syscall.c
+|4,39,162,0,1526906775,"~/pintos/src/userprog/syscall.c"
+-'  185  1  ~/pintos/src/userprog/exception.c
+|4,39,185,1,1526906767,"~/pintos/src/userprog/exception.c"
+-'  185  1  ~/pintos/src/userprog/exception.c
+|4,39,185,1,1526906767,"~/pintos/src/userprog/exception.c"
+-'  185  1  ~/pintos/src/userprog/exception.c
+|4,39,185,1,1526906767,"~/pintos/src/userprog/exception.c"
+-'  113  14  ~/pintos/src/vm/frame.c
+|4,39,113,14,1526906764,"~/pintos/src/vm/frame.c"
+-'  113  14  ~/pintos/src/vm/frame.c
+|4,39,113,14,1526906764,"~/pintos/src/vm/frame.c"
+-'  113  14  ~/pintos/src/vm/frame.c
+|4,39,113,14,1526906764,"~/pintos/src/vm/frame.c"
+-'  376  11  ~/pintos/src/userprog/process.c
+|4,39,376,11,1526906728,"~/pintos/src/userprog/process.c"
+-'  376  11  ~/pintos/src/userprog/process.c
+|4,39,376,11,1526906728,"~/pintos/src/userprog/process.c"
+-'  326  6  ~/pintos/src/userprog/process.c
+|4,39,326,6,1526906727,"~/pintos/src/userprog/process.c"
+-'  326  6  ~/pintos/src/userprog/process.c
+|4,39,326,6,1526906727,"~/pintos/src/userprog/process.c"
+-'  288  14  ~/pintos/src/userprog/process.c
+|4,39,288,14,1526906726,"~/pintos/src/userprog/process.c"
+-'  288  14  ~/pintos/src/userprog/process.c
+|4,39,288,14,1526906726,"~/pintos/src/userprog/process.c"
+-'  146  9  ~/pintos/src/userprog/process.c
+|4,39,146,9,1526906725,"~/pintos/src/userprog/process.c"
+-'  146  9  ~/pintos/src/userprog/process.c
+|4,39,146,9,1526906725,"~/pintos/src/userprog/process.c"
+-'  181  0  ~/pintos/src/userprog/process.c
+|4,39,181,0,1526906713,"~/pintos/src/userprog/process.c"
+-'  181  0  ~/pintos/src/userprog/process.c
+|4,39,181,0,1526906713,"~/pintos/src/userprog/process.c"
+-'  130  13  ~/pintos/src/userprog/syscall.c
+|4,39,130,13,1526906704,"~/pintos/src/userprog/syscall.c"
+-'  159  0  ~/pintos/src/userprog/syscall.c
+|4,39,159,0,1526906704,"~/pintos/src/userprog/syscall.c"
+-'  130  13  ~/pintos/src/userprog/syscall.c
+|4,39,130,13,1526906704,"~/pintos/src/userprog/syscall.c"
+-'  159  0  ~/pintos/src/userprog/syscall.c
+|4,39,159,0,1526906704,"~/pintos/src/userprog/syscall.c"
+-'  130  13  ~/pintos/src/userprog/syscall.c
+|4,39,130,13,1526906704,"~/pintos/src/userprog/syscall.c"
+-'  159  0  ~/pintos/src/userprog/syscall.c
+|4,39,159,0,1526906704,"~/pintos/src/userprog/syscall.c"
+-'  519  3  ~/pintos/src/userprog/syscall.c
+|4,39,519,3,1526906700,"~/pintos/src/userprog/syscall.c"
+-'  519  3  ~/pintos/src/userprog/syscall.c
+|4,39,519,3,1526906700,"~/pintos/src/userprog/syscall.c"
+-'  519  3  ~/pintos/src/userprog/syscall.c
+|4,39,519,3,1526906700,"~/pintos/src/userprog/syscall.c"
+-'  1  0  ~/pintos/src/threads/thread.h
+|4,39,1,0,1526906413,"~/pintos/src/threads/thread.h"
+-'  1  0  ~/pintos/src/threads/thread.h
+|4,39,1,0,1526906413,"~/pintos/src/threads/thread.h"
+-'  1  0  ~/pintos/src/threads/thread.h
+|4,39,1,0,1526906413,"~/pintos/src/threads/thread.h"
+-'  1  0  ~/pintos/src/threads/synch.h
+|4,39,1,0,1526906409,"~/pintos/src/threads/synch.h"
+-'  1  0  ~/pintos/src/threads/synch.h
+|4,39,1,0,1526906409,"~/pintos/src/threads/synch.h"
+-'  1  0  ~/pintos/src/threads/synch.h
+|4,39,1,0,1526906409,"~/pintos/src/threads/synch.h"
+-'  1  0  ~/pintos/src/threads/synch.h
+|4,39,1,0,1526906409,"~/pintos/src/threads/synch.h"
+-'  1  0  ~/pintos/src/threads/synch.h
+|4,39,1,0,1526906409,"~/pintos/src/threads/synch.h"
+-'  1  0  ~/pintos/src/threads/synch.h
+|4,39,1,0,1526906409,"~/pintos/src/threads/synch.h"
+-'  654  0  ~/pintos/src/userprog/process.c
+|4,39,654,0,1526906351,"~/pintos/src/userprog/process.c"
+-'  654  0  ~/pintos/src/userprog/process.c
+|4,39,654,0,1526906351,"~/pintos/src/userprog/process.c"
+-'  514  7  ~/pintos/src/userprog/process.c
+|4,39,514,7,1526906223,"~/pintos/src/userprog/process.c"
+-'  389  12  ~/pintos/src/userprog/process.c
+|4,39,389,12,1526906223,"~/pintos/src/userprog/process.c"
+-'  514  7  ~/pintos/src/userprog/process.c
+|4,39,514,7,1526906223,"~/pintos/src/userprog/process.c"
+-'  389  12  ~/pintos/src/userprog/process.c
+|4,39,389,12,1526906223,"~/pintos/src/userprog/process.c"
+-'  1  0  ~/pintos/src/userprog/process.c
+|4,39,1,0,1526906222,"~/pintos/src/userprog/process.c"
 -'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901103,"~/pintos/src/userprog/syscall.c"
+|4,39,1,0,1526905830,"~/pintos/src/userprog/syscall.c"
 -'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901103,"~/pintos/src/userprog/syscall.c"
--'  6  0  ~/pintos/src/userprog/syscall.h
-|4,39,6,0,1526901100,"~/pintos/src/userprog/syscall.h"
--'  6  0  ~/pintos/src/userprog/syscall.h
-|4,39,6,0,1526901100,"~/pintos/src/userprog/syscall.h"
--'  6  0  ~/pintos/src/userprog/syscall.h
-|4,39,6,0,1526901100,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901069,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901069,"~/pintos/src/userprog/syscall.h"
+|4,39,1,0,1526905830,"~/pintos/src/userprog/syscall.c"
 -'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901067,"~/pintos/src/userprog/syscall.c"
+|4,39,1,0,1526905830,"~/pintos/src/userprog/syscall.c"
 -'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901067,"~/pintos/src/userprog/syscall.c"
+|4,39,1,0,1526905830,"~/pintos/src/userprog/syscall.c"
 -'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901067,"~/pintos/src/userprog/syscall.c"
+|4,39,1,0,1526905830,"~/pintos/src/userprog/syscall.c"
 -'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901067,"~/pintos/src/userprog/syscall.c"
--'  499  5  ~/pintos/src/userprog/syscall.c
-|4,39,499,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  501  5  ~/pintos/src/userprog/syscall.c
-|4,39,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  501  5  ~/pintos/src/userprog/syscall.c
-|4,39,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  501  5  ~/pintos/src/userprog/syscall.c
-|4,39,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  501  5  ~/pintos/src/userprog/syscall.c
-|4,39,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  499  5  ~/pintos/src/userprog/syscall.c
-|4,39,499,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  501  5  ~/pintos/src/userprog/syscall.c
-|4,39,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  501  5  ~/pintos/src/userprog/syscall.c
-|4,39,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  501  5  ~/pintos/src/userprog/syscall.c
-|4,39,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  501  5  ~/pintos/src/userprog/syscall.c
-|4,39,501,5,1526901025,"~/pintos/src/userprog/syscall.c"
--'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901022,"~/pintos/src/userprog/syscall.c"
--'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901022,"~/pintos/src/userprog/syscall.c"
--'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901022,"~/pintos/src/userprog/syscall.c"
--'  1  0  ~/pintos/src/userprog/syscall.c
-|4,39,1,0,1526901022,"~/pintos/src/userprog/syscall.c"
--'  10  42  ~/pintos/src/userprog/syscall.h
-|4,39,10,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  8  42  ~/pintos/src/userprog/syscall.h
-|4,39,8,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  9  42  ~/pintos/src/userprog/syscall.h
-|4,39,9,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  7  42  ~/pintos/src/userprog/syscall.h
-|4,39,7,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  7  42  ~/pintos/src/userprog/syscall.h
-|4,39,7,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  7  42  ~/pintos/src/userprog/syscall.h
-|4,39,7,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  7  42  ~/pintos/src/userprog/syscall.h
-|4,39,7,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  9  42  ~/pintos/src/userprog/syscall.h
-|4,39,9,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  7  42  ~/pintos/src/userprog/syscall.h
-|4,39,7,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  7  42  ~/pintos/src/userprog/syscall.h
-|4,39,7,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  7  42  ~/pintos/src/userprog/syscall.h
-|4,39,7,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  7  42  ~/pintos/src/userprog/syscall.h
-|4,39,7,42,1526901018,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901002,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901002,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901002,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901002,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901002,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901002,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901002,"~/pintos/src/userprog/syscall.h"
--'  1  0  ~/pintos/src/userprog/syscall.h
-|4,39,1,0,1526901002,"~/pintos/src/userprog/syscall.h"
--'  534  10  ~/pintos/src/userprog/syscall.c
-|4,39,534,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  534  10  ~/pintos/src/userprog/syscall.c
-|4,39,534,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  536  10  ~/pintos/src/userprog/syscall.c
-|4,39,536,10,1526900998,"~/pintos/src/userprog/syscall.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
--'  1  0  ~/pintos/src/filesys/file.c
-|4,39,1,0,1526900890,"~/pintos/src/filesys/file.c"
+|4,39,1,0,1526905830,"~/pintos/src/userprog/syscall.c"
 
 # History of marks within files (newest to oldest):
 
-> ~/pintos/src/userprog/syscall.h
-	*	1526901144	0
-	"	7	0
-	^	7	0
-	.	6	25
-	+	9	25
-	+	10	0
-	+	4	17
-	+	5	31
-	+	10	42
-	+	5	27
-	+	6	25
+> ~/pintos/src/userprog/process.c
+	*	1526907193	0
+	"	511	16
+	^	535	2
+	.	512	2
+	+	225	10
+	+	226	10
+	+	228	28
+	+	229	32
+	+	231	5
+	+	234	2
+	+	235	0
+	+	237	0
+	+	305	0
+	+	235	3
+	+	235	6
+	+	235	8
+	+	286	1
+	+	287	0
+	+	237	22
+	+	237	0
+	+	235	3
+	+	236	0
+	+	235	3
+	+	236	0
+	+	641	0
+	+	640	33
+	+	641	0
+	+	640	33
+	+	640	29
+	+	641	0
+	+	634	7
+	+	2	0
+	+	1	0
+	+	184	13
+	+	184	42
+	+	237	0
+	+	220	38
+	+	221	0
+	+	206	1
+	+	207	0
+	+	220	6
+	+	308	0
+	+	168	20
+	+	169	0
+	+	243	41
+	+	244	0
+	+	184	13
+	+	174	0
+	+	184	41
+	+	221	1
+	+	184	42
+	+	184	13
+	+	220	32
+	+	634	0
+	+	636	0
+	+	629	6
+	+	635	7
+	+	740	32
+	+	725	0
+	+	737	0
+	+	635	7
+	+	631	42
+	+	632	0
+	+	632	38
+	+	631	45
+	+	633	2
+	+	632	19
+	+	736	15
+	+	630	0
+	+	735	0
+	+	741	31
+	+	743	0
+	+	202	15
+	+	201	22
+	+	187	27
+	+	188	3
+	+	190	0
+	+	204	30
+	+	220	6
+	+	221	0
+	+	184	13
+	+	185	0
+	+	202	2
+	+	202	3
+	+	202	0
+	+	203	20
+	+	203	24
+	+	184	27
+	+	183	0
+	+	176	40
+	+	178	36
+	+	182	0
+	+	200	24
+	+	201	0
+	+	200	13
+	+	93	2
+	+	94	0
+	+	94	50
+	+	95	0
+	+	403	0
+	+	512	0
+	+	511	30
+	+	527	0
+	+	512	2
+	m	391	12
+	n	521	19
+
+> ~/pintos/src/tests/vm/parallel-merge.c
+	*	1526907190	0
+	"	11	6
+
+> ~/pintos/src/tests/vm/child-qsort-mm.c
+	*	1526907187	0
+	"	1	0
+
+> ~/pintos/src/threads/synch.c
+	*	1526907173	0
+	"	330	0
+	^	149	29
+	.	149	28
+	+	411	0
+	+	411	30
+	+	411	19
+	+	411	90
+	+	411	26
+	+	411	20
+	+	411	5
+	+	411	7
+	+	411	9
+	+	411	7
+	+	411	5
+	+	411	0
+	+	411	5
+	+	411	23
+	+	411	12
+	+	411	98
+	+	410	3
+	+	411	5
+	+	411	20
+	+	411	6
+	+	411	28
+	+	410	2
+	+	411	4
+	+	411	11
+	+	411	97
+	+	411	5
+	+	413	68
+	+	411	101
+	+	411	29
+	+	411	58
+	+	411	103
+	+	409	88
+	+	413	98
+	+	414	30
+	+	410	0
+	+	415	0
+	+	414	0
+	+	411	139
+	+	411	31
+	+	411	54
+	+	411	24
+	+	411	73
+	+	413	67
+	+	411	4
+	+	411	102
+	+	411	60
+	+	411	66
+	+	411	19
+	+	1	0
+	+	2	0
+	+	411	43
+	+	411	45
+	+	411	28
+	+	411	5
+	+	411	12
+	+	411	98
+	+	411	97
+	+	411	0
+	+	419	0
+	+	425	0
+	+	419	73
+	+	423	34
+	+	410	3
+	+	410	21
+	+	411	5
+	+	411	194
+	+	411	97
+	+	411	11
+	+	411	29
+	+	418	67
+	+	411	52
+	+	421	44
+	+	422	44
+	+	421	45
+	+	422	45
+	+	411	0
+	+	410	0
+	+	213	62
+	+	235	79
+	+	262	81
+	+	245	52
+	+	252	0
+	+	251	41
+	+	250	32
+	+	245	101
+	+	254	63
+	+	250	37
+	+	248	0
+	+	247	19
+	+	248	55
+	+	249	106
+	+	301	71
+	+	307	88
+	+	251	17
+	+	213	34
+	+	214	0
+	+	145	4
+	+	146	22
+	+	147	21
+	+	149	28
+	n	393	2
+
+> ~/pintos/src/threads/thread.h
+	*	1526907006	0
+	"	130	0
+	^	123	14
+	.	123	13
+	+	96	63
+	+	98	79
+	+	18	52
+	+	18	51
+	+	99	0
+	+	98	79
+	+	99	61
+	+	101	15
+	+	102	0
+	+	101	13
+	+	99	118
+	+	99	151
+	+	7	18
+	+	99	149
+	+	7	25
+	+	99	118
+	+	101	0
+	+	106	118
+	+	107	20
+	+	107	54
+	+	108	26
+	+	141	52
+	+	108	43
+	+	109	23
+	+	7	26
+	+	110	25
+	+	107	51
+	+	107	53
+	+	111	31
+	+	174	75
+	+	174	31
+	+	175	0
+	+	174	31
+	+	175	0
+	+	162	41
+	+	160	25
+	+	162	42
+	+	100	0
+	+	107	22
+	+	107	23
+	+	108	0
+	+	99	79
+	+	99	110
+	+	106	61
+	+	107	0
+	+	111	25
+	+	137	0
+	+	100	0
+	+	136	28
+	+	131	11
+	+	141	25
+	+	142	0
+	+	108	27
+	+	109	0
+	+	111	20
+	+	135	30
+	+	136	0
+	+	133	10
+	+	132	18
+	+	112	30
+	+	111	26
+	+	137	1
+	+	99	59
+	+	100	0
+	+	113	19
+	+	136	27
+	+	114	21
+	+	111	16
+	+	114	22
+	+	116	27
+	+	115	19
+	+	125	0
+	+	119	10
+	+	8	20
+	+	9	16
+	+	119	27
+	+	119	44
+	+	119	19
+	+	119	52
+	+	100	4
+	+	120	19
+	+	119	27
+	+	120	25
+	+	123	22
+	+	124	0
+	+	123	13
 
 > ~/pintos/src/userprog/syscall.c
-	*	1526901131	0
-	"	14	27
-	^	14	28
+	*	1526906774	0
+	"	162	0
+	^	519	4
 	.	15	0
 	+	456	0
 	+	473	25
@@ -2761,206 +3079,9 @@ $
 	m	605	9
 	n	566	7
 
-> ~/pintos/src/filesys/file.c
-	*	1526900887	0
-	"	1	0
-	^	12	4
-	.	13	0
-	+	13	0
-	+	12	33
-	+	12	7
-	+	5	0
-	+	6	0
-	+	12	4
-	+	13	0
-
-> ~/pintos/src/vm/page.c
-	*	1526900877	0
-	"	61	0
-	^	59	11
-	.	59	10
-	+	1	20
-	+	4	8
-	+	5	56
-	+	2	18
-	+	9	1
-	+	9	0
-	+	17	64
-	+	16	57
-	+	17	65
-	+	21	0
-	+	2	51
-	+	24	13
-	+	2	54
-	+	26	0
-	+	2	0
-	+	2	26
-	+	24	66
-	+	2	85
-	+	24	54
-	+	32	47
-	+	36	15
-	+	27	23
-	+	41	0
-	+	27	26
-	+	2	56
-	+	3	0
-	+	24	54
-	+	2	26
-	+	22	37
-	+	25	0
-	+	27	49
-	+	36	41
-	+	32	20
-	+	32	64
-	+	32	66
-	+	32	20
-	+	35	0
-	+	39	1
-	+	40	43
-	+	41	1
-	+	32	20
-	+	33	0
-	+	35	44
-	+	36	0
-	+	46	0
-	+	46	43
-	+	49	0
-	+	22	28
-	+	24	13
-	+	27	38
-	+	35	17
-	+	27	65
-	+	41	30
-	+	46	15
-	+	27	49
-	+	31	42
-	+	27	41
-	+	1	20
-	+	2	0
-	+	34	30
-	+	38	0
-	+	37	0
-	+	43	42
-	+	41	33
-	+	43	43
-	+	45	30
-	+	48	0
-	+	53	43
-	+	58	0
-	+	59	10
-
-> ~/pintos/src/userprog/process.c
-	*	1526900796	0
-	"	184	2
-	^	184	3
-	.	184	0
-	+	212	7
-	+	211	5
-	+	212	6
-	+	226	10
-	+	226	45
-	+	227	9
-	+	228	9
-	+	229	9
-	+	227	11
-	+	228	10
-	+	229	10
-	+	230	10
-	+	231	10
-	+	232	10
-	+	234	28
-	+	235	32
-	+	237	5
-	+	240	2
-	+	241	0
-	+	243	0
-	+	311	0
-	+	241	3
-	+	241	6
-	+	241	8
-	+	292	1
-	+	293	0
-	+	243	22
-	+	243	0
-	+	241	3
-	+	242	0
-	+	241	3
-	+	242	0
-	+	639	0
-	+	638	33
-	+	639	0
-	+	638	33
-	+	638	29
-	+	639	0
-	+	632	7
-	+	2	0
-	+	1	0
-	+	186	13
-	+	186	42
-	+	243	0
-	+	226	38
-	+	227	0
-	+	212	1
-	+	213	0
-	+	226	6
-	+	314	0
-	+	170	20
-	+	171	0
-	+	249	41
-	+	250	0
-	+	186	13
-	+	176	0
-	+	186	41
-	+	227	1
-	+	186	42
-	+	186	13
-	+	226	32
-	+	632	0
-	+	634	0
-	+	627	6
-	+	633	7
-	+	738	32
-	+	723	0
-	+	735	0
-	+	633	7
-	+	629	42
-	+	630	0
-	+	630	38
-	+	629	45
-	+	631	2
-	+	630	19
-	+	734	15
-	+	628	0
-	+	733	0
-	+	739	31
-	+	741	0
-	+	208	15
-	+	207	22
-	+	189	27
-	+	190	3
-	+	192	0
-	+	210	30
-	+	226	6
-	+	227	0
-	+	186	13
-	+	187	0
-	+	208	2
-	+	208	3
-	+	208	0
-	+	209	20
-	+	209	24
-	+	186	27
-	+	185	0
-	+	178	40
-	+	180	36
-	+	184	0
-	m	397	12
-	n	523	19
-
 > ~/pintos/src/userprog/exception.c
-	*	1526900690	0
-	"	163	6
+	*	1526906766	0
+	"	185	1
 	^	188	56
 	.	188	55
 	+	291	0
@@ -3066,8 +3187,8 @@ $
 	n	17	17
 
 > ~/pintos/src/vm/frame.c
-	*	1526900445	0
-	"	92	0
+	*	1526906763	0
+	"	113	14
 	^	126	0
 	.	126	0
 	+	79	102
@@ -3170,6 +3291,120 @@ $
 	+	124	21
 	+	117	34
 	+	126	0
+
+> ~/pintos/src/threads/synch.h
+	*	1526906409	0
+	"	1	0
+
+> ~/pintos/src/filesys/file.c
+	*	1526902208	0
+	"	46	0
+	^	12	4
+	.	13	0
+	+	13	0
+	+	12	33
+	+	12	7
+	+	5	0
+	+	6	0
+	+	12	4
+	+	13	0
+
+> ~/pintos/src/tests/vm/page-merge-mm.c
+	*	1526901511	0
+	"	1	0
+
+> ~/pintos/src/tests/vm/mmap-null.ck
+	*	1526901493	0
+	"	1	0
+
+> ~/pintos/src/userprog/syscall.h
+	*	1526901144	0
+	"	7	0
+	^	7	0
+	.	6	25
+	+	9	25
+	+	10	0
+	+	4	17
+	+	5	31
+	+	10	42
+	+	5	27
+	+	6	25
+
+> ~/pintos/src/vm/page.c
+	*	1526900877	0
+	"	61	0
+	^	59	11
+	.	59	10
+	+	1	20
+	+	4	8
+	+	5	56
+	+	2	18
+	+	9	1
+	+	9	0
+	+	17	64
+	+	16	57
+	+	17	65
+	+	21	0
+	+	2	51
+	+	24	13
+	+	2	54
+	+	26	0
+	+	2	0
+	+	2	26
+	+	24	66
+	+	2	85
+	+	24	54
+	+	32	47
+	+	36	15
+	+	27	23
+	+	41	0
+	+	27	26
+	+	2	56
+	+	3	0
+	+	24	54
+	+	2	26
+	+	22	37
+	+	25	0
+	+	27	49
+	+	36	41
+	+	32	20
+	+	32	64
+	+	32	66
+	+	32	20
+	+	35	0
+	+	39	1
+	+	40	43
+	+	41	1
+	+	32	20
+	+	33	0
+	+	35	44
+	+	36	0
+	+	46	0
+	+	46	43
+	+	49	0
+	+	22	28
+	+	24	13
+	+	27	38
+	+	35	17
+	+	27	65
+	+	41	30
+	+	46	15
+	+	27	49
+	+	31	42
+	+	27	41
+	+	1	20
+	+	2	0
+	+	34	30
+	+	38	0
+	+	37	0
+	+	43	42
+	+	41	33
+	+	43	43
+	+	45	30
+	+	48	0
+	+	53	43
+	+	58	0
+	+	59	10
 
 > ~/pintos/src/vm/swap.c
 	*	1526900138	0
@@ -3431,113 +3666,6 @@ $
 	+	142	17
 	m	139	2
 
-> ~/pintos/src/threads/synch.c
-	*	1526892458	0
-	"	414	63
-	^	149	29
-	.	149	28
-	+	411	0
-	+	411	30
-	+	411	19
-	+	411	90
-	+	411	26
-	+	411	20
-	+	411	5
-	+	411	7
-	+	411	9
-	+	411	7
-	+	411	5
-	+	411	0
-	+	411	5
-	+	411	23
-	+	411	12
-	+	411	98
-	+	410	3
-	+	411	5
-	+	411	20
-	+	411	6
-	+	411	28
-	+	410	2
-	+	411	4
-	+	411	11
-	+	411	97
-	+	411	5
-	+	413	68
-	+	411	101
-	+	411	29
-	+	411	58
-	+	411	103
-	+	409	88
-	+	413	98
-	+	414	30
-	+	410	0
-	+	415	0
-	+	414	0
-	+	411	139
-	+	411	31
-	+	411	54
-	+	411	24
-	+	411	73
-	+	413	67
-	+	411	4
-	+	411	102
-	+	411	60
-	+	411	66
-	+	411	19
-	+	1	0
-	+	2	0
-	+	411	43
-	+	411	45
-	+	411	28
-	+	411	5
-	+	411	12
-	+	411	98
-	+	411	97
-	+	411	0
-	+	419	0
-	+	425	0
-	+	419	73
-	+	423	34
-	+	410	3
-	+	410	21
-	+	411	5
-	+	411	194
-	+	411	97
-	+	411	11
-	+	411	29
-	+	418	67
-	+	411	52
-	+	421	44
-	+	422	44
-	+	421	45
-	+	422	45
-	+	411	0
-	+	410	0
-	+	213	62
-	+	235	79
-	+	262	81
-	+	245	52
-	+	252	0
-	+	251	41
-	+	250	32
-	+	245	101
-	+	254	63
-	+	250	37
-	+	248	0
-	+	247	19
-	+	248	55
-	+	249	106
-	+	301	71
-	+	307	88
-	+	251	17
-	+	213	34
-	+	214	0
-	+	145	4
-	+	146	22
-	+	147	21
-	+	149	28
-	n	393	2
-
 > ~/pintos/src/userprog/page.h
 	*	1526890839	0
 	"	1	0
@@ -3653,98 +3781,6 @@ $
 > ~/pintos/src/threads/the
 	*	1526890162	0
 	"	1	0
-
-> ~/pintos/src/threads/thread.h
-	*	1526890158	0
-	"	99	4
-	^	123	14
-	.	123	13
-	+	96	63
-	+	98	79
-	+	18	52
-	+	18	51
-	+	99	0
-	+	98	79
-	+	99	61
-	+	101	15
-	+	102	0
-	+	101	13
-	+	99	118
-	+	99	151
-	+	7	18
-	+	99	149
-	+	7	25
-	+	99	118
-	+	101	0
-	+	106	118
-	+	107	20
-	+	107	54
-	+	108	26
-	+	141	52
-	+	108	43
-	+	109	23
-	+	7	26
-	+	110	25
-	+	107	51
-	+	107	53
-	+	111	31
-	+	174	75
-	+	174	31
-	+	175	0
-	+	174	31
-	+	175	0
-	+	162	41
-	+	160	25
-	+	162	42
-	+	100	0
-	+	107	22
-	+	107	23
-	+	108	0
-	+	99	79
-	+	99	110
-	+	106	61
-	+	107	0
-	+	111	25
-	+	137	0
-	+	100	0
-	+	136	28
-	+	131	11
-	+	141	25
-	+	142	0
-	+	108	27
-	+	109	0
-	+	111	20
-	+	135	30
-	+	136	0
-	+	133	10
-	+	132	18
-	+	112	30
-	+	111	26
-	+	137	1
-	+	99	59
-	+	100	0
-	+	113	19
-	+	136	27
-	+	114	21
-	+	111	16
-	+	114	22
-	+	116	27
-	+	115	19
-	+	125	0
-	+	119	10
-	+	8	20
-	+	9	16
-	+	119	27
-	+	119	44
-	+	119	19
-	+	119	52
-	+	100	4
-	+	120	19
-	+	119	27
-	+	120	25
-	+	123	22
-	+	124	0
-	+	123	13
 
 > ~/pintos/src/lib/user/syscall.c
 	*	1526884503	0
@@ -3863,18 +3899,6 @@ $
 > ~/pintos/src/tests/vm/page-merge-seq.c
 	*	1526726077	0
 	"	40	0
-
-> ~/pintos/src/tests/vm/child-qsort-mm.c
-	*	1526724759	0
-	"	1	3
-
-> ~/pintos/src/tests/vm/page-merge-mm.c
-	*	1526724744	0
-	"	1	0
-
-> ~/pintos/src/tests/vm/parallel-merge.c
-	*	1526724686	0
-	"	149	0
 
 > ~/pintos/src/tests/vm/page-merge-stk.c
 	*	1526724673	0
@@ -4384,21 +4408,3 @@ $
 > ~/pintos/src/tests/vm/pt-write-code
 	*	1526036025	0
 	"	1	0
-
-> ~/pintos/src/userprog/init.c
-	*	1526035706	0
-	"	1	0
-
-> ~/pintos/src/threads/synch.h
-	*	1526033262	0
-	"	1	0
-	^	25	70
-	.	26	0
-	+	23	74
-	+	25	69
-	+	33	58
-	+	33	59
-	+	45	2
-	+	45	74
-	+	25	70
-	+	26	0
