@@ -1,360 +1,3 @@
-vim exception.c
-vim process.
-vim process.c
-vim exception.c
-make
-vim exception.c
-make
-clear
-vim exception.c
-cd pintos/src/tests/vm/
-vim page-linear.c
-make
-vim page-linear.c
-make
-cd bu
-vim page-linear.c
-cd pintos/src/vm/build/
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=19 run page-linear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=18 run page-linear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-clear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-clea
-clear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-clear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-clear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-make
-cd ..
-cd build/
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-clear
-ls
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=6 run page-linear
-clear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=6 run page-linear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-handle SIGSEGV nopass noprint nostop
-make
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-clear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-cd ..
-cd build/
-handle SIGSEGV nopass noprint nostop
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-amke
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-cd pintos/src/vm/
-vim frame.c
-make
-cd build/
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=8 run page-linear
-cd ..
-vim frame.c
-cd pintos/src/
-cd lib/kernel/
-vim bimap.c
-cd ..
-cd kernel/
-vim bitmap.c
-cd pintos/src/vm/build/
-ls
-clear
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-make
-clear
-pintos-gdb kernel.o
-clea
-clear
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-cd pintos/src/vm/
-vim swap.c
-cd pintos/src/vm
-ls
-cd ..
-cd tests/
-ls
-cd vm/
-vim page-linear.c
-rm .page-linear.c.swp 
-vim page-linear.c
-make
-vim page-linear.c
-clear
-vim page-linear.c
-cd pintos/src/vm
-cd by
-cd build/
-ls
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-fault_num 1 fault page 8048000 evict 0
-fault_num 2 fault page 804d000 evict 0
-fault_num 3 fault page 8049000 evict 0
-fault_num 4 fault page 804b000 evict 0
-fault_num 5 fault page 804a000 evict 0
-(page-linear) begin
-(page-linear) initialize
-fault_num 6 fault page 804c000 evict bffff000
-fault_num 7 fault page bffff000 evict 8048000
-fault_num 8 fault page 8048000 evict 8049000
-fault_num 9 fault page 8049000 evict 804b000
-fault_num 10 fault page 804b000 evict 804a000
-fault_num 11 fault page 804a000 evict 804c000
-(page-linear) first search
-fault_num 12 fault page 804c000 evict bffff000
-swap index 0
-fault_num 13 fault page bffff000 evict 804d000
-fault_num 14 fault page 804d000 evict 8049000
-fault_num 15 fault page 8049000 evict 804b000
-fault_num 16 fault page 804b000 evict 804a000
-fault_num 17 fault page 804a000 evict 804c000
-(page-linear) second search
-fault_num 18 fault page 804c000 evict bffff000
-fault_num 19 fault page bffff000 evict 804d000
-fault_num 20 fault page 804d000 evict 8049000
-fault_num 21 fault page 8049000 evict 804b000
-fault_num 22 fault page 804b000 evict 804a000
-fault_num 23 fault page 804a000 evict 804c000
-fault_num 1 fault page 8048000 evict 0
-fault_num 2 fault page 804d000 evict 0
-fault_num 3 fault page 8049000 evict 0
-fault_num 4 fault page 804b000 evict 0
-fault_num 5 fault page 804a000 evict 0
-(page-linear) begin
-(page-linear) initialize
-fault_num 6 fault page 804c000 evict bffff000
-fault_num 7 fault page bffff000 evict 8048000
-fault_num 8 fault page 8048000 evict 8049000
-fault_num 9 fault page 8049000 evict 804b000
-fault_num 10 fault page 804b000 evict 804a000
-fault_num 11 fault page 804a000 evict 804c000
-(page-linear) first search
-fault_num 12 fault page 804c000 evict bffff000
-swap index 0
-fault_num 13 fault page bffff000 evict 804d000
-fault_num 14 fault page 804d000 evict 8049000
-fault_num 15 fault page 8049000 evict 804b000
-fault_num 16 fault page 804b000 evict 804a000
-fault_num 17 fault page 804a000 evict 804c000
-(page-linear) second search
-fault_num 18 fault page 804c000 evict bffff000
-fault_num 19 fault page bffff000 evict 804d000
-fault_num 20 fault page 804d000 evict 8049000
-fault_num 21 fault page 8049000 evict 804b000
-fault_num 22 fault page 804b000 evict 804a000
-fault_num 23 fault page 804a000 evict 804c000
-clear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-amke
-make
-clear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-clear
-malke
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-maek
-make
-clear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-make
-clear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=7 run page-linear
-clear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-make
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-make
-handle SIGSEGV nopass noprint nostop
-loadusersymbols tests/vm/page-linear
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-cd pintos/src/vm/
-vim frame.c
-ls
-vim frame.c
-rm .frame.c.swp 
-vim frame.c
-clear
-cd pintos/src/vm
-ls
-clear
-cd build/
-ls
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-clear
-cd pintos/src/pr
-cd pintos/src/userprog/
-ls
-vim exception.c
-make
-vim exception.c
-vim process.c
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f run page-linear
-vim exception.c
-cd pintos/src/vm
-ls
-cd build/
-pintos -v -k -T 300 --qemu  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-clear
-pintos --gdb -v -k --bochs  --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q  -f -ul=15 run page-linear
-cd pintos/src/vm/build/
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-clear
-pintos-gdb kernel.o
-cd pintos/src/vm/
-vim frame.c
-cd pintos/src/tests/
-ls
-cd vbm
-cd vm
-vim page-linear.c
-cd pintos/src/userprog/
-vim pagedir.c
-vim exception.c
-vim pagedir.c
-vim exception.c
-cd pintos/src/vm/
-vim swap.c
-cd pintos/src/vm
-ls
-cd build/
-pintos -j 2 -v -k --bochs  --filesys-size=2 -p tests/vm/page-parallel -a page-parallel -p tests/vm/child-linear -a child-linear --swap-size=4 -- -q  -f -ul=25 run page-parallel
-backtrace Call stack: 0xc002ab92 0xc002e4fc 0xc002eb52 0xc003206a 0xc00321f9 0xc002f1c1 0xc00221c5 0xc002241d 0x804aab0
-make
-pintos -j 2 -v -k --bochs  --filesys-size=2 -p tests/vm/page-parallel -a page-parallel -p tests/vm/child-linear -a child-linear --swap-size=4 -- -q  -f -ul=25 run page-parallel
-cd pintos/src/userprog/
-ls
-vim exception.c
-rm .exception.c.swp 
-vim exception.c
-cd pintos/src/userprog/
-vim process.c
-cd pintos/src/vim
-ls
-cd pintos/src/userprog/
-vim process.c
-cd ..
-vim threads/
-cd threads/
-clear
-vim thread.c
 vim thread.h
 cd pintos/src/vm/
 vim frame.c
@@ -1998,3 +1641,360 @@ vim child-qsort-mm.c
 clear
 ls
 vim parallel-merge.c
+ls
+cd pintos
+ls
+make clean
+tar -czvf team22_project3.tar.gz src Project_3_Document_Templete.docx
+ls
+vim team22_project3.tar.gz
+cd pintos/src/
+ls
+cd tests/filesys/
+ls
+cd extended/
+ls
+vim dir-rmdir.c
+cscope
+cd pintos/
+cd src/
+ls
+cd vm
+ls
+vim frame.c
+page.c
+vim page.c
+vim swap.c
+cd ..
+cd userprog
+ls
+vim exception.c
+vim syscall.c
+cd pintos/src/vm
+make 
+make clean
+make check
+make clean
+make
+make check
+make clean
+make
+make check
+cd ..
+cd filesys/
+vim filesys.c
+cd pintos/src/
+ls
+cd devices/
+ls
+vim block.c
+cd ..
+cd threads/
+vim interrupt.c
+cd ..
+cd filesys/
+ls
+vim inode.c
+cd pintos/src/filesys/
+ls
+vim inode.c
+clear
+cd pintos/src/vm
+vim frame.c
+make
+make check
+vim frame.h
+clear
+ls
+cd pintos/src/vm
+ls
+cd ..
+cd userprog/
+vim process.c
+cd ..
+cscope
+cd pintos/src/
+ls
+cd threads/
+ls
+clear
+ls
+vim thread.c
+cd pintos/src/filesys/
+vim inode.c
+cd pintos/src/vm
+clear
+ls
+cd ..
+cd devices/
+vim timer.c
+cd ..
+cd lib/
+ls
+cd kernel/
+ls
+cd ..
+vim inttypes.h 
+cd ..
+cscope
+cd ti
+cd devices/
+vim timer.c
+vim timer.h
+cd ..
+cd lib/
+vim stdint.h
+ls
+cd ..
+ㅣㄴ
+ls
+clear
+cd devices/
+ls
+vim timer.c
+cd ..
+cd filesys/
+vim inode.c
+ls
+cd ..
+cd devices/
+;s
+ls
+vim block.h
+clear
+cd pintos/src/vm
+ls
+clear
+ls
+vim cache.c
+ls
+vim cache.h
+vim cache.c
+cp cache.c ../filesys/cache.c
+cp cache.h ../filesys/cache.h
+ls
+rm cache.c
+rm cache.h 
+cd ..
+cd filesys/
+ls
+make
+clear
+make
+clear
+make
+clear
+ls
+make clean
+clear
+make
+cd bi
+cd build/
+ls
+cd threads/
+ls
+cd ..
+ls
+vim Makefile 
+clear
+ls
+make
+ls
+cd threads/
+ls
+vim init.o
+cd ..
+ls
+cd  tests/
+ls
+cd ..
+cd lib/
+ls
+cd kernel/
+ls
+cd ..
+clear
+make check
+clear
+make clean
+make
+ls
+cd build/
+ls
+vim Makefile 
+ls
+cd userprog/
+ls
+cd ..
+ls
+cd devices/
+ls
+cd ..
+cd lib/
+ls
+cd ,,
+cd ..
+ls
+vim Make.config 
+vim Makefile.build 
+cd filesys/
+ls
+cd ..
+cd vm
+ls
+cd ..
+cd filesys/
+ls
+vim cache.c
+make
+clar
+clear
+make clean
+make
+vim cache.c
+ls
+vim Makefile 
+ls
+vim Make.vars 
+clear
+make
+clear
+make
+clear
+ls
+clear
+ls
+vim file.c
+vim cache.x
+vim cache.c
+ls
+vim cache.c
+cd pintos/src/cm
+cd pintos/src/threads/
+vim init.c
+cd ..
+cd vm
+vim frame.h
+cd ..
+cd filesys/
+ls
+cd ..
+cd devices/
+vim block.h
+cd ..
+ls
+cd lib/
+ls
+cd kernel/
+vim list.h
+vim list.c
+ls
+cleasr
+clear
+cd ..
+ls
+cd ..
+cd devices/
+ls
+vim timer.c
+cd pintos/src/vm
+ls
+vim frame.h
+vim cache.h
+make
+vim cache.h
+cd ..
+ls
+vim Make.config 
+vim Makefile.build 
+cd vn
+cd vm
+clear
+make
+make check
+cd ,,
+cd ..
+ls
+vim Make.config 
+vim Makefile.build 
+cd vm
+ls
+cd ..
+cd filesys/
+ls
+clear
+vim cache.h
+vim cache.c
+vim cache.h
+clear
+cd pintos/src/filesys/
+vim cache.c
+clear
+ls
+vim cache.c
+vim cache.h
+vim cache.c
+make
+cd pintos/src/
+cd filesys/
+ls
+vim inode.c
+vim cache.h
+vim cache.c
+clear
+make
+clear
+make
+clear
+make
+vim cache.h
+vim cache.c
+vim cache.h
+make
+clear
+make
+cd ..
+cd src/
+ls
+clear
+cd lib/
+vim string.c
+ls
+vim string.h
+cscope
+cd .
+c d..
+ls
+vim stdio.c
+vim stdio.h
+vim stdio.c
+cd pintos/src/lib/
+ls
+vim string.c
+cd ..
+cscope
+cd devices/
+vim timer.c
+vim block.c
+cd ..
+ls
+cd threads/
+ls
+vim thread.c
+cd pintos/src/threads/
+ls
+vim init.c
+cd pintos/src/vm/
+cd ..
+cd filesys/
+clear
+ls
+vim filesys.c
+vim inode.c
+vim inode.h
+vim inode.c
+cd pintos/src/filesys/
+ls
+clear
+ls
+vim cache.c

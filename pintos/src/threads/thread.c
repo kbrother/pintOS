@@ -298,7 +298,8 @@ thread_exit (void)
   struct thread *cur = thread_current ();
 
 #ifdef USERPROG
-  process_exit ();
+  if (cur->pagedir != NULL)
+    process_exit ();
 #endif
 
   /* Remove thread from all threads list, set our status to dying,
@@ -509,10 +510,11 @@ init_thread (struct thread *t, const char *name, int priority)
   t->status = THREAD_BLOCKED;
   strlcpy (t->name, name, sizeof t->name);
   
+  t->pagedir = NULL;
   t->stack = (uint8_t *) t + PGSIZE;
   t->priority = priority;
   t->magic = THREAD_MAGIC;
-  
+   
   t->original_prior = priority;
   t->locked = false;
   t->time_to_wake = -1;
